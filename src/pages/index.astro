@@ -1,0 +1,1099 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+
+	<!-- FONTS: HarmonyOS Sans SC (中文) + HarmonyOS Sans (Latin) -->
+	<link rel="stylesheet" href="https://unpkg.com/harmonyos-sans-sc-webfont-splitted@1.1.0/dist/index.css" />
+
+	<!-- NAVBAR -->
+	<nav id="navbar" class="fixed top-0 left-0 right-0 z-[100] px-4 sm:px-8 h-[70px] flex items-center justify-between bg-[rgba(10,10,18,0.85)] backdrop-blur-xl border-b border-[rgba(68,78,134,0.15)] transition-all duration-300">
+		<a href="#" class="font-[Syne] text-xl sm:text-2xl font-extrabold text-white no-underline">
+			Eavision
+		</a>
+		<ul class="hidden md:flex items-center gap-8 lg:gap-10 list-none" id="navLinks">
+			<li><a href="#nosotros" class="text-[#898989] no-underline text-sm font-normal tracking-wide transition-colors hover:text-white">Nosotros</a></li>
+			<li><a href="#ventas" class="text-[#898989] no-underline text-sm font-normal tracking-wide transition-colors hover:text-white">Equipos</a></li>
+			<li><a href="#servicios" class="text-[#898989] no-underline text-sm font-normal tracking-wide transition-colors hover:text-white">Servicios</a></li>
+			<li><a href="#beneficios" class="text-[#898989] no-underline text-sm font-normal tracking-wide transition-colors hover:text-white">Beneficios</a></li>
+			<li><a href="#galeria" class="text-[#898989] no-underline text-sm font-normal tracking-wide transition-colors hover:text-white">Galería</a></li>
+			<li>
+				<a href="#contacto" class="bg-[#444e86] text-[#0a0a12] px-5 py-2 rounded-md font-medium text-sm transition-all hover:bg-[#5b67a8] hover:-translate-y-px no-underline">
+					Cotizar
+				</a>
+			</li>
+		</ul>
+		<button class="md:hidden flex flex-col gap-[5px] cursor-pointer bg-transparent border-none p-1" id="hamburger" aria-label="Menú">
+			<span class="block w-[22px] h-[1.5px] bg-white rounded-sm transition-all"></span>
+			<span class="block w-[22px] h-[1.5px] bg-white rounded-sm transition-all"></span>
+			<span class="block w-[22px] h-[1.5px] bg-white rounded-sm transition-all"></span>
+		</button>
+	</nav>
+
+	<!-- MOBILE NAV MENU -->
+	<div id="mobileMenu" class="hidden fixed top-[70px] left-0 right-0 z-[99] bg-[#0a0a12] border-b border-[rgba(68,78,134,0.15)] px-6 py-8 flex-col gap-6">
+		<a href="#nosotros" class="text-[#898989] no-underline text-base font-medium hover:text-white transition-colors" onclick="closeMobileMenu()">Nosotros</a>
+		<a href="#servicios" class="text-[#898989] no-underline text-base font-medium hover:text-white transition-colors" onclick="closeMobileMenu()">Servicios</a>
+		<a href="#beneficios" class="text-[#898989] no-underline text-base font-medium hover:text-white transition-colors" onclick="closeMobileMenu()">Beneficios</a>
+		<a href="#galeria" class="text-[#898989] no-underline text-base font-medium hover:text-white transition-colors" onclick="closeMobileMenu()">Galería</a>
+		<a href="#contacto" class="bg-[#444e86] text-[#0a0a12] px-5 py-3 rounded-md font-semibold text-sm text-center no-underline" onclick="closeMobileMenu()">Cotizar</a>
+	</div>
+
+	<!-- HERO -->
+	<section class="min-h-screen flex items-center relative px-4 sm:px-8 pt-24 pb-16 overflow-hidden bg-[#0a0a12]" id="hero">
+		<!-- BG -->
+		<div class="absolute inset-0 pointer-events-none"
+			style="background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(68,78,134,0.12) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 20% 80%, rgba(68,78,134,0.06) 0%, transparent 60%);">
+		</div>
+		<!-- GRID -->
+		<div class="absolute inset-0 pointer-events-none"
+			style="background-image: linear-gradient(rgba(68,78,134,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(68,78,134,0.04) 1px, transparent 1px); background-size: 60px 60px; mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 100%);">
+		</div>
+
+		<div class="max-w-[1200px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
+
+			<!-- CONTENT -->
+			<div>
+				<div class="inline-flex items-center gap-2 bg-[rgba(68,78,134,0.1)] border border-[rgba(68,78,134,0.25)] px-4 py-1.5 rounded-full text-[0.78rem] font-medium text-[#444e86] mb-6 uppercase tracking-widest">
+					<span class="w-1.5 h-1.5 bg-[#444e86] rounded-full animate-pulse"></span>
+					Tecnología Agrícola de Precisión
+				</div>
+
+				<h1 class="font-[Syne] text-[clamp(2.5rem,6vw,4.8rem)] font-extrabold leading-[1.0] mb-6 text-white">
+					El campo entra a la <em class="not-italic text-[#444e86]">era de los drones</em>
+				</h1>
+
+				<p class="text-base sm:text-lg text-[#898989] leading-relaxed mb-8 max-w-xl">
+					Optimizamos cada hectárea con drones de última generación. Más eficiencia, menos costo, mayor rentabilidad para tu producción agrícola.
+				</p>
+
+				<div class="flex flex-col sm:flex-row gap-4">
+					<a href="#contacto" class="bg-[#444e86] text-[#0a0a12] px-7 py-3.5 rounded-lg font-semibold text-base no-underline inline-flex items-center justify-center gap-2 transition-all hover:bg-[#5b67a8] hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(68,78,134,0.3)]">
+						Solicitar Cotización →
+					</a>
+					<a href="#servicios" class="bg-transparent text-white px-7 py-3.5 rounded-lg font-medium text-base no-underline inline-flex items-center justify-center gap-2 transition-all border border-[rgba(255,255,255,0.15)] hover:border-[rgba(255,255,255,0.35)] hover:bg-[rgba(255,255,255,0.05)]">
+						Ver Servicios
+					</a>
+				</div>
+
+				<!-- STATS -->
+				<div class="flex flex-row gap-6 sm:gap-8 mt-10 pt-8 border-t border-[rgba(68,78,134,0.15)]">
+					<div>
+						<div class="font-[Syne] text-2xl sm:text-3xl font-extrabold text-[#444e86]">40%</div>
+						<div class="text-xs text-[#898989] mt-1">Menos insumos utilizados</div>
+					</div>
+					<div>
+						<div class="font-[Syne] text-2xl sm:text-3xl font-extrabold text-[#444e86]">10x</div>
+						<div class="text-xs text-[#898989] mt-1">Más rápido que maquinaria</div>
+					</div>
+					<div>
+						<div class="font-[Syne] text-2xl sm:text-3xl font-extrabold text-[#444e86]">0%</div>
+						<div class="text-xs text-[#898989] mt-1">Compactación de suelo</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- VISUAL -->
+			<div class="hidden lg:flex items-center justify-center">
+				<div class="relative w-full max-w-[500px] aspect-square">
+					<!-- Circle -->
+					<div class="w-full h-full rounded-full border border-[rgba(68,78,134,0.2)] relative overflow-hidden"
+						style="background: radial-gradient(circle at 40% 40%, rgba(68,78,134,0.2), rgba(10,10,18,0.8));">
+						<div class="absolute inset-[-50%] animate-[radar_6s_linear_infinite]"
+							style="background: conic-gradient(transparent 0deg, rgba(68,78,134,0.08) 60deg, transparent 120deg);">
+						</div>
+						<!-- Drone SVG -->
+						<div class="absolute inset-0 flex items-center justify-center">
+							<svg class="w-[65%] animate-[float_4s_ease-in-out_infinite]" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect x="80" y="85" width="40" height="30" rx="8" fill="#444e86" opacity="0.9"/>
+								<rect x="88" y="90" width="24" height="20" rx="5" fill="#171a30"/>
+								<rect x="30" y="95" width="52" height="5" rx="2.5" fill="#444e86" opacity="0.7"/>
+								<rect x="118" y="95" width="52" height="5" rx="2.5" fill="#444e86" opacity="0.7"/>
+								<rect x="82" y="55" width="5" height="38" rx="2.5" fill="#444e86" opacity="0.7"/>
+								<rect x="113" y="55" width="5" height="38" rx="2.5" fill="#444e86" opacity="0.7"/>
+								<circle cx="32" cy="95" r="16" fill="#171a30" stroke="#444e86" stroke-width="1.5"/>
+								<circle cx="168" cy="95" r="16" fill="#171a30" stroke="#444e86" stroke-width="1.5"/>
+								<circle cx="85" cy="52" r="16" fill="#171a30" stroke="#444e86" stroke-width="1.5"/>
+								<circle cx="115" cy="52" r="16" fill="#171a30" stroke="#444e86" stroke-width="1.5"/>
+								<ellipse cx="32" cy="95" rx="20" ry="4" fill="#444e86" opacity="0.4"/>
+								<ellipse cx="168" cy="95" rx="20" ry="4" fill="#444e86" opacity="0.4"/>
+								<ellipse cx="85" cy="52" rx="20" ry="4" fill="#444e86" opacity="0.4"/>
+								<ellipse cx="115" cy="52" rx="20" ry="4" fill="#444e86" opacity="0.4"/>
+								<circle cx="100" cy="122" r="8" fill="#444e86" opacity="0.6"/>
+								<circle cx="100" cy="122" r="4" fill="#0a0a12"/>
+								<circle cx="80" cy="148" r="3" fill="#444e86" opacity="0.5"/>
+								<circle cx="100" cy="155" r="3" fill="#444e86" opacity="0.4"/>
+								<circle cx="120" cy="148" r="3" fill="#444e86" opacity="0.5"/>
+								<circle cx="90" cy="162" r="2" fill="#444e86" opacity="0.3"/>
+								<circle cx="110" cy="162" r="2" fill="#444e86" opacity="0.3"/>
+							</svg>
+						</div>
+					</div>
+					<!-- Orbit -->
+					<div class="absolute inset-[-20px] rounded-full border border-dashed border-[rgba(68,78,134,0.2)] animate-spin" style="animation-duration: 20s;">
+						<div class="absolute top-1/2 left-[-5px] w-2 h-2 rounded-full bg-[#444e86] -mt-1 shadow-[0_0_10px_#444e86]"></div>
+					</div>
+					<!-- Data cards -->
+					<div class="absolute top-[10%] left-[-10%] bg-[rgba(19,20,31,0.9)] backdrop-blur-xl border border-[rgba(68,78,134,0.15)] rounded-xl px-4 py-3 text-xs">
+						<div class="text-[#898989] text-[0.7rem] mb-0.5">Velocidad de vuelo</div>
+						<div class="text-white font-semibold font-[Syne]">8 m/s</div>
+						<div class="text-[#444e86] text-[0.7rem] mt-0.5">↑ Máx. eficiencia</div>
+					</div>
+					<div class="absolute bottom-[15%] right-[-8%] bg-[rgba(19,20,31,0.9)] backdrop-blur-xl border border-[rgba(68,78,134,0.15)] rounded-xl px-4 py-3 text-xs">
+						<div class="text-[#898989] text-[0.7rem] mb-0.5">Hectáreas/día</div>
+						<div class="text-white font-semibold font-[Syne]">80–120 ha</div>
+						<div class="text-[#444e86] text-[0.7rem] mt-0.5">↑ Alta cobertura</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- NOSOTROS -->
+	<section class="py-20 sm:py-28 px-4 sm:px-8 bg-[#13141f] relative overflow-hidden" id="nosotros">
+		<div class="absolute inset-0 pointer-events-none"
+			style="background: radial-gradient(circle at 20% 30%, rgba(68,78,134,0.08), transparent 40%), radial-gradient(circle at 80% 70%, rgba(68,78,134,0.05), transparent 40%);">
+		</div>
+		<div class="max-w-[1200px] mx-auto relative z-10">
+			<div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-20 items-center">
+
+				<!-- Content -->
+				<div class="fade-up">
+					<div class="inline-block text-[0.72rem] font-medium tracking-[0.12em] uppercase text-[#444e86] mb-4">Nosotros</div>
+					<h2 class="font-[Syne] text-[clamp(2rem,4vw,3rem)] font-bold leading-[1.15] text-white mb-4">
+						Somos <em class="not-italic text-[#444e86]">Eavision</em>
+					</h2>
+					<p class="text-base text-[#898989] leading-relaxed max-w-[560px]">
+						Empresa argentina especializada en tecnología agrícola de precisión y soluciones aéreas para el agro.
+					</p>
+					<div class="flex flex-col gap-5 mt-8">
+						<p class="text-[#898989] leading-[1.8] text-[0.97rem]">
+							Trabajamos junto a productores, ingenieros agrónomos y contratistas para optimizar cada hectárea mediante drones agrícolas de última generación.
+						</p>
+						<p class="text-[#898989] leading-[1.8] text-[0.97rem]">
+							Somos representantes oficiales de <strong class="text-white">EaVision</strong>, una de las marcas líderes a nivel mundial en drones inteligentes para fumigación, monitoreo y agricultura de precisión.
+						</p>
+						<p class="text-[#898989] leading-[1.8] text-[0.97rem]">
+							Brindamos venta de equipos, capacitación, soporte técnico y servicios profesionales en campo, acompañando a nuestros clientes desde la implementación hasta la operación diaria.
+						</p>
+					</div>
+					<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-8">
+						<div class="flex items-center gap-3 px-4 py-3.5 bg-[rgba(10,10,18,0.55)] border border-[rgba(68,78,134,0.15)] rounded-xl text-sm text-white">
+							<span class="text-[#444e86] font-bold">✔</span>
+							<span>Representantes oficiales EaVision</span>
+						</div>
+						<div class="flex items-center gap-3 px-4 py-3.5 bg-[rgba(10,10,18,0.55)] border border-[rgba(68,78,134,0.15)] rounded-xl text-sm text-white">
+							<span class="text-[#444e86] font-bold">✔</span>
+							<span>Capacitación y soporte técnico</span>
+						</div>
+						<div class="flex items-center gap-3 px-4 py-3.5 bg-[rgba(10,10,18,0.55)] border border-[rgba(68,78,134,0.15)] rounded-xl text-sm text-white">
+							<span class="text-[#444e86] font-bold">✔</span>
+							<span>Tecnología agrícola de precisión</span>
+						</div>
+						<div class="flex items-center gap-3 px-4 py-3.5 bg-[rgba(10,10,18,0.55)] border border-[rgba(68,78,134,0.15)] rounded-xl text-sm text-white">
+							<span class="text-[#444e86] font-bold">✔</span>
+							<span>Operaciones en todo el país</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Card -->
+				<div class="fade-up [transition-delay:0.2s] relative bg-[rgba(10,10,18,0.8)] border border-[rgba(68,78,134,0.2)] rounded-3xl p-8 sm:p-12 overflow-hidden">
+					<div class="absolute inset-[-20%] pointer-events-none" style="background: radial-gradient(circle, rgba(68,78,134,0.18), transparent 60%); filter: blur(40px);"></div>
+					<div class="relative z-10">
+						<div class="inline-flex items-center gap-2 bg-[rgba(68,78,134,0.1)] border border-[rgba(68,78,134,0.25)] px-4 py-1.5 rounded-full text-xs text-[#444e86] mb-6">
+							🚁 Partner Oficial
+						</div>
+						<h3 class="font-[Syne] text-3xl font-bold text-white mb-4 leading-tight">EaVision Argentina</h3>
+						<p class="text-[#898989] leading-[1.7] mb-8">
+							Drones inteligentes diseñados para maximizar rendimiento, reducir costos y transformar la forma de trabajar el campo.
+						</p>
+						<div class="flex gap-8 pt-6 border-t border-[rgba(68,78,134,0.15)]">
+							<div>
+								<div class="font-[Syne] text-3xl font-extrabold text-[#444e86] leading-none">+500</div>
+								<div class="text-xs text-[#898989] mt-1.5">Hectáreas trabajadas</div>
+							</div>
+							<div>
+								<div class="font-[Syne] text-3xl font-extrabold text-[#444e86] leading-none">24/7</div>
+								<div class="text-xs text-[#898989] mt-1.5">Soporte técnico</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- VENTAS -->
+	<section class="py-20 sm:py-28 px-4 sm:px-8 bg-[#0a0a12]" id="ventas">
+		<div class="max-w-[1200px] mx-auto">
+
+			<div class="text-center mb-14 fade-up">
+				<div class="inline-block text-[0.72rem] font-medium tracking-[0.12em] uppercase text-[#444e86] mb-4">Equipos en venta</div>
+				<h2 class="font-[Syne] text-[clamp(2rem,4vw,3rem)] font-bold text-white mb-4">
+					Adquirí tu <em class="not-italic text-[#444e86]">drone agrícola</em>
+				</h2>
+				<p class="text-[#898989] leading-[1.7] max-w-[520px] mx-auto">
+					Equipos EaVision disponibles para entrega inmediata. Financiación disponible, capacitación incluida y soporte técnico permanente.
+				</p>
+			</div>
+
+			<!-- Card del drone -->
+			<div class="max-w-3xl mx-auto fade-up">
+				<div id="drone-card" class="group relative bg-[#13141f] border border-[rgba(68,78,134,0.2)] rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 hover:border-[rgba(68,78,134,0.45)] hover:shadow-[0_0_60px_rgba(68,78,134,0.1)]"
+					onclick="openModal()">
+
+					<div class="grid grid-cols-1 sm:grid-cols-2">
+
+						<!-- Imagen principal -->
+						<div class="relative overflow-hidden aspect-square sm:aspect-auto min-h-[280px]">
+							<img src="/droneVolandoSoja.webp" alt="EaVision EA-30 Pro"
+								class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+							<div class="absolute inset-0 bg-gradient-to-r from-transparent to-[rgba(10,10,18,0.6)] hidden sm:block"></div>
+							<!-- Badge disponible -->
+							<div class="absolute top-4 left-4">
+								<span class="inline-flex items-center gap-1.5 bg-[rgba(68,78,134,0.15)] border border-[rgba(68,78,134,0.35)] text-[#444e86] text-[0.68rem] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full backdrop-blur-sm">
+									<span class="w-1.5 h-1.5 bg-[#444e86] rounded-full animate-pulse"></span>
+									Disponible
+								</span>
+							</div>
+						</div>
+
+						<!-- Info -->
+						<div class="p-7 sm:p-8 flex flex-col justify-between">
+							<div>
+								<div class="text-[#444e86] text-xs font-semibold uppercase tracking-widest mb-2">EaVision</div>
+								<h3 class="font-[Syne] text-2xl sm:text-3xl font-extrabold text-white leading-tight mb-1">EA-30 Pro</h3>
+								<p class="text-[#898989] text-sm mb-6 leading-relaxed">Drone agrícola de alta capacidad para fumigación, siembra y fertilización de precisión.</p>
+
+								<!-- Specs -->
+								<div class="grid grid-cols-2 gap-3 mb-6">
+									{[
+										{ icon: '💧', label: 'Tanque', val: '30 L' },
+										{ icon: '⚡', label: 'Velocidad', val: '8 m/s' },
+										{ icon: '🌾', label: 'Cobertura', val: '80-120 ha/día' },
+										{ icon: '🎯', label: 'Precisión RTK', val: '±2 cm' },
+										{ icon: '🔋', label: 'Autonomía', val: '12 min/carga' },
+										{ icon: '⚖️', label: 'Peso', val: '24 kg (lleno)' },
+									].map((s) => (
+										<div class="flex items-center gap-2.5 bg-[rgba(10,10,18,0.6)] border border-[rgba(68,78,134,0.1)] rounded-xl px-3 py-2.5">
+											<span class="text-base">{s.icon}</span>
+											<div>
+												<div class="text-[0.65rem] text-[#898989] leading-none mb-0.5">{s.label}</div>
+												<div class="text-xs font-semibold text-white">{s.val}</div>
+											</div>
+										</div>
+									))}
+								</div>
+
+								<!-- Precio -->
+								<div class="bg-[rgba(68,78,134,0.06)] border border-[rgba(68,78,134,0.15)] rounded-2xl px-5 py-4 mb-6">
+									<div class="text-[0.68rem] text-[#898989] uppercase tracking-widest mb-1">Precio de venta</div>
+									<div class="font-[Syne] text-3xl font-extrabold text-[#444e86] leading-none">$4.500.000</div>
+									<div class="text-xs text-[#898989] mt-1.5">ARS · Financiación disponible · IVA incluido</div>
+								</div>
+							</div>
+
+							<!-- Botones -->
+							<div class="flex flex-col gap-3" onclick="event.stopPropagation()">
+								<a href="https://wa.me/5493510000000?text=Hola!%20Me%20interesa%20el%20drone%20EaVision%20EA-30%20Pro.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F"
+									target="_blank"
+									class="w-full bg-[#25d366] text-white px-6 py-3.5 rounded-xl font-semibold text-sm text-center no-underline inline-flex items-center justify-center gap-2 transition-all hover:bg-[#20ba5a] hover:-translate-y-0.5">
+									<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+									Consultar por WhatsApp
+								</a>
+								<button onclick="openModal()" class="w-full bg-transparent text-white border border-[rgba(255,255,255,0.15)] px-6 py-3 rounded-xl font-medium text-sm inline-flex items-center justify-center gap-2 transition-all hover:border-[rgba(68,78,134,0.35)] hover:bg-[rgba(68,78,134,0.05)] cursor-pointer">
+									🖼️ Ver galería del equipo
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- Includes strip -->
+					<div class="border-t border-[rgba(68,78,134,0.12)] px-7 sm:px-8 py-4 flex flex-wrap gap-x-6 gap-y-2">
+						{['✔ Capacitación incluida', '✔ Garantía 12 meses', '✔ Soporte técnico 24/7', '✔ Envío a todo el país'].map((item) => (
+							<span class="text-xs text-[#898989]">{item}</span>
+						))}
+					</div>
+				</div>
+			</div>
+
+				<!-- Calculadora ROI -->
+				<div class="max-w-[1000px] mx-auto mt-16 fade-up">
+					<div class="text-center mb-10">
+						<div class="inline-block text-[0.72rem] font-medium tracking-[0.12em] uppercase text-[#444e86] mb-4">Calculadora</div>
+						<h3 class="font-[Syne] text-[clamp(1.6rem,3vw,2.4rem)] font-bold text-white mb-3">
+							Calculá el <em class="not-italic text-[#444e86]">ROI</em> de tu drone
+						</h3>
+						<p class="text-[#898989] leading-[1.7] max-w-[520px] mx-auto">Estimá cuánto vas a ganar por mes y en cuánto tiempo recuperás la inversión.</p>
+					</div>
+			<!-- ROI Panel -->
+			<div id="panel-roi" class="block">
+				<div class="bg-[#13141f] border border-[rgba(68,78,134,0.15)] rounded-2xl p-5 sm:p-8 lg:p-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+					<!-- Inputs -->
+					<div>
+						<div class="font-[Syne] text-xl font-bold text-white mb-8">📥 Ingresá los datos</div>
+						{[
+							{ label: 'Precio del Drone (ARS)', id: 'precio-drone', prefix: '$', val: '4500000', fn: 'calcROI()', readonly: true },
+							{ label: 'Hectáreas trabajadas por día', id: 'ha-dia', prefix: 'ha', val: '80', fn: 'calcROI()' },
+							{ label: 'Precio cobrado por hectárea (ARS)', id: 'precio-ha', prefix: '$', val: '4500', fn: 'calcROI()' },
+							{ label: 'Días de trabajo por mes', id: 'dias-mes', prefix: 'd', val: '20', fn: 'calcROI()' },
+							{ label: 'Costos operativos mensuales (ARS)', id: 'costo-op', prefix: '$', val: '250000', fn: 'calcROI()' },
+						].map((f) => (
+							<div class="mb-6 last:mb-0">
+								<label class="flex items-center gap-2 text-xs text-[#898989] font-medium mb-2" for={f.id}>
+									{f.label}
+									{f.readonly && <span class="text-[0.62rem] bg-[rgba(68,78,134,0.1)] border border-[rgba(68,78,134,0.2)] text-[#444e86] px-2 py-0.5 rounded-full uppercase tracking-wide">Precio fijo</span>}
+								</label>
+								<div class="relative">
+									<span class={`absolute left-4 top-1/2 -translate-y-1/2 text-sm font-semibold ${f.readonly ? 'text-[#5c5c66]' : 'text-[#444e86]'}`}>{f.prefix}</span>
+									<input
+										class={`w-full border rounded-xl py-3.5 pl-10 pr-4 text-base font-[DM_Sans] outline-none transition-all ${f.readonly ? 'bg-[rgba(255,255,255,0.03)] border-[rgba(68,78,134,0.08)] text-[#5c5c66] cursor-not-allowed' : 'bg-[rgba(10,10,18,0.8)] border-[rgba(68,78,134,0.15)] text-white focus:border-[#444e86] focus:shadow-[0_0_0_3px_rgba(68,78,134,0.12)]'}`}
+										type="number" id={f.id} value={f.val}
+										oninput={f.readonly ? undefined : f.fn}
+										readonly={f.readonly || undefined}
+										tabindex={f.readonly ? -1 : undefined}
+									/>
+								</div>
+							</div>
+						))}
+					</div>
+					<!-- Results -->
+					<div>
+						<div class="font-[Syne] text-xl font-bold text-white mb-8">📊 Tus resultados</div>
+						<div class="flex flex-col gap-4">
+							<div class="p-5 sm:p-6 rounded-2xl border bg-[rgba(68,78,134,0.08)] border-[rgba(68,78,134,0.3)]">
+								<div class="text-[0.7rem] text-[#898989] uppercase tracking-widest mb-1.5">Ganancia Mensual Neta</div>
+								<div id="ganancia-mensual" class="font-[Syne] text-3xl sm:text-4xl font-extrabold text-[#444e86] leading-none">$6.950.000</div>
+								<div class="text-xs text-[#898989] mt-2">Ingresos brutos menos costos operativos</div>
+							</div>
+							<div class="p-5 rounded-2xl border bg-[rgba(10,10,18,0.6)] border-[rgba(68,78,134,0.15)]">
+								<div class="text-[0.7rem] text-[#898989] uppercase tracking-widest mb-1.5">Recupero de Inversión</div>
+								<div id="tiempo-recupero" class="font-[Syne] text-2xl font-extrabold text-white leading-none">0,6 meses</div>
+								<div class="text-xs text-[#898989] mt-2">Tiempo estimado para recuperar el costo del drone</div>
+							</div>
+							<div class="p-5 rounded-2xl border bg-[rgba(10,10,18,0.6)] border-[rgba(68,78,134,0.15)]">
+								<div class="text-[0.7rem] text-[#898989] uppercase tracking-widest mb-1.5">Proyección Anual</div>
+								<div id="proyeccion-anual" class="font-[Syne] text-2xl font-extrabold text-white leading-none">$83.400.000</div>
+								<div class="text-xs text-[#898989] mt-2">Ganancia neta estimada en 12 meses</div>
+							</div>
+							<div class="p-5 rounded-2xl border bg-[rgba(10,10,18,0.6)] border-[rgba(68,78,134,0.15)]">
+								<div class="text-[0.7rem] text-[#898989] uppercase tracking-widest mb-1.5">Ingresos Brutos/Mes</div>
+								<div id="ingresos-brutos" class="font-[Syne] text-2xl font-extrabold text-white leading-none">$7.200.000</div>
+								<div id="ha-mes-desc" class="text-xs text-[#898989] mt-2">1600 ha/mes × $4.500/ha</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+				</div>
+		</div>
+	</section>
+
+	<!-- MODAL GALERÍA DRONE -->
+	<div id="drone-modal" class="fixed inset-0 z-[200] flex items-center justify-center p-4 sm:p-8 opacity-0 pointer-events-none transition-opacity duration-300">
+		<!-- Backdrop -->
+		<div class="absolute inset-0 bg-[rgba(10,10,18,0.95)] backdrop-blur-md" onclick="closeModal()"></div>
+
+		<!-- Modal content -->
+		<div class="relative z-10 w-full max-w-4xl bg-[#13141f] border border-[rgba(68,78,134,0.2)] rounded-3xl overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.8)] translate-y-6 transition-transform duration-300" id="modal-inner">
+
+			<!-- Header -->
+			<div class="flex items-center justify-between px-6 sm:px-8 py-5 border-b border-[rgba(68,78,134,0.12)]">
+				<div>
+					<div class="text-[0.68rem] text-[#444e86] uppercase tracking-widest mb-0.5">EaVision</div>
+					<div class="font-[Syne] text-lg font-bold text-white">EA-30 Pro — Galería</div>
+				</div>
+				<button onclick="closeModal()" class="w-9 h-9 rounded-xl border border-[rgba(255,255,255,0.12)] flex items-center justify-center text-[#898989] hover:text-white hover:border-[rgba(68,78,134,0.35)] transition-all cursor-pointer bg-transparent text-xl leading-none">
+					✕
+				</button>
+			</div>
+
+			<!-- Imagen principal -->
+			<div class="relative aspect-video overflow-hidden bg-[#0a0a12]">
+				<img id="modal-main-img" src="/droneVolandoSoja.webp" alt="Drone" class="w-full h-full object-cover transition-opacity duration-300" />
+				<!-- Flechas -->
+				<button onclick="prevPhoto()" class="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 w-10 h-10 bg-[rgba(10,10,18,0.8)] border border-[rgba(68,78,134,0.2)] rounded-xl flex items-center justify-center text-white hover:border-[rgba(68,78,134,0.5)] transition-all cursor-pointer backdrop-blur-sm">‹</button>
+				<button onclick="nextPhoto()" class="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 w-10 h-10 bg-[rgba(10,10,18,0.8)] border border-[rgba(68,78,134,0.2)] rounded-xl flex items-center justify-center text-white hover:border-[rgba(68,78,134,0.5)] transition-all cursor-pointer backdrop-blur-sm">›</button>
+				<!-- Contador -->
+				<div class="absolute bottom-4 right-4 bg-[rgba(10,10,18,0.8)] backdrop-blur-sm border border-[rgba(68,78,134,0.15)] text-white text-xs px-3 py-1.5 rounded-full font-medium">
+					<span id="modal-counter">1 / 5</span>
+				</div>
+			</div>
+
+			<!-- Thumbnails -->
+			<div class="flex gap-3 px-6 sm:px-8 py-5 overflow-x-auto">
+				{[
+					{ src: '/droneVolandoSoja.webp', alt: 'Fumigación sobre soja' },
+					{ src: '/droneMonitoreo.webp', alt: 'Sistema de monitoreo' },
+					{ src: '/droneMapeo.webp', alt: 'Mapeo de precisión' },
+					{ src: '/droneAplicacionFertilizante.webp', alt: 'Aplicación fertilizante' },
+					{ src: '/droneSiembraAerea.webp', alt: 'Siembra aérea' },
+				].map((img, i) => (
+					<button
+						onclick={`selectPhoto(${i})`}
+						class="modal-thumb flex-shrink-0 w-20 h-16 sm:w-24 sm:h-[72px] rounded-xl overflow-hidden border-2 transition-all cursor-pointer p-0 bg-transparent"
+						data-index={i}
+						style={i === 0 ? 'border-color: #444e86;' : 'border-color: rgba(68,78,134,0.15);'}
+					>
+						<img src={img.src} alt={img.alt} class="w-full h-full object-cover" />
+					</button>
+				))}
+			</div>
+
+			<!-- Footer con CTA -->
+			<div class="px-6 sm:px-8 pb-6 pt-1">
+				<a href="https://wa.me/5493510000000?text=Hola!%20Me%20interesa%20el%20drone%20EaVision%20EA-30%20Pro.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F"
+					target="_blank"
+					class="w-full bg-[#25d366] text-white px-6 py-4 rounded-xl font-semibold text-sm text-center no-underline flex items-center justify-center gap-2 transition-all hover:bg-[#20ba5a]">
+					<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+					Consultar precio y disponibilidad
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- FOTO FONDO -->
+	<section class="py-16 sm:py-20 px-4 sm:px-8 bg-[#0a0a12]">
+		<div class="max-w-[1200px] mx-auto">
+			<div class="relative h-[380px] sm:h-[480px] lg:h-[520px] rounded-2xl sm:rounded-3xl overflow-hidden border border-[rgba(68,78,134,0.15)] shadow-[0_20px_60px_rgba(0,0,0,0.45)] group">
+				<img src="/tanqueYBoquillaDrone.webp" alt="Drone fumigando en campo"
+					class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+				<div class="absolute inset-0"
+					style="background: linear-gradient(to top, rgba(0,0,0,0.85) 10%, rgba(0,0,0,0.25) 55%, rgba(0,0,0,0.05) 100%);">
+				</div>
+				<div class="absolute left-5 sm:left-10 bottom-6 sm:bottom-10 z-10 max-w-[90%] sm:max-w-[650px]">
+					<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(68,78,134,0.12)] border border-[rgba(68,78,134,0.25)] text-[#444e86] text-[0.7rem] sm:text-xs font-bold uppercase tracking-widest mb-3 sm:mb-4 backdrop-blur-xl">
+						Tecnología de precisión
+					</span>
+					<h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-3 sm:mb-4 font-[Syne]">
+						Aplicación inteligente con drones agrícolas
+					</h2>
+					<p class="text-sm sm:text-base text-[rgba(255,255,255,0.75)] leading-relaxed max-w-xl">
+						Cobertura uniforme, ahorro de insumos y máxima eficiencia para grandes superficies.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- SERVICIOS -->
+	<section class="py-20 sm:py-28 px-4 sm:px-8 bg-[#0a0a12]" id="servicios">
+		<div class="max-w-[1200px] mx-auto">
+			<div class="text-center mb-14 fade-up">
+				<div class="inline-block text-[0.72rem] font-medium tracking-[0.12em] uppercase text-[#444e86] mb-4">Lo que hacemos</div>
+				<h2 class="font-[Syne] text-[clamp(2rem,4vw,3rem)] font-bold text-white mb-4">
+					Servicios <em class="not-italic text-[#444e86]">Aéreos</em> para el Campo
+				</h2>
+				<p class="text-base sm:text-lg text-[#898989] leading-relaxed max-w-xl mx-auto">
+					Cubrimos todas las etapas del cultivo con tecnología de precisión y pilotos certificados con experiencia en campo.
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border border-[rgba(68,78,134,0.15)] rounded-2xl overflow-hidden divide-y divide-[rgba(68,78,134,0.15)] sm:divide-y-0"
+				style="gap: 1.5px; background: rgba(68,78,134,0.15);">
+				{[
+					{ icon: '🌿', titulo: 'Fumigación con Drones', desc: 'Aplicación ultra precisa de agroquímicos con pulverización electrostática. Hasta 40% menos de producto, cero deriva, máxima cobertura foliar.' },
+					{ icon: '🌱', titulo: 'Siembra Aérea', desc: 'Sembramos pasturas, coberturas y cultivos secundarios desde el aire con alta densidad y uniformidad, sin compactar el suelo.' },
+					{ icon: '⚗️', titulo: 'Aplicación de Fertilizantes', desc: 'Fertirrigación aérea de precisión. Micro y macronutrientes aplicados en el momento justo, en la dosis exacta que el cultivo necesita.' },
+					{ icon: '📡', titulo: 'Monitoreo de Cultivos', desc: 'Cámaras multiespectrales NDVI y RGB que detectan estrés hídrico, plagas, enfermedades y malezas antes de que el ojo humano pueda verlas.' },
+					{ icon: '🗺️', titulo: 'Mapeo y Relevamiento', desc: 'Generación de ortomosaicos, modelos 3D, curvas de nivel y mapas de variabilidad con precisión centimétrica RTK/PPK.' },
+					{ icon: '💊', titulo: 'Aplicación Diferencial', desc: 'Vuelos de prescripción variable basados en mapas NDVI. Cada zona del lote recibe exactamente lo que necesita, sin desperdicios.' },
+				].map((s) => (
+					<div class="group bg-[#0a0a12] px-6 sm:px-10 py-8 sm:py-10 cursor-default relative overflow-hidden transition-colors hover:bg-[rgba(68,78,134,0.04)]">
+						<div class="absolute bottom-0 left-0 right-0 h-[2px] bg-[#444e86] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></div>
+						<div class="w-12 h-12 sm:w-[52px] sm:h-[52px] bg-[rgba(68,78,134,0.1)] border border-[rgba(68,78,134,0.2)] rounded-xl flex items-center justify-center mb-5 sm:mb-6 text-xl sm:text-2xl transition-all group-hover:bg-[rgba(68,78,134,0.18)] group-hover:border-[rgba(68,78,134,0.4)]">
+							{s.icon}
+						</div>
+						<h3 class="font-[Syne] text-base sm:text-lg font-bold text-white mb-3">{s.titulo}</h3>
+						<p class="text-sm text-[#898989] leading-relaxed">{s.desc}</p>
+						<div class="inline-flex items-center gap-1.5 mt-5 text-xs text-[#444e86] font-medium opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0">
+							Ver más →
+						</div>
+					</div>
+				))}
+			</div>
+
+			<!-- Calculadora Ahorro por No Pisoteo -->
+			<div class="max-w-[1000px] mx-auto mt-16 fade-up">
+				<div class="text-center mb-10">
+					<div class="inline-block text-[0.72rem] font-medium tracking-[0.12em] uppercase text-[#444e86] mb-4">Calculadora</div>
+					<h3 class="font-[Syne] text-[clamp(1.6rem,3vw,2.4rem)] font-bold text-white mb-3">
+						Ahorro por <em class="not-italic text-[#444e86]">No Pisoteo</em>
+					</h3>
+					<p class="text-[#898989] leading-[1.7] max-w-[520px] mx-auto">Calculá cuánto grano dejás de perder al no compactar el suelo con maquinaria pesada.</p>
+				</div>
+			<!-- Ahorro Panel -->
+			<div id="panel-ahorro">
+				<div class="bg-[#13141f] border border-[rgba(68,78,134,0.15)] rounded-2xl p-5 sm:p-8 lg:p-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+					<!-- Inputs -->
+					<div>
+						<div class="font-[Syne] text-xl font-bold text-white mb-8">📥 Datos del cultivo</div>
+						{[
+							{ label: 'Hectáreas del lote', id: 'hectareas', prefix: 'ha', val: '500', fn: 'calcAhorro()' },
+							{ label: 'Rendimiento promedio (kg/ha)', id: 'rendimiento', prefix: 'kg', val: '4500', fn: 'calcAhorro()' },
+							{ label: 'Precio del grano (ARS/ton)', id: 'precio-grano', prefix: '$', val: '380000', fn: 'calcAhorro()' },
+							{ label: 'Pasadas de maquinaria estimadas', id: 'pasadas', prefix: 'N°', val: '4', fn: 'calcAhorro()' },
+						].map((f) => (
+							<div class="mb-6 last:mb-0">
+								<label class="block text-xs text-[#898989] font-medium mb-2" for={f.id}>{f.label}</label>
+								<div class="relative">
+									<span class="absolute left-4 top-1/2 -translate-y-1/2 text-[#444e86] text-sm font-semibold">{f.prefix}</span>
+									<input
+										class="w-full bg-[rgba(10,10,18,0.8)] border border-[rgba(68,78,134,0.15)] rounded-xl py-3.5 pl-10 pr-4 text-white text-base font-[DM_Sans] outline-none transition-all focus:border-[#444e86] focus:shadow-[0_0_0_3px_rgba(68,78,134,0.12)]"
+										type="number" id={f.id} value={f.val} oninput={f.fn}
+									/>
+								</div>
+							</div>
+						))}
+					</div>
+					<!-- Results -->
+					<div>
+						<div class="font-[Syne] text-xl font-bold text-white mb-8">🌾 Ahorro estimado</div>
+						<div class="flex flex-col gap-4">
+							<div class="p-5 sm:p-6 rounded-2xl border bg-[rgba(68,78,134,0.08)] border-[rgba(68,78,134,0.3)]">
+								<div class="text-[0.7rem] text-[#898989] uppercase tracking-widest mb-1.5">Pérdida Evitada Total</div>
+								<div id="perdida-evitada" class="font-[Syne] text-3xl sm:text-4xl font-extrabold text-[#444e86] leading-none">$34.200.000</div>
+								<div class="text-xs text-[#898989] mt-2">Valor del grano que no se pierde por pisoteo</div>
+							</div>
+							<div class="p-5 rounded-2xl border bg-[rgba(10,10,18,0.6)] border-[rgba(68,78,134,0.15)]">
+								<div class="text-[0.7rem] text-[#898989] uppercase tracking-widest mb-1.5">Kg Evitados de Pérdida</div>
+								<div id="kg-evitados" class="font-[Syne] text-2xl font-extrabold text-white leading-none">90.000 kg</div>
+								<div class="text-xs text-[#898989] mt-2">Estimado 2% de pérdida por pasada de maquinaria</div>
+							</div>
+							<div class="p-5 rounded-2xl border bg-[rgba(10,10,18,0.6)] border-[rgba(68,78,134,0.15)]">
+								<div class="text-[0.7rem] text-[#898989] uppercase tracking-widest mb-1.5">Ahorro por Hectárea</div>
+								<div id="ahorro-ha" class="font-[Syne] text-2xl font-extrabold text-white leading-none">$68.400</div>
+								<div class="text-xs text-[#898989] mt-2">Promedio de ahorro por cada hectárea trabajada</div>
+							</div>
+						</div>
+						<!-- Comparativa -->
+						<div class="mt-5 bg-[rgba(10,10,18,0.8)] border border-[rgba(68,78,134,0.15)] rounded-xl p-5 sm:p-6">
+							<div class="text-sm font-semibold text-white mb-5">Comparativa: Maquinaria vs Drone</div>
+							<div class="mb-4">
+								<div class="text-xs text-[#898989] mb-3">Pérdida de rendimiento</div>
+								<div class="flex flex-col gap-2">
+									<div class="flex items-center gap-3">
+										<span class="text-[0.68rem] text-[#898989] w-20 flex-shrink-0">Maquinaria</span>
+										<div class="flex-1 h-2 bg-[rgba(255,255,255,0.06)] rounded-full overflow-hidden">
+											<div id="bar-maq" class="h-full bg-[rgba(255,255,255,0.25)] rounded-full transition-all duration-1000" style="width:72%"></div>
+										</div>
+										<span id="pct-maq" class="text-xs text-white font-semibold w-10 text-right">8%</span>
+									</div>
+									<div class="flex items-center gap-3">
+										<span class="text-[0.68rem] text-[#898989] w-20 flex-shrink-0">Drone</span>
+										<div class="flex-1 h-2 bg-[rgba(255,255,255,0.06)] rounded-full overflow-hidden">
+											<div class="h-full w-0 bg-[#444e86] rounded-full"></div>
+										</div>
+										<span class="text-xs text-white font-semibold w-10 text-right">0%</span>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="text-xs text-[#898989] mb-3">Compactación del suelo</div>
+								<div class="flex flex-col gap-2">
+									<div class="flex items-center gap-3">
+										<span class="text-[0.68rem] text-[#898989] w-20 flex-shrink-0">Maquinaria</span>
+										<div class="flex-1 h-2 bg-[rgba(255,255,255,0.06)] rounded-full overflow-hidden">
+											<div class="h-full w-[90%] bg-[rgba(255,255,255,0.25)] rounded-full"></div>
+										</div>
+										<span class="text-xs text-white font-semibold w-10 text-right">Alta</span>
+									</div>
+									<div class="flex items-center gap-3">
+										<span class="text-[0.68rem] text-[#898989] w-20 flex-shrink-0">Drone</span>
+										<div class="flex-1 h-2 bg-[rgba(255,255,255,0.06)] rounded-full overflow-hidden">
+											<div class="h-full w-0 bg-[#444e86] rounded-full"></div>
+										</div>
+										<span class="text-xs text-white font-semibold w-10 text-right">Nula</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- BENEFICIOS -->
+	<section class="py-20 sm:py-28 px-4 sm:px-8 bg-[#171a30] relative overflow-hidden" id="beneficios">
+		<div class="absolute inset-0 pointer-events-none"
+			style="background: radial-gradient(ellipse 60% 60% at 80% 50%, rgba(68,78,134,0.08), transparent);">
+		</div>
+		<div class="max-w-[1200px] mx-auto relative z-10">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+				<!-- Left -->
+				<div class="fade-up">
+					<div class="inline-block text-[0.72rem] font-medium tracking-[0.12em] uppercase text-[#444e86] mb-4">Por qué elegirnos</div>
+					<h2 class="font-[Syne] text-[clamp(2rem,4vw,3rem)] font-bold text-white mb-4">
+						Tecnología que <em class="not-italic text-[#444e86]">rinde</em> desde el primer vuelo
+					</h2>
+					<p class="text-[#898989] leading-[1.7] max-w-[560px]">
+						Nuestros drones no son solo una herramienta: son una ventaja competitiva que se traduce en pesos en tu bolsillo.
+					</p>
+					<div class="mt-10 bg-[rgba(10,10,18,0.5)] border border-[rgba(68,78,134,0.15)] rounded-2xl p-6 sm:p-8">
+						<div class="text-xs text-[#898989] mb-2">Cobertura promedio diaria</div>
+						<div class="font-[Syne] text-5xl font-extrabold text-[#444e86] leading-none">100 ha</div>
+						<div class="text-sm text-[#898989] mt-2">vs. 40-50 ha de una máquina terrestre</div>
+						<div class="mt-5 h-2 bg-[rgba(255,255,255,0.06)] rounded-full overflow-hidden">
+							<div class="h-full w-[75%] bg-[#444e86] rounded-full" style="animation: progressFill 1.5s ease 0.5s both;"></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Right grid -->
+				<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+					{[
+						{ icon: '⚡', titulo: 'Velocidad Operativa', desc: 'Hasta 10x más rápido que equipos terrestres en condiciones difíciles.' },
+						{ icon: '🎯', titulo: 'Precisión GPS RTK', desc: 'Error de posicionamiento menor a 5 cm. Cero solapamiento innecesario.' },
+						{ icon: '💧', titulo: 'Ahorro de Insumos', desc: '30-40% menos producto por la pulverización de gota fina controlada.' },
+						{ icon: '🌍', titulo: 'Sin Compactación', desc: 'El drone no pisa el cultivo. Preserva el suelo y evita pérdidas de rendimiento.' },
+						{ icon: '🔋', titulo: 'Operación 24/7', desc: 'Vuelos nocturnos posibles con sensores térmicos y luces anti-colisión.' },
+						{ icon: '📊', titulo: 'Reportes Digitales', desc: 'Cada vuelo genera datos georreferenciados, trazabilidad completa.' },
+					].map((b) => (
+						<div class="fade-up flex items-start gap-4 p-5 bg-[rgba(10,10,18,0.5)] border border-[rgba(68,78,134,0.15)] rounded-xl transition-colors hover:border-[rgba(68,78,134,0.35)]">
+							<div class="w-10 h-10 flex-shrink-0 bg-[rgba(68,78,134,0.12)] rounded-xl flex items-center justify-center text-lg">
+								{b.icon}
+							</div>
+							<div>
+								<div class="text-sm font-semibold text-white mb-1">{b.titulo}</div>
+								<div class="text-xs text-[#898989] leading-relaxed">{b.desc}</div>
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- GALERÍA -->
+	<section class="py-20 sm:py-28 px-4 sm:px-8 bg-[#0a0a12]" id="galeria">
+		<div class="max-w-[1200px] mx-auto">
+			<div class="text-center mb-12 fade-up">
+				<div class="inline-block text-[0.72rem] font-medium tracking-[0.12em] uppercase text-[#444e86] mb-4">Galería</div>
+				<h2 class="font-[Syne] text-[clamp(2rem,4vw,3rem)] font-bold text-white mb-4">
+					Drones en <em class="not-italic text-[#444e86]">acción</em>
+				</h2>
+				<p class="text-[#898989] leading-[1.7] max-w-[560px] mx-auto">
+					Cada vuelo es una historia de tecnología aplicada al campo real.
+				</p>
+			</div>
+
+			<!-- Gallery: imagen grande izquierda + grid 2x2 derecha -->
+			<div class="flex flex-col lg:flex-row gap-4 sm:gap-5">
+
+				<!-- Imagen principal (ocupa toda la altura) -->
+				<div class="fade-up group relative rounded-2xl overflow-hidden border border-[rgba(68,78,134,0.15)] bg-[#13141f] transition-all duration-300 hover:border-[rgba(68,78,134,0.35)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.45)] w-full lg:w-[45%] aspect-[4/3] lg:aspect-auto lg:min-h-[560px]">
+					<img src="/droneVolandoSoja.webp" alt="Drone en vuelo sobre soja" class="w-full h-full object-cover" />
+					<div class="absolute inset-0 bg-gradient-to-t from-[rgba(10,10,18,0.9)] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+						<span class="text-sm font-semibold text-white">Fumigación aérea · Soja</span>
+					</div>
+				</div>
+
+				<!-- Grid 2x2 derecha -->
+				<div class="grid grid-cols-2 gap-4 sm:gap-5 w-full lg:w-[55%]">
+					{[
+						{ src: '/droneMonitoreo.webp', alt: 'Monitoreo NDVI · Maíz', label: 'Monitoreo NDVI · Maíz' },
+						{ src: '/droneMapeo.webp', alt: 'Mapeo 3D · Topografía', label: 'Mapeo 3D · Topografía' },
+						{ src: '/droneAplicacionFertilizante.webp', alt: 'Fertilización · Trigo', label: 'Fertilización · Trigo' },
+						{ src: '/droneSiembraAerea.webp', alt: 'Siembra aérea · Pastura', label: 'Siembra aérea · Pastura' },
+					].map((img) => (
+						<div class="fade-up group relative rounded-2xl overflow-hidden border border-[rgba(68,78,134,0.15)] bg-[#13141f] transition-all duration-300 hover:border-[rgba(68,78,134,0.35)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.45)] aspect-square">
+							<img src={img.src} alt={img.alt} class="w-full h-full object-cover" />
+							<div class="absolute inset-0 bg-gradient-to-t from-[rgba(10,10,18,0.9)] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+								<span class="text-xs sm:text-sm font-semibold text-white">{img.label}</span>
+							</div>
+						</div>
+					))}
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- TESTIMONIOS -->
+	<section class="py-20 sm:py-28 px-4 sm:px-8 bg-[#171a30] relative overflow-hidden" id="testimonios">
+		<div class="absolute inset-0 pointer-events-none"
+			style="background: radial-gradient(ellipse 50% 70% at 10% 50%, rgba(68,78,134,0.06), transparent);">
+		</div>
+		<div class="max-w-[1200px] mx-auto relative z-10">
+			<div class="text-center mb-12 sm:mb-16 fade-up">
+				<div class="inline-block text-[0.72rem] font-medium tracking-[0.12em] uppercase text-[#444e86] mb-4">Testimonios</div>
+				<h2 class="font-[Syne] text-[clamp(2rem,4vw,3rem)] font-bold text-white mb-4">
+					Lo que dicen los <em class="not-italic text-[#444e86]">productores</em>
+				</h2>
+				<p class="text-[#898989] leading-[1.7] max-w-[560px] mx-auto">
+					Resultados reales de gente que trabaja la tierra todos los días.
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+				{[
+					{ initials: 'JM', name: 'Juan M. Rodríguez', role: 'Productor agropecuario · Córdoba, 1.200 ha',
+					  text: '"En la primera campaña con drones redujimos el gasto en herbicida un 35%. El equipo es muy profesional y los datos del monitoreo NDVI nos permitieron tomar decisiones a tiempo. No volvería a la maquinaria para fumigación."' },
+					{ initials: 'CG', name: 'Ing. Carlos García', role: 'Agrónomo · Buenos Aires',
+					  text: '"Como agrónomo, lo que más me sorprende es la precisión del mapeo. Los ortomosaicos que entregan tienen una calidad impresionante. Detectamos un foco de roya en soja 10 días antes de que fuera visible desde el suelo."' },
+					{ initials: 'LF', name: 'Luis Fernández', role: 'Contratista agropecuario · Santa Fe',
+					  text: '"Compramos el drone de ellos y en 3 meses ya recuperamos la inversión. El servicio post-venta es excelente, siempre disponibles para capacitarnos. Ahora prestamos servicio a vecinos y es un negocio muy rentable."' },
+				].map((t) => (
+					<div class="fade-up bg-[rgba(10,10,18,0.6)] border border-[rgba(68,78,134,0.15)] rounded-2xl p-6 sm:p-10 transition-all duration-300 hover:border-[rgba(68,78,134,0.35)] hover:-translate-y-1">
+						<div class="text-[#444e86] text-sm mb-5">★★★★★</div>
+						<p class="text-[0.95rem] text-[#c7c7d6] leading-[1.75] italic mb-7">{t.text}</p>
+						<div class="flex items-center gap-4">
+							<div class="w-12 h-12 flex-shrink-0 rounded-full bg-[rgba(68,78,134,0.15)] border border-[rgba(68,78,134,0.3)] flex items-center justify-center font-[Syne] font-bold text-sm text-[#444e86]">
+								{t.initials}
+							</div>
+							<div>
+								<div class="font-semibold text-sm text-white">{t.name}</div>
+								<div class="text-xs text-[#898989] mt-0.5">{t.role}</div>
+							</div>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- CONTACTO -->
+	<section class="py-20 sm:py-28 px-4 sm:px-8 bg-[#0a0a12]" id="contacto">
+		<div class="max-w-[1200px] mx-auto">
+			<div class="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 items-start">
+
+				<!-- Info -->
+				<div class="fade-up pt-0 lg:pt-4">
+					<div class="inline-block text-[0.72rem] font-medium tracking-[0.12em] uppercase text-[#444e86] mb-4">Contacto</div>
+					<h2 class="font-[Syne] text-[clamp(2rem,4vw,3rem)] font-bold text-white mb-4">
+						Hablemos de tu <em class="not-italic text-[#444e86]">campo</em>
+					</h2>
+					<p class="text-[#898989] leading-[1.7] mb-10">Cotizá sin compromiso. Respondemos en menos de 24 horas.</p>
+
+					{[
+						{ icon: '📞', label: 'Teléfono / WhatsApp', val: '+54 9 351 000-0000' },
+						{ icon: '📧', label: 'Email', val: 'info@eavision.com' },
+						{ icon: '📍', label: 'Zona de operaciones', val: 'Córdoba · Buenos Aires · Santa Fe · Entre Ríos' },
+					].map((c) => (
+						<div class="flex items-start gap-4 mb-7">
+							<div class="w-12 h-12 flex-shrink-0 bg-[rgba(68,78,134,0.1)] border border-[rgba(68,78,134,0.2)] rounded-xl flex items-center justify-center text-xl">
+								{c.icon}
+							</div>
+							<div>
+								<div class="text-xs text-[#898989] mb-1">{c.label}</div>
+								<div class="text-[0.97rem] text-white font-medium">{c.val}</div>
+							</div>
+						</div>
+					))}
+
+					<a href="https://wa.me/5493510000000?text=Hola!%20Quiero%20cotizar%20servicio%20de%20drones%20para%20mi%20campo."
+						class="inline-flex items-center gap-2 bg-[#25d366] text-white px-6 py-3.5 rounded-xl font-semibold text-sm no-underline transition-all hover:bg-[#20ba5a] hover:-translate-y-0.5 mt-2"
+						target="_blank">
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+						Escribinos por WhatsApp
+					</a>
+				</div>
+
+				<!-- Form -->
+				<div class="fade-up [transition-delay:0.2s] bg-[#13141f] border border-[rgba(68,78,134,0.15)] rounded-2xl p-6 sm:p-10">
+					<div class="font-[Syne] text-xl sm:text-2xl font-bold text-white mb-7">Solicitar Cotización</div>
+					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+						<div class="flex flex-col gap-1.5">
+							<label class="text-xs text-[#898989]">Nombre y apellido</label>
+							<input type="text" class="bg-[rgba(10,10,18,0.8)] border border-[rgba(68,78,134,0.15)] rounded-xl px-4 py-3 text-white text-sm font-[DM_Sans] outline-none transition-all focus:border-[#444e86] focus:shadow-[0_0_0_3px_rgba(68,78,134,0.12)]" placeholder="Juan Rodríguez" />
+						</div>
+						<div class="flex flex-col gap-1.5">
+							<label class="text-xs text-[#898989]">Teléfono</label>
+							<input type="tel" class="bg-[rgba(10,10,18,0.8)] border border-[rgba(68,78,134,0.15)] rounded-xl px-4 py-3 text-white text-sm font-[DM_Sans] outline-none transition-all focus:border-[#444e86] focus:shadow-[0_0_0_3px_rgba(68,78,134,0.12)]" placeholder="+54 9 351 ..." />
+						</div>
+						<div class="flex flex-col gap-1.5">
+							<label class="text-xs text-[#898989]">Email</label>
+							<input type="email" class="bg-[rgba(10,10,18,0.8)] border border-[rgba(68,78,134,0.15)] rounded-xl px-4 py-3 text-white text-sm font-[DM_Sans] outline-none transition-all focus:border-[#444e86] focus:shadow-[0_0_0_3px_rgba(68,78,134,0.12)]" placeholder="juan@campo.com" />
+						</div>
+						<div class="flex flex-col gap-1.5">
+							<label class="text-xs text-[#898989]">Provincia</label>
+							<select class="bg-[rgba(10,10,18,0.8)] border border-[rgba(68,78,134,0.15)] rounded-xl px-4 py-3 text-white text-sm font-[DM_Sans] outline-none transition-all focus:border-[#444e86] appearance-none cursor-pointer">
+								<option value="">Seleccionar...</option>
+								<option>Córdoba</option>
+								<option>Buenos Aires</option>
+								<option>Santa Fe</option>
+								<option>Entre Ríos</option>
+								<option>La Pampa</option>
+								<option>Chaco</option>
+								<option>Santiago del Estero</option>
+								<option>Otra</option>
+							</select>
+						</div>
+						<div class="sm:col-span-2 flex flex-col gap-1.5">
+							<label class="text-xs text-[#898989]">Servicio de interés</label>
+							<select class="bg-[rgba(10,10,18,0.8)] border border-[rgba(68,78,134,0.15)] rounded-xl px-4 py-3 text-white text-sm font-[DM_Sans] outline-none transition-all focus:border-[#444e86] appearance-none cursor-pointer">
+								<option value="">¿Qué necesitás?</option>
+								<option>Fumigación con drones</option>
+								<option>Siembra aérea</option>
+								<option>Aplicación de fertilizantes</option>
+								<option>Monitoreo y mapeo</option>
+								<option>Compra de drone agrícola</option>
+								<option>Todos los servicios</option>
+							</select>
+						</div>
+						<div class="sm:col-span-2 flex flex-col gap-1.5">
+							<label class="text-xs text-[#898989]">Hectáreas aproximadas / Mensaje</label>
+							<textarea class="bg-[rgba(10,10,18,0.8)] border border-[rgba(68,78,134,0.15)] rounded-xl px-4 py-3 text-white text-sm font-[DM_Sans] outline-none transition-all focus:border-[#444e86] focus:shadow-[0_0_0_3px_rgba(68,78,134,0.12)] resize-y min-h-[120px] w-full" placeholder="Contanos sobre tu campo y qué necesitás. Ej: 800 ha de soja en Córdoba, necesito cotización para fumigación esta campaña."></textarea>
+						</div>
+					</div>
+					<button type="submit" class="w-full mt-5 bg-[#444e86] text-[#0a0a12] px-7 py-4 rounded-xl font-semibold text-base inline-flex items-center justify-center gap-2 transition-all hover:bg-[#5b67a8] hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(68,78,134,0.3)] cursor-pointer border-none font-[DM_Sans]">
+						Enviar Consulta →
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FOOTER -->
+	<footer class="bg-[#171a30] border-t border-[rgba(68,78,134,0.15)] pt-14 sm:pt-16 pb-8 px-4 sm:px-8">
+		<div class="max-w-[1200px] mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-8 sm:gap-10 lg:gap-12 mb-12">
+			<div class="col-span-2 sm:col-span-2 lg:col-span-1">
+				<div class="font-[Syne] text-2xl font-extrabold text-white mb-4">Eavision</div>
+				<p class="text-sm text-[#898989] leading-relaxed mb-6 max-w-xs">
+					Tecnología aérea de precisión para el campo argentino. Más eficiencia, menos costo, máxima rentabilidad.
+				</p>
+				<div class="flex gap-3">
+					{['📷', '📘', '💼', '▶️'].map((icon) => (
+						<a href="#" class="w-9 h-9 bg-[rgba(68,78,134,0.1)] border border-[rgba(68,78,134,0.2)] rounded-lg flex items-center justify-center text-base text-[#898989] no-underline transition-all hover:bg-[#444e86] hover:text-[#0a0a12] hover:border-[#444e86]">
+							{icon}
+						</a>
+					))}
+				</div>
+			</div>
+			<div>
+				<h4 class="font-[Syne] text-sm font-bold text-white mb-5 uppercase tracking-widest">Servicios</h4>
+				<ul class="list-none flex flex-col gap-2.5">
+					{['Fumigación', 'Siembra Aérea', 'Fertilización', 'Monitoreo NDVI', 'Mapeo 3D'].map((s) => (
+						<li><a href="#" class="text-sm text-[#898989] no-underline transition-colors hover:text-[#444e86]">{s}</a></li>
+					))}
+				</ul>
+			</div>
+			<div>
+				<h4 class="font-[Syne] text-sm font-bold text-white mb-5 uppercase tracking-widest">Empresa</h4>
+				<ul class="list-none flex flex-col gap-2.5">
+					{['Nosotros', 'Flota', 'Certificaciones', 'Blog', 'Trabaja con Nosotros'].map((s) => (
+						<li><a href="#" class="text-sm text-[#898989] no-underline transition-colors hover:text-[#444e86]">{s}</a></li>
+					))}
+				</ul>
+			</div>
+			<div>
+				<h4 class="font-[Syne] text-sm font-bold text-white mb-5 uppercase tracking-widest">Legal</h4>
+				<ul class="list-none flex flex-col gap-2.5">
+					{['Términos de servicio', 'Privacidad', 'Habilitaciones ANAC'].map((s) => (
+						<li><a href="#" class="text-sm text-[#898989] no-underline transition-colors hover:text-[#444e86]">{s}</a></li>
+					))}
+				</ul>
+			</div>
+		</div>
+		<div class="max-w-[1200px] mx-auto pt-6 border-t border-[rgba(68,78,134,0.15)] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#898989]">
+			<span>© 2026 Eavision. Todos los derechos reservados.</span>
+			<span>Diseñado para el campo argentino 🌾</span>
+		</div>
+	</footer>
+
+</Layout>
+
+<style>
+	html {
+		scroll-behavior: smooth;
+	}
+	/* Animaciones que Tailwind no puede generar dinámicamente */
+	@keyframes float {
+		0%, 100% { transform: translateY(0px); }
+		50% { transform: translateY(-15px); }
+	}
+	@keyframes radar {
+		from { transform: rotate(0deg); }
+		to { transform: rotate(360deg); }
+	}
+	@keyframes progressFill {
+		from { width: 0; }
+	}
+
+	/* Fade-up animation */
+	.fade-up {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: opacity 0.7s ease, transform 0.7s ease;
+	}
+	.fade-up.visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	.fade-up.[transition-delay\:0\.1s] { transition-delay: 0.1s; }
+	.fade-up.[transition-delay\:0\.2s] { transition-delay: 0.2s; }
+	.fade-up.[transition-delay\:0\.3s] { transition-delay: 0.3s; }
+
+	/* Scrollbar */
+	::-webkit-scrollbar { width: 4px; }
+	::-webkit-scrollbar-track { background: #0a0a12; }
+	::-webkit-scrollbar-thumb { background: #444e86; border-radius: 2px; }
+
+	/* Font families: HarmonyOS Sans (texto) / HarmonyOS Sans SC (títulos y CJK) */
+	* { font-family: 'HarmonyOS Sans', 'HarmonyOS Sans SC', sans-serif; }
+	.font-\[Syne\] { font-family: 'HarmonyOS Sans SC', 'HarmonyOS Sans', sans-serif; }
+
+	/* Select option color fix */
+	select option { background: #13141f; color: white; }
+
+	/* Input number arrows remove */
+	input[type=number]::-webkit-outer-spin-button,
+	input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+	input[type=number] { -moz-appearance: textfield; }
+
+	/* Animate float for drone svg */
+	.animate-\[float_4s_ease-in-out_infinite\] { animation: float 4s ease-in-out infinite; }
+
+	/* Animate radar */
+	.animate-\[radar_6s_linear_infinite\] { animation: radar 6s linear infinite; }
+</style>
+
+<script>
+	// Fonts
+	if (!document.querySelector('link[href*="fonts.googleapis.com/css2?family=Syne"]')) {
+		const link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.href = 'https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap';
+		document.head.appendChild(link);
+	}
+
+	// Modal galería drone
+	const modalPhotos = [
+		'/droneVolandoSoja.webp',
+		'/droneMonitoreo.webp',
+		'/droneMapeo.webp',
+		'/droneAplicacionFertilizante.webp',
+		'/droneSiembraAerea.webp',
+	];
+	let currentPhoto = 0;
+
+	function openModal() {
+		const modal = document.getElementById('drone-modal');
+		const inner = document.getElementById('modal-inner');
+		modal.classList.remove('opacity-0', 'pointer-events-none');
+		inner.classList.remove('translate-y-6');
+		document.body.style.overflow = 'hidden';
+		selectPhoto(0);
+	}
+
+	function closeModal() {
+		const modal = document.getElementById('drone-modal');
+		const inner = document.getElementById('modal-inner');
+		modal.classList.add('opacity-0', 'pointer-events-none');
+		inner.classList.add('translate-y-6');
+		document.body.style.overflow = '';
+	}
+
+	function selectPhoto(index) {
+		currentPhoto = index;
+		const img = document.getElementById('modal-main-img');
+		const counter = document.getElementById('modal-counter');
+		if (img) { img.style.opacity = '0'; setTimeout(() => { img.src = modalPhotos[index]; img.style.opacity = '1'; }, 150); }
+		if (counter) counter.textContent = `${index + 1} / ${modalPhotos.length}`;
+		document.querySelectorAll('.modal-thumb').forEach((t, i) => {
+			t.style.borderColor = i === index ? '#444e86' : 'rgba(68,78,134,0.15)';
+		});
+	}
+
+	function nextPhoto() { selectPhoto((currentPhoto + 1) % modalPhotos.length); }
+	function prevPhoto() { selectPhoto((currentPhoto - 1 + modalPhotos.length) % modalPhotos.length); }
+
+	// Cerrar modal con ESC
+	document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+	window.openModal = openModal;
+	window.closeModal = closeModal;
+	window.selectPhoto = selectPhoto;
+	window.nextPhoto = nextPhoto;
+	window.prevPhoto = prevPhoto;
+
+	// Navbar scroll
+	window.addEventListener('scroll', () => {
+		const nav = document.getElementById('navbar');
+		if (nav) nav.style.background = window.scrollY > 50 ? 'rgba(10,10,18,0.97)' : 'rgba(10,10,18,0.85)';
+	});
+
+	// Hamburger
+	let menuOpen = false;
+	document.getElementById('hamburger')?.addEventListener('click', () => {
+		menuOpen = !menuOpen;
+		const menu = document.getElementById('mobileMenu');
+		if (menu) {
+			menu.style.display = menuOpen ? 'flex' : 'none';
+		}
+	});
+
+	function closeMobileMenu() {
+		menuOpen = false;
+		const menu = document.getElementById('mobileMenu');
+		if (menu) menu.style.display = 'none';
+	}
+	window.closeMobileMenu = closeMobileMenu;
+
+	// Intersection Observer for fade-up
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+	}, { threshold: 0.1 });
+	document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+	// ROI Calculator
+	function calcROI() {
+		const precio = parseFloat(document.getElementById('precio-drone')?.value) || 0;
+		const haDia = parseFloat(document.getElementById('ha-dia')?.value) || 0;
+		const precioHa = parseFloat(document.getElementById('precio-ha')?.value) || 0;
+		const diasMes = parseFloat(document.getElementById('dias-mes')?.value) || 0;
+		const costoOp = parseFloat(document.getElementById('costo-op')?.value) || 0;
+
+		const haMes = haDia * diasMes;
+		const ingresosBrutos = haMes * precioHa;
+		const gananciaNeta = ingresosBrutos - costoOp;
+		const tiempoRecupero = gananciaNeta > 0 ? precio / gananciaNeta : 0;
+		const proyeccionAnual = gananciaNeta * 12;
+
+		const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+		set('ganancia-mensual', '$' + formatNum(gananciaNeta));
+		set('tiempo-recupero', tiempoRecupero > 0 ? tiempoRecupero.toFixed(1) + ' meses' : '—');
+		set('proyeccion-anual', '$' + formatNum(proyeccionAnual));
+		set('ingresos-brutos', '$' + formatNum(ingresosBrutos));
+		set('ha-mes-desc', formatNum(haMes) + ' ha/mes × $' + formatNum(precioHa) + '/ha');
+	}
+	window.calcROI = calcROI;
+
+	// Ahorro Calculator
+	function calcAhorro() {
+		const ha = parseFloat(document.getElementById('hectareas')?.value) || 0;
+		const rend = parseFloat(document.getElementById('rendimiento')?.value) || 0;
+		const precioGrano = parseFloat(document.getElementById('precio-grano')?.value) || 0;
+		const pasadas = parseFloat(document.getElementById('pasadas')?.value) || 0;
+
+		const pctPerdida = pasadas * 0.02;
+		const kgPerdidos = ha * rend * pctPerdida;
+		const valorPerdida = kgPerdidos * (precioGrano / 1000);
+		const ahorroPorHa = ha > 0 ? valorPerdida / ha : 0;
+
+		const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+		set('perdida-evitada', '$' + formatNum(valorPerdida));
+		set('kg-evitados', formatNum(kgPerdidos) + ' kg');
+		set('ahorro-ha', '$' + formatNum(ahorroPorHa));
+
+		const barMaq = document.getElementById('bar-maq');
+		if (barMaq) barMaq.style.width = Math.min(pctPerdida * 100 * 9, 95) + '%';
+		const pctMaq = document.getElementById('pct-maq');
+		if (pctMaq) pctMaq.textContent = (pctPerdida * 100).toFixed(1) + '%';
+	}
+	window.calcAhorro = calcAhorro;
+
+	function formatNum(n) {
+		if (isNaN(n) || !isFinite(n)) return '0';
+		return Math.round(n).toLocaleString('es-AR');
+	}
+
+	// Init
+	calcROI();
+	calcAhorro();
+</script>
