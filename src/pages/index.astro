@@ -11,28 +11,85 @@ const description = 'Venta y servicios de drones agrícolas EaVision: fumigació
 	<link rel="stylesheet" href="https://unpkg.com/harmonyos-sans-sc-webfont-splitted@1.1.0/dist/index.css" />
 
 	<!-- NAVBAR -->
-	<nav id="navbar" class="fixed top-0 left-0 right-0 z-[100] px-4 sm:px-8 h-[70px] flex items-center justify-between bg-[rgba(10,10,18,0.85)] backdrop-blur-xl border-b border-[rgba(68,78,134,0.15)] transition-all duration-300" aria-label="Navegación principal">
-		<a href="#" class="font-[Syne] text-xl sm:text-2xl font-extrabold text-white no-underline" aria-label="Eavision - Inicio">
-			Eavision
+<nav
+	id="navbar"
+	class="fixed inset-x-0 top-0 z-50 border-b border-[rgba(68,78,134,0.15)] bg-[rgba(10,10,18,0.85)] backdrop-blur-xl transition-all duration-300"
+	aria-label="Navegación principal"
+>
+	<div class="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+
+		<!-- Logo -->
+		<a
+			href="#"
+			aria-label="EA Vision - Inicio"
+			class="flex items-center"
+		>
+			<img
+				src="/logos/logoEavisionAzul.webp"
+				alt="EA Vision"
+				class="h-10 sm:h-11 lg:h-12 w-auto transition-transform duration-300 hover:scale-105"
+			/>
 		</a>
-		<ul class="hidden md:flex items-center gap-8 lg:gap-10 list-none" id="navLinks">
-			<li><a href="#nosotros" class="text-[#898989] no-underline text-sm font-normal tracking-wide transition-colors hover:text-white">Nosotros</a></li>
-			<li><a href="#ventas" class="text-[#898989] no-underline text-sm font-normal tracking-wide transition-colors hover:text-white">Equipos</a></li>
-			<li><a href="#servicios" class="text-[#898989] no-underline text-sm font-normal tracking-wide transition-colors hover:text-white">Servicios</a></li>
-			<li><a href="#beneficios" class="text-[#898989] no-underline text-sm font-normal tracking-wide transition-colors hover:text-white">Beneficios</a></li>
-			<li><a href="#galeria" class="text-[#898989] no-underline text-sm font-normal tracking-wide transition-colors hover:text-white">Galería</a></li>
+
+		<!-- Desktop -->
+		<ul class="hidden md:flex items-center gap-7 lg:gap-10">
 			<li>
-				<a href="#contacto" class="bg-[#444e86] text-[#0a0a12] px-5 py-2 rounded-md font-medium text-sm transition-all hover:bg-[#5b67a8] hover:-translate-y-px no-underline">
+				<a href="#nosotros" class="text-sm text-[#9ca3af] transition-colors hover:text-white">
+					Nosotros
+				</a>
+			</li>
+
+			<li>
+				<a href="#ventas" class="text-sm text-[#9ca3af] transition-colors hover:text-white">
+					Equipos
+				</a>
+			</li>
+
+			<li>
+				<a href="#servicios" class="text-sm text-[#9ca3af] transition-colors hover:text-white">
+					Servicios
+				</a>
+			</li>
+
+			<li>
+				<a href="#beneficios" class="text-sm text-[#9ca3af] transition-colors hover:text-white">
+					Beneficios
+				</a>
+			</li>
+
+			<li>
+				<a href="#galeria" class="text-sm text-[#9ca3af] transition-colors hover:text-white">
+					Galería
+				</a>
+			</li>
+
+			<li>
+				<a
+					href="#contacto"
+					class="rounded-xl bg-[#444e86] px-5 py-2.5 text-sm font-semibold text-[#0a0a12] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#5b67a8]"
+				>
 					Cotizar
 				</a>
 			</li>
 		</ul>
-		<button class="md:hidden flex flex-col gap-[5px] cursor-pointer bg-transparent border-none p-1" id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobileMenu">
-			<span class="block w-[22px] h-[1.5px] bg-white rounded-sm transition-all"></span>
-			<span class="block w-[22px] h-[1.5px] bg-white rounded-sm transition-all"></span>
-			<span class="block w-[22px] h-[1.5px] bg-white rounded-sm transition-all"></span>
+
+		<!-- Botón hamburguesa -->
+		<button
+			id="hamburger"
+			class="flex h-10 w-10 items-center justify-center rounded-lg border border-[rgba(68,78,134,0.2)] md:hidden"
+			aria-label="Abrir menú"
+			aria-expanded="false"
+			aria-controls="mobileMenu"
+		>
+			<div class="flex flex-col gap-1.5">
+				<span class="h-[2px] w-6 rounded-full bg-white"></span>
+				<span class="h-[2px] w-6 rounded-full bg-white"></span>
+				<span class="h-[2px] w-6 rounded-full bg-white"></span>
+			</div>
 		</button>
-	</nav>
+
+	</div>
+</nav>
 
 	<!-- MOBILE NAV MENU -->
 	<div id="mobileMenu" class="hidden fixed top-[70px] left-0 right-0 z-[99] bg-[#0a0a12] border-b border-[rgba(68,78,134,0.15)] px-6 py-8 flex-col gap-6">
@@ -782,16 +839,37 @@ const description = 'Venta y servicios de drones agrícolas EaVision: fumigació
 						</div>
 						<div class="flex flex-col gap-1.5">
 							<label class="text-xs text-[#898989]" for="provincia">Provincia</label>
-							<select id="provincia" name="provincia" class="bg-[rgba(10,10,18,0.8)] border border-[rgba(68,78,134,0.15)] rounded-xl px-4 py-3 text-white text-sm font-[DM_Sans] outline-none transition-all focus:border-[#444e86] appearance-none cursor-pointer">
+
+							<select
+								id="provincia"
+								name="provincia"
+								class="bg-[rgba(10,10,18,0.8)] border border-[rgba(68,78,134,0.15)] rounded-xl px-4 py-3 text-white text-sm font-[DM_Sans] outline-none transition-all focus:border-[#444e86] appearance-none cursor-pointer"
+							>
 								<option value="">Seleccionar...</option>
-								<option>Córdoba</option>
-								<option>Buenos Aires</option>
-								<option>Santa Fe</option>
-								<option>Entre Ríos</option>
-								<option>La Pampa</option>
-								<option>Chaco</option>
-								<option>Santiago del Estero</option>
-								<option>Otra</option>
+								<option value="Buenos Aires">Buenos Aires</option>
+								<option value="Ciudad Autónoma de Buenos Aires">Ciudad Autónoma de Buenos Aires</option>
+								<option value="Catamarca">Catamarca</option>
+								<option value="Chaco">Chaco</option>
+								<option value="Chubut">Chubut</option>
+								<option value="Córdoba">Córdoba</option>
+								<option value="Corrientes">Corrientes</option>
+								<option value="Entre Ríos">Entre Ríos</option>
+								<option value="Formosa">Formosa</option>
+								<option value="Jujuy">Jujuy</option>
+								<option value="La Pampa">La Pampa</option>
+								<option value="La Rioja">La Rioja</option>
+								<option value="Mendoza">Mendoza</option>
+								<option value="Misiones">Misiones</option>
+								<option value="Neuquén">Neuquén</option>
+								<option value="Río Negro">Río Negro</option>
+								<option value="Salta">Salta</option>
+								<option value="San Juan">San Juan</option>
+								<option value="San Luis">San Luis</option>
+								<option value="Santa Cruz">Santa Cruz</option>
+								<option value="Santa Fe">Santa Fe</option>
+								<option value="Santiago del Estero">Santiago del Estero</option>
+								<option value="Tierra del Fuego">Tierra del Fuego</option>
+								<option value="Tucumán">Tucumán</option>
 							</select>
 						</div>
 						<div class="sm:col-span-2 flex flex-col gap-1.5">
@@ -823,24 +901,69 @@ const description = 'Venta y servicios de drones agrícolas EaVision: fumigació
 	<!-- FOOTER -->
 	<footer class="bg-[#171a30] border-t border-[rgba(68,78,134,0.15)] pt-14 sm:pt-16 pb-8 px-4 sm:px-8">
 		<div class="max-w-[1200px] mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-8 sm:gap-10 lg:gap-12 mb-12">
-			<div class="col-span-2 sm:col-span-2 lg:col-span-1">
-				<div class="font-[Syne] text-2xl font-extrabold text-white mb-4">Eavision</div>
-				<p class="text-sm text-[#898989] leading-relaxed mb-6 max-w-xs">
-					Tecnología aérea de precisión para el campo argentino. Más eficiencia, menos costo, máxima rentabilidad.
-				</p>
-				<div class="flex gap-3">
-					{['📷', '📘', '💼', '▶️'].map((icon) => (
-						<a href="#" aria-label="Seguinos en redes sociales" rel="noopener" class="w-9 h-9 bg-[rgba(68,78,134,0.1)] border border-[rgba(68,78,134,0.2)] rounded-lg flex items-center justify-center text-base text-[#898989] no-underline transition-all hover:bg-[#444e86] hover:text-[#0a0a12] hover:border-[#444e86]">
-							<span aria-hidden="true">{icon}</span>
-						</a>
-					))}
-				</div>
-			</div>
+			<div class="col-span-2 lg:col-span-1">
+	<div class="mb-5">
+		<img
+			src="/logos/logoEavisionAzul.webp"
+			alt="EA Vision"
+			class="h-12 sm:h-14 md:h-16 w-auto"
+			loading="lazy"
+		/>
+	</div>
+
+	<p class="max-w-md text-sm sm:text-base leading-7 text-[#9ca3af] mb-6">
+		Tecnología aérea de precisión para el campo argentino.
+		Optimización de aplicaciones con drones, mayor eficiencia,
+		menores costos y mejores resultados para cada productor.
+	</p>
+
+	<div class="flex flex-wrap items-center gap-3">
+		<a
+			href="https://instagram.com/"
+			target="_blank"
+			rel="noopener noreferrer"
+			aria-label="Instagram"
+			class="flex h-10 w-10 items-center justify-center rounded-xl border border-[rgba(68,78,134,0.2)] bg-[rgba(68,78,134,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-[#444e86] hover:bg-[#444e86] hover:text-[#0a0a12]"
+		>
+			<i class="fa-brands fa-instagram text-lg"></i>
+		</a>
+
+		<a
+			href="https://facebook.com/"
+			target="_blank"
+			rel="noopener noreferrer"
+			aria-label="Facebook"
+			class="flex h-10 w-10 items-center justify-center rounded-xl border border-[rgba(68,78,134,0.2)] bg-[rgba(68,78,134,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-[#444e86] hover:bg-[#444e86] hover:text-[#0a0a12]"
+		>
+			<i class="fa-brands fa-facebook-f text-lg"></i>
+		</a>
+
+		<a
+			href="https://linkedin.com/"
+			target="_blank"
+			rel="noopener noreferrer"
+			aria-label="LinkedIn"
+			class="flex h-10 w-10 items-center justify-center rounded-xl border border-[rgba(68,78,134,0.2)] bg-[rgba(68,78,134,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-[#444e86] hover:bg-[#444e86] hover:text-[#0a0a12]"
+		>
+			<i class="fa-brands fa-linkedin-in text-lg"></i>
+		</a>
+
+		<a
+			href="https://youtube.com/"
+			target="_blank"
+			rel="noopener noreferrer"
+			aria-label="YouTube"
+			class="flex h-10 w-10 items-center justify-center rounded-xl border border-[rgba(68,78,134,0.2)] bg-[rgba(68,78,134,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-[#444e86] hover:bg-[#444e86] hover:text-[#0a0a12]"
+		>
+			<i class="fa-brands fa-youtube text-lg"></i>
+		</a>
+	</div>
+</div>
 			<div>
 				<h4 class="font-[Syne] text-sm font-bold text-white mb-5 uppercase tracking-widest">Servicios</h4>
 				<ul class="list-none flex flex-col gap-2.5">
 					{['Fumigación', 'Siembra Aérea', 'Fertilización', 'Monitoreo NDVI', 'Mapeo 3D'].map((s) => (
-						<li><a href="#servicios" class="text-sm text-[#898989] no-underline transition-colors hover:text-[#444e86]">{s}</a></li>
+						<li><a href="#contacto" class="text-sm text-[#898989] no-underline transition-colors hover:text-[#444e86]">{s}</a></li>
 					))}
 				</ul>
 			</div>
