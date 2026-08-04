@@ -876,9 +876,13 @@ import Layout from '../layouts/Layout.astro';
 			<div>
 				<h4 class="font-[Syne] text-sm font-bold text-white mb-5 uppercase tracking-widest">Empresa</h4>
 				<ul class="list-none flex flex-col gap-2.5">
-					{['Nosotros', 'Flota', 'Certificaciones', 'Blog', 'Trabaja con Nosotros'].map((s) => (
-						<li><a href="#" class="text-sm text-[#898989] no-underline transition-colors hover:text-[#444e86]">{s}</a></li>
-					))}
+					<ul class="list-none flex flex-col gap-2.5">
+						<li><a href="#nosotros" class="text-sm text-[#898989] no-underline transition-colors hover:text-[#444e86]">Nosotros</a></li>
+						<li><a href="#ventas" class="text-sm text-[#898989] no-underline transition-colors hover:text-[#444e86]">Equipos</a></li>
+						<li><a href="#servicios" class="text-sm text-[#898989] no-underline transition-colors hover:text-[#444e86]">Servicios</a></li>
+						<li><a href="#beneficios" class="text-sm text-[#898989] no-underline transition-colors hover:text-[#444e86]">Beneficios</a></li>
+						<li><a href="#galeria" class="text-sm text-[#898989] no-underline transition-colors hover:text-[#444e86]">Galería</a></li>
+					</ul>
 				</ul>
 			</div>
 			<div>
@@ -892,7 +896,6 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 		<div class="max-w-[1200px] mx-auto pt-6 border-t border-[rgba(68,78,134,0.15)] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#898989]">
 			<span>© 2026 Eavision. Todos los derechos reservados.</span>
-			<span>Diseñado para el campo argentino 🌾</span>
 		</div>
 	</footer>
 
