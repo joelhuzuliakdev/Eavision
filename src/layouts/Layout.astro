@@ -1,16 +1,142 @@
 ---
 import '../styles/global.css'
+
+interface Props {
+	title?: string;
+	description?: string;
+	image?: string;
+	noindex?: boolean;
+}
+
+const {
+	title = 'Eavision | Drones Agrícolas y Tecnología Aérea de Precisión para el Campo',
+	description = 'Venta y servicios de drones agrícolas EaVision: fumigación, siembra aérea, fertilización y monitoreo NDVI de cultivos. Reducí costos y aumentá tu rentabilidad. Cotizá sin cargo.',
+	image = '/og-image.jpg',
+	noindex = false,
+} = Astro.props;
+
+// Reemplazar por el dominio real del sitio en producción
+const siteUrl = 'https://www.eavision.com.ar';
+const canonicalURL = new URL(Astro.url.pathname, siteUrl);
+const ogImageURL = new URL(image, siteUrl);
 ---
+
 <!doctype html>
-<html lang="en">
+<html lang="es-AR">
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Eavision | Tecnología Aérea para el Campo Moderno</title>
-		<meta name="description" content="Servicios de drones agrícolas: fumigación, siembra, monitoreo y mapeo de cultivos. Tecnología de precisión para maximizar tu rentabilidad en el campo.">
-		<meta name="keywords" content="drones agrícolas, fumigación con drones, siembra aérea, monitoreo cultivos, drones agricultura Argentina">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+		<!-- Meta básicos -->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="generator" content={Astro.generator} />
+
+		<!-- Título y descripción -->
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="keywords" content="drones agrícolas, fumigación con drones, siembra aérea, drones agricultura Argentina, monitoreo NDVI cultivos, EaVision, drone fumigador Córdoba, agricultura de precisión" />
+		<meta name="author" content="Eavision" />
+
+		<!-- Robots -->
+		<meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large'} />
+
+		<!-- Canonical -->
+		<link rel="canonical" href={canonicalURL} />
+
+		<!-- Idioma / región -->
+		<meta name="geo.region" content="AR" />
+		<meta name="geo.placename" content="Córdoba, Argentina" />
+
+		<!-- Favicons -->
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<meta name="theme-color" content="#0a0a12" />
+
+		<!-- Open Graph / Facebook / WhatsApp -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImageURL} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:locale" content="es_AR" />
+		<meta property="og:site_name" content="Eavision" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content={canonicalURL} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImageURL} />
+
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+		<!-- JSON-LD: LocalBusiness -->
+		<script type="application/ld+json" set:html={JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'LocalBusiness',
+			'@id': `${siteUrl}/#organization`,
+			name: 'Eavision',
+			description: 'Representantes oficiales de EaVision en Argentina. Venta de drones agrícolas y servicios de fumigación, siembra aérea, fertilización y monitoreo de cultivos.',
+			image: ogImageURL.toString(),
+			url: siteUrl,
+			telephone: '+5493510000000',
+			email: 'info@eavision.com',
+			priceRange: '$$',
+			address: {
+				'@type': 'PostalAddress',
+				addressRegion: 'Córdoba',
+				addressCountry: 'AR',
+			},
+			areaServed: [
+				{ '@type': 'AdministrativeArea', name: 'Córdoba' },
+				{ '@type': 'AdministrativeArea', name: 'Buenos Aires' },
+				{ '@type': 'AdministrativeArea', name: 'Santa Fe' },
+				{ '@type': 'AdministrativeArea', name: 'Entre Ríos' },
+			],
+			sameAs: [],
+		})} />
+
+		<!-- JSON-LD: Producto (drone EA-30 Pro) -->
+		<script type="application/ld+json" set:html={JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'Product',
+			name: 'EaVision EA-30 Pro',
+			description: 'Drone agrícola de alta capacidad para fumigación, siembra y fertilización de precisión. Tanque de 30 L, precisión RTK ±2 cm, cobertura de 80-120 ha/día.',
+			brand: {
+				'@type': 'Brand',
+				name: 'EaVision',
+			},
+			image: `${siteUrl}/droneVolandoSoja.webp`,
+			offers: {
+				'@type': 'Offer',
+				url: `${siteUrl}/#ventas`,
+				priceCurrency: 'ARS',
+				price: '4500000',
+				availability: 'https://schema.org/InStock',
+				seller: {
+					'@type': 'Organization',
+					name: 'Eavision',
+				},
+			},
+		})} />
+
+		<!-- JSON-LD: Breadcrumb -->
+		<script type="application/ld+json" set:html={JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'BreadcrumbList',
+			itemListElement: [
+				{
+					'@type': 'ListItem',
+					position: 1,
+					name: 'Inicio',
+					item: siteUrl,
+				},
+			],
+		})} />
 	</head>
 	<body>
 		<slot />
