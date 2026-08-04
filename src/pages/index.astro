@@ -42,6 +42,20 @@ import Layout from '../layouts/Layout.astro';
 
 	<!-- HERO -->
 	<section class="min-h-screen flex items-center relative px-4 sm:px-8 pt-24 pb-16 overflow-hidden bg-[#0a0a12]" id="hero">
+		<!-- VIDEO -->
+		<video
+			autoplay
+			muted
+			loop
+			playsinline
+			class="absolute inset-0 w-full h-full object-cover"
+		>
+			<source src="/videos/hero.mp4" type="video/mp4" />
+			Tu navegador no soporta videos.
+		</video>
+
+		<!-- Overlay oscuro -->
+		<div class="absolute inset-0 bg-black/70 z-[1]"></div>
 		<!-- BG -->
 		<div class="absolute inset-0 pointer-events-none"
 			style="background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(68,78,134,0.12) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 20% 80%, rgba(68,78,134,0.06) 0%, transparent 60%);">
@@ -90,60 +104,6 @@ import Layout from '../layouts/Layout.astro';
 					<div>
 						<div class="font-[Syne] text-2xl sm:text-3xl font-extrabold text-[#444e86]">0%</div>
 						<div class="text-xs text-[#898989] mt-1">Compactación de suelo</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- VISUAL -->
-			<div class="hidden lg:flex items-center justify-center">
-				<div class="relative w-full max-w-[500px] aspect-square">
-					<!-- Circle -->
-					<div class="w-full h-full rounded-full border border-[rgba(68,78,134,0.2)] relative overflow-hidden"
-						style="background: radial-gradient(circle at 40% 40%, rgba(68,78,134,0.2), rgba(10,10,18,0.8));">
-						<div class="absolute inset-[-50%] animate-[radar_6s_linear_infinite]"
-							style="background: conic-gradient(transparent 0deg, rgba(68,78,134,0.08) 60deg, transparent 120deg);">
-						</div>
-						<!-- Drone SVG -->
-						<div class="absolute inset-0 flex items-center justify-center">
-							<svg class="w-[65%] animate-[float_4s_ease-in-out_infinite]" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<rect x="80" y="85" width="40" height="30" rx="8" fill="#444e86" opacity="0.9"/>
-								<rect x="88" y="90" width="24" height="20" rx="5" fill="#171a30"/>
-								<rect x="30" y="95" width="52" height="5" rx="2.5" fill="#444e86" opacity="0.7"/>
-								<rect x="118" y="95" width="52" height="5" rx="2.5" fill="#444e86" opacity="0.7"/>
-								<rect x="82" y="55" width="5" height="38" rx="2.5" fill="#444e86" opacity="0.7"/>
-								<rect x="113" y="55" width="5" height="38" rx="2.5" fill="#444e86" opacity="0.7"/>
-								<circle cx="32" cy="95" r="16" fill="#171a30" stroke="#444e86" stroke-width="1.5"/>
-								<circle cx="168" cy="95" r="16" fill="#171a30" stroke="#444e86" stroke-width="1.5"/>
-								<circle cx="85" cy="52" r="16" fill="#171a30" stroke="#444e86" stroke-width="1.5"/>
-								<circle cx="115" cy="52" r="16" fill="#171a30" stroke="#444e86" stroke-width="1.5"/>
-								<ellipse cx="32" cy="95" rx="20" ry="4" fill="#444e86" opacity="0.4"/>
-								<ellipse cx="168" cy="95" rx="20" ry="4" fill="#444e86" opacity="0.4"/>
-								<ellipse cx="85" cy="52" rx="20" ry="4" fill="#444e86" opacity="0.4"/>
-								<ellipse cx="115" cy="52" rx="20" ry="4" fill="#444e86" opacity="0.4"/>
-								<circle cx="100" cy="122" r="8" fill="#444e86" opacity="0.6"/>
-								<circle cx="100" cy="122" r="4" fill="#0a0a12"/>
-								<circle cx="80" cy="148" r="3" fill="#444e86" opacity="0.5"/>
-								<circle cx="100" cy="155" r="3" fill="#444e86" opacity="0.4"/>
-								<circle cx="120" cy="148" r="3" fill="#444e86" opacity="0.5"/>
-								<circle cx="90" cy="162" r="2" fill="#444e86" opacity="0.3"/>
-								<circle cx="110" cy="162" r="2" fill="#444e86" opacity="0.3"/>
-							</svg>
-						</div>
-					</div>
-					<!-- Orbit -->
-					<div class="absolute inset-[-20px] rounded-full border border-dashed border-[rgba(68,78,134,0.2)] animate-spin" style="animation-duration: 20s;">
-						<div class="absolute top-1/2 left-[-5px] w-2 h-2 rounded-full bg-[#444e86] -mt-1 shadow-[0_0_10px_#444e86]"></div>
-					</div>
-					<!-- Data cards -->
-					<div class="absolute top-[10%] left-[-10%] bg-[rgba(19,20,31,0.9)] backdrop-blur-xl border border-[rgba(68,78,134,0.15)] rounded-xl px-4 py-3 text-xs">
-						<div class="text-[#898989] text-[0.7rem] mb-0.5">Velocidad de vuelo</div>
-						<div class="text-white font-semibold font-[Syne]">8 m/s</div>
-						<div class="text-[#444e86] text-[0.7rem] mt-0.5">↑ Máx. eficiencia</div>
-					</div>
-					<div class="absolute bottom-[15%] right-[-8%] bg-[rgba(19,20,31,0.9)] backdrop-blur-xl border border-[rgba(68,78,134,0.15)] rounded-xl px-4 py-3 text-xs">
-						<div class="text-[#898989] text-[0.7rem] mb-0.5">Hectáreas/día</div>
-						<div class="text-white font-semibold font-[Syne]">80–120 ha</div>
-						<div class="text-[#444e86] text-[0.7rem] mt-0.5">↑ Alta cobertura</div>
 					</div>
 				</div>
 			</div>
