@@ -130,6 +130,7 @@ const description = 'Venta y servicios de drones agrícolas EaVision: fumigació
 			preload="metadata"
 			poster="/droneVolandoSoja.webp"
 			aria-hidden="true"
+			will-change: transform;
 			class="absolute inset-0 w-full h-full object-cover"
 		>
 			<source src="/videos/hero.mp4" type="video/mp4" />
@@ -151,24 +152,24 @@ const description = 'Venta y servicios de drones agrícolas EaVision: fumigació
 
 			<!-- CONTENT -->
 			<div>
-				<div class="inline-flex items-center gap-2 bg-[rgba(68,78,134,0.1)] border border-[rgba(68,78,134,0.25)] px-4 py-1.5 rounded-full text-[0.78rem] font-medium text-[#898989] mb-6 uppercase tracking-widest">
+				<div class="hero-in hero-in-1 inline-flex items-center gap-2 bg-[rgba(68,78,134,0.1)] border border-[rgba(68,78,134,0.25)] px-4 py-1.5 rounded-full text-[0.78rem] font-medium text-[#898989] mb-6 uppercase tracking-widest">
 					<span class="w-1.5 h-1.5 bg-[#444e86] rounded-full animate-pulse"></span>
 					Tecnología Agrícola de Precisión
 				</div>
 
-				<h1 class="font-[Syne] text-[clamp(2.5rem,6vw,4.8rem)] font-extrabold leading-[1.0] mb-6 text-white">
+				<h1 class="hero-in hero-in-2 font-[Syne] text-[clamp(2.5rem,6vw,4.8rem)] font-extrabold leading-[1.0] mb-6 text-white">
 					El campo entra a la era de los drones
 				</h1>
 
-				<p class="text-base sm:text-lg text-[#898989] leading-relaxed mb-8 max-w-xl">
+				<p class="hero-in hero-in-3 text-base sm:text-lg text-[#898989] leading-relaxed mb-8 max-w-xl">
 					Optimizamos cada hectárea con drones de última generación. Más eficiencia, menos costo, mayor rentabilidad para tu producción agrícola.
 				</p>
 
-				<div class="flex flex-col sm:flex-row gap-4">
+				<div class="hero-in hero-in-4 flex flex-col sm:flex-row gap-4">
 					<a href="#contacto" class="bg-[#444e86] text-white px-7 py-3.5 rounded-lg font-semibold text-base no-underline inline-flex items-center justify-center gap-2 transition-all hover:bg-[#5b67a8] hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(68,78,134,0.3)]">
 						Solicitar Cotización →
 					</a>
-					<a href="#servicios" class="bg-transparent text-white px-7 py-3.5 rounded-lg font-medium text-base no-underline inline-flex items-center justify-center gap-2 transition-all border border-[rgba(255,255,255,0.15)] hover:border-[rgba(255,255,255,0.35)] hover:bg-[rgba(255,255,255,0.05)]">
+					<a href="#servicios" class="hero-in hero-in-5 bg-transparent text-white px-7 py-3.5 rounded-lg font-medium text-base no-underline inline-flex items-center justify-center gap-2 transition-all border border-[rgba(255,255,255,0.15)] hover:border-[rgba(255,255,255,0.35)] hover:bg-[rgba(255,255,255,0.05)]">
 						Ver Servicios
 					</a>
 				</div>
@@ -176,15 +177,15 @@ const description = 'Venta y servicios de drones agrícolas EaVision: fumigació
 				<!-- STATS -->
 				<div class="flex flex-row gap-6 sm:gap-8 mt-10 pt-8 border-t border-[rgba(68,78,134,0.15)]">
 					<div>
-						<div class="font-[Syne] text-2xl sm:text-3xl font-extrabold text-[#444e86]">40%</div>
+						<div id="stat-1" class="font-[Syne] text-2xl sm:text-3xl font-extrabold text-[#444e86]" data-count="40" data-suffix="%">0%</div>
 						<div class="text-xs text-[#898989] mt-1">Menos insumos utilizados</div>
 					</div>
 					<div>
-						<div class="font-[Syne] text-2xl sm:text-3xl font-extrabold text-[#444e86]">10x</div>
+						<div id="stat-2" class="font-[Syne] text-2xl sm:text-3xl font-extrabold text-[#444e86]" data-count="10" data-suffix="x">0x</div>
 						<div class="text-xs text-[#898989] mt-1">Más rápido que maquinaria</div>
 					</div>
 					<div>
-						<div class="font-[Syne] text-2xl sm:text-3xl font-extrabold text-[#444e86]">0%</div>
+						<div id="stat-3" class="font-[Syne] text-2xl sm:text-3xl font-extrabold text-[#444e86]" data-count="0" data-suffix="%">0%</div>
 						<div class="text-xs text-[#898989] mt-1">Compactación de suelo</div>
 					</div>
 				</div>
@@ -546,7 +547,7 @@ const description = 'Venta y servicios de drones agrícolas EaVision: fumigació
 					{ icon: '🗺️', titulo: 'Mapeo y Relevamiento', desc: 'Generación de ortomosaicos, modelos 3D, curvas de nivel y mapas de variabilidad con precisión centimétrica RTK/PPK.' },
 					{ icon: '💊', titulo: 'Aplicación Diferencial', desc: 'Vuelos de prescripción variable basados en mapas NDVI. Cada zona del lote recibe exactamente lo que necesita, sin desperdicios.' },
 				].map((s) => (
-					<div class="group bg-[#0a0a12] px-6 sm:px-10 py-8 sm:py-10 cursor-default relative overflow-hidden transition-colors hover:bg-[rgba(68,78,134,0.04)]">
+					<div class="fade-up group group bg-[#0a0a12] px-6 sm:px-10 py-8 sm:py-10 cursor-default relative overflow-hidden transition-colors hover:bg-[rgba(68,78,134,0.04)]">
 						<div class="absolute bottom-0 left-0 right-0 h-[2px] bg-[#444e86] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></div>
 						<div class="w-12 h-12 sm:w-[52px] sm:h-[52px] bg-[rgba(68,78,134,0.1)] border border-[rgba(68,78,134,0.2)] rounded-xl flex items-center justify-center mb-5 sm:mb-6 text-xl sm:text-2xl transition-all group-hover:bg-[rgba(68,78,134,0.18)] group-hover:border-[rgba(68,78,134,0.4)]" aria-hidden="true">
 							{s.icon}
@@ -1083,6 +1084,21 @@ const description = 'Venta y servicios de drones agrícolas EaVision: fumigació
 
 	/* Animate radar */
 	.animate-\[radar_6s_linear_infinite\] { animation: radar 6s linear infinite; }
+
+	/* Hero entrance */
+	@keyframes heroIn {
+		from { opacity: 0; transform: translateY(24px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+	.hero-in {
+		opacity: 0;
+		animation: heroIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+	}
+	.hero-in-1 { animation-delay: 0.1s; }
+	.hero-in-2 { animation-delay: 0.25s; }
+	.hero-in-3 { animation-delay: 0.4s; }
+	.hero-in-4 { animation-delay: 0.55s; }
+	.hero-in-5 { animation-delay: 0.7s; }
 </style>
 
 <script>
@@ -1093,6 +1109,30 @@ const description = 'Venta y servicios de drones agrícolas EaVision: fumigació
 		link.href = 'https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap';
 		document.head.appendChild(link);
 	}
+
+	const heroVideo = document.querySelector('#hero video');
+	window.addEventListener('scroll', () => {
+		if (heroVideo && window.scrollY < window.innerHeight) {
+			heroVideo.style.transform = `translateY(${window.scrollY * 0.15}px) scale(1.05)`;
+		}
+	}, { passive: true });
+
+	function animateCounters() {
+		document.querySelectorAll('[data-count]').forEach((el) => {
+			const target = parseInt(el.dataset.count, 10);
+			const suffix = el.dataset.suffix || '';
+			const duration = 1200;
+			const start = performance.now();
+			function tick(now) {
+				const progress = Math.min((now - start) / duration, 1);
+				const eased = 1 - Math.pow(1 - progress, 3);
+				el.textContent = Math.round(target * eased) + suffix;
+				if (progress < 1) requestAnimationFrame(tick);
+			}
+			requestAnimationFrame(tick);
+		});
+	}
+setTimeout(animateCounters, 700);
 
 	// Modal galería drone
 	const modalPhotos = [
@@ -1167,10 +1207,19 @@ const description = 'Venta y servicios de drones agrícolas EaVision: fumigació
 	}
 	window.closeMobileMenu = closeMobileMenu;
 
-	// Intersection Observer for fade-up
+	// Intersection Observer for fade-up con stagger automático
 	const observer = new IntersectionObserver((entries) => {
-		entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-	}, { threshold: 0.1 });
+		entries.forEach((e) => {
+			if (e.isIntersecting) {
+				const siblings = Array.from(e.target.parentElement.children)
+					.filter(el => el.classList.contains('fade-up'));
+				const index = siblings.indexOf(e.target);
+				e.target.style.transitionDelay = `${Math.min(index * 0.08, 0.5)}s`;
+				e.target.classList.add('visible');
+				observer.unobserve(e.target); // solo una vez
+			}
+		});
+	}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 	document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
 	// ROI Calculator
