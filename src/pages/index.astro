@@ -32,7 +32,7 @@ const description = 'Venta y servicios de drones agrícolas EaVision: fumigació
 	<!-- NAVBAR -->
 	<nav
 		id="navbar"
-		class="fixed inset-x-0 top-0 z-50 border-b border-[rgba(68,78,134,0.15)] bg-[rgba(10,10,18,0.85)] backdrop-blur-xl transition-all duration-300"
+		class="fixed inset-x-0 top-0 z-50 border-b border-[rgba(68,78,134,0.15)] bg-[rgba(15,17,35,0.85)] backdrop-blur-xl transition-all duration-300"
 		aria-label="Navegación principal"
 	>
 		<div class="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -85,7 +85,7 @@ const description = 'Venta y servicios de drones agrícolas EaVision: fumigació
 				<li>
 					<a
 						href="#contacto"
-						class="rounded-xl bg-[#444e86] px-5 py-2.5 text-sm font-semibold text-[#0a0a12] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#5b67a8]"
+						class="rounded-xl bg-[#444e86] px-5 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#5b67a8]"
 					>
 						Cotizar
 					</a>
@@ -116,7 +116,7 @@ const description = 'Venta y servicios de drones agrícolas EaVision: fumigació
 		<a href="#servicios" class="text-[#898989] no-underline text-base font-medium hover:text-white transition-colors" onclick="closeMobileMenu()">Servicios</a>
 		<a href="#beneficios" class="text-[#898989] no-underline text-base font-medium hover:text-white transition-colors" onclick="closeMobileMenu()">Beneficios</a>
 		<a href="#galeria" class="text-[#898989] no-underline text-base font-medium hover:text-white transition-colors" onclick="closeMobileMenu()">Galería</a>
-		<a href="#contacto" class="bg-[#444e86] text-[#0a0a12] px-5 py-3 rounded-md font-semibold text-sm text-center no-underline" onclick="closeMobileMenu()">Cotizar</a>
+		<a href="#contacto" class="bg-[#444e86] text-white px-5 py-3 rounded-md font-semibold text-sm text-center no-underline" onclick="closeMobileMenu()">Cotizar</a>
 	</div>
 
 	<!-- HERO -->
@@ -151,13 +151,13 @@ const description = 'Venta y servicios de drones agrícolas EaVision: fumigació
 
 			<!-- CONTENT -->
 			<div>
-				<div class="inline-flex items-center gap-2 bg-[rgba(68,78,134,0.1)] border border-[rgba(68,78,134,0.25)] px-4 py-1.5 rounded-full text-[0.78rem] font-medium text-[#444e86] mb-6 uppercase tracking-widest">
+				<div class="inline-flex items-center gap-2 bg-[rgba(68,78,134,0.1)] border border-[rgba(68,78,134,0.25)] px-4 py-1.5 rounded-full text-[0.78rem] font-medium text-[#898989] mb-6 uppercase tracking-widest">
 					<span class="w-1.5 h-1.5 bg-[#444e86] rounded-full animate-pulse"></span>
 					Tecnología Agrícola de Precisión
 				</div>
 
 				<h1 class="font-[Syne] text-[clamp(2.5rem,6vw,4.8rem)] font-extrabold leading-[1.0] mb-6 text-white">
-					El campo entra a la <em class="not-italic text-[#444e86]">era de los drones</em>
+					El campo entra a la era de los drones
 				</h1>
 
 				<p class="text-base sm:text-lg text-[#898989] leading-relaxed mb-8 max-w-xl">
@@ -165,7 +165,7 @@ const description = 'Venta y servicios de drones agrícolas EaVision: fumigació
 				</p>
 
 				<div class="flex flex-col sm:flex-row gap-4">
-					<a href="#contacto" class="bg-[#444e86] text-[#0a0a12] px-7 py-3.5 rounded-lg font-semibold text-base no-underline inline-flex items-center justify-center gap-2 transition-all hover:bg-[#5b67a8] hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(68,78,134,0.3)]">
+					<a href="#contacto" class="bg-[#444e86] text-white px-7 py-3.5 rounded-lg font-semibold text-base no-underline inline-flex items-center justify-center gap-2 transition-all hover:bg-[#5b67a8] hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(68,78,134,0.3)]">
 						Solicitar Cotización →
 					</a>
 					<a href="#servicios" class="bg-transparent text-white px-7 py-3.5 rounded-lg font-medium text-base no-underline inline-flex items-center justify-center gap-2 transition-all border border-[rgba(255,255,255,0.15)] hover:border-[rgba(255,255,255,0.35)] hover:bg-[rgba(255,255,255,0.05)]">
@@ -1031,12 +1031,15 @@ const description = 'Venta y servicios de drones agrícolas EaVision: fumigació
 	@keyframes whatsappPulse {
 		0% {
 			transform: scale(1);
+			box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
 		}
-		50% {
+		70% {
 			transform: scale(1.08);
+			box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
 		}
 		100% {
 			transform: scale(1);
+			box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
 		}
 	}
 
