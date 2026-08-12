@@ -46,7 +46,7 @@ const description = 'Venta y servicios de drones agrícolas EaVision: pulverizac
 				<img
 					src="logos/logoEavisionAzul.webp"
 					alt="EA Vision"
-					class="h-10 sm:h-11 lg:h-12 w-auto transition-transform duration-300 hover:scale-105"
+					class="h-12 sm:h-14 lg:h-16 w-auto transition-transform duration-300 hover:scale-105"
 				/>
 			</a>
 
@@ -177,7 +177,7 @@ const description = 'Venta y servicios de drones agrícolas EaVision: pulverizac
 						<div class="text-xs text-[#898989] mt-1">Menos insumos utilizados</div>
 					</div>
 					<div>
-						<div id="stat-2" class="font-[Syne] text-2xl sm:text-3xl font-extrabold text-white" data-count="35ha/h" data-suffix="x">0x</div>
+						<div id="stat-2" class="font-[Syne] text-2xl sm:text-3xl font-extrabold text-white" data-count="35" data-suffix="ha/h">0x</div>
 						<div class="text-xs text-[#898989] mt-1">Capacidad de trabajo</div>
 					</div>
 					<div>
@@ -250,11 +250,11 @@ const description = 'Venta y servicios de drones agrícolas EaVision: pulverizac
 						</p>
 						<div class="flex gap-8 pt-6 border-t border-[rgba(68,78,134,0.15)]">
 							<div>
-								<div class="font-[Syne] text-3xl font-extrabold text-[#444e86] leading-none">+500</div>
+								<div class="font-[Syne] text-3xl font-extrabold text-[#FFFF] leading-none">+500</div>
 								<div class="text-xs text-[#898989] mt-1.5">Hectáreas trabajadas</div>
 							</div>
 							<div>
-								<div class="font-[Syne] text-3xl font-extrabold text-[#444e86] leading-none">24/7</div>
+								<div class="font-[Syne] text-3xl font-extrabold text-[#FFFF] leading-none">24/7</div>
 								<div class="text-xs text-[#898989] mt-1.5">Soporte técnico</div>
 							</div>
 						</div>
@@ -325,6 +325,13 @@ const description = 'Venta y servicios de drones agrícolas EaVision: pulverizac
 											</div>
 										</div>
 									))}
+								</div>
+
+								<!-- Precio -->
+								<div class="bg-[rgba(68,78,134,0.06)] border border-[rgba(68,78,134,0.15)] rounded-2xl px-5 py-4 mb-6">
+									<div class="text-[0.68rem] text-[#898989] uppercase tracking-widest mb-1">Precio de venta</div>
+									<div class="font-[Syne] text-3xl font-extrabold text-[#FFFF] leading-none">$4.500.000</div>
+									<div class="text-xs text-[#898989] mt-1.5">ARS · Financiación disponible · IVA incluido</div>
 								</div>
 							</div>
 
@@ -398,7 +405,7 @@ const description = 'Venta y servicios de drones agrícolas EaVision: pulverizac
 						<div class="flex flex-col gap-4">
 							<div class="p-5 sm:p-6 rounded-2xl border bg-[rgba(68,78,134,0.08)] border-[rgba(68,78,134,0.3)]">
 								<div class="text-[0.7rem] text-[#898989] uppercase tracking-widest mb-1.5">Ganancia Mensual Neta</div>
-								<div id="ganancia-mensual" class="font-[Syne] text-3xl sm:text-4xl font-extrabold text-[#444e86] leading-none">$6.950.000</div>
+								<div id="ganancia-mensual" class="font-[Syne] text-3xl sm:text-4xl font-extrabold text-[#FFFF] leading-none">$6.950.000</div>
 								<div class="text-xs text-[#898989] mt-2">Ingresos brutos menos costos operativos</div>
 							</div>
 							<div class="p-5 rounded-2xl border bg-[rgba(10,10,18,0.6)] border-[rgba(68,78,134,0.15)]">
@@ -458,7 +465,7 @@ const description = 'Venta y servicios de drones agrícolas EaVision: pulverizac
 			<!-- Thumbnails -->
 			<div class="flex gap-3 px-6 sm:px-8 py-5 overflow-x-auto">
 				{[
-					{ src: '/droneVolandoSoja.webp', alt: 'pulverización con drone agrícola sobre cultivo de soja' },
+					{ src: '/droneVolandoSoja.webp', alt: 'Pulverización con drone agrícola sobre cultivo de soja' },
 					{ src: '/droneMonitoreo.webp', alt: 'Drone realizando monitoreo NDVI de cultivos' },
 					{ src: '/droneMapeo.webp', alt: 'Drone realizando mapeo de precisión del terreno' },
 					{ src: '/droneAplicacionFertilizante.webp', alt: 'Drone aplicando fertilizante de forma aérea' },
@@ -487,31 +494,6 @@ const description = 'Venta y servicios de drones agrícolas EaVision: pulverizac
 			</div>
 		</div>
 	</div>
-    
-	<!-- FOTO FONDO -->
-	<section class="py-16 sm:py-20 px-4 sm:px-8 bg-[#0a0a12]">
-		<div class="max-w-[1200px] mx-auto">
-			<div class="relative h-[380px] sm:h-[480px] lg:h-[520px] rounded-2xl sm:rounded-3xl overflow-hidden border border-[rgba(68,78,134,0.15)] shadow-[0_20px_60px_rgba(0,0,0,0.45)] group">
-				<img src="/tanqueYBoquillaDrone.webp" alt="Tanque y boquilla de pulverización de un drone agrícola pulverizando en el campo"
-					width="1200" height="520" loading="lazy" decoding="async"
-					class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-				<div class="absolute inset-0"
-					style="background: linear-gradient(to top, rgba(0,0,0,0.85) 10%, rgba(0,0,0,0.25) 55%, rgba(0,0,0,0.05) 100%);">
-				</div>
-				<div class="absolute left-5 sm:left-10 bottom-6 sm:bottom-10 z-10 max-w-[90%] sm:max-w-[650px]">
-					<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(68,78,134,0.12)] border border-[rgba(68,78,134,0.25)] text-[#898989] text-[0.7rem] sm:text-xs font-bold uppercase tracking-widest mb-3 sm:mb-4 backdrop-blur-xl">
-						Tecnología de precisión
-					</span>
-					<h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-3 sm:mb-4 font-[Syne]">
-						Aplicación inteligente con drones agrícolas
-					</h2>
-					<p class="text-sm sm:text-base text-[rgba(255,255,255,0.75)] leading-relaxed max-w-xl">
-						Cobertura uniforme, ahorro de insumos y máxima eficiencia para grandes superficies.
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
 
 	<!-- SERVICIOS -->
 	<section class="py-20 sm:py-28 px-4 sm:px-8 bg-[#0a0a12]" id="servicios">
@@ -585,7 +567,7 @@ const description = 'Venta y servicios de drones agrícolas EaVision: pulverizac
 						<div class="flex flex-col gap-4">
 							<div class="p-5 sm:p-6 rounded-2xl border bg-[rgba(68,78,134,0.08)] border-[rgba(68,78,134,0.3)]">
 								<div class="text-[0.7rem] text-[#898989] uppercase tracking-widest mb-1.5">Pérdida Evitada Total</div>
-								<div id="perdida-evitada" class="font-[Syne] text-3xl sm:text-4xl font-extrabold text-[#444e86] leading-none">$34.200.000</div>
+								<div id="perdida-evitada" class="font-[Syne] text-3xl sm:text-4xl font-extrabold  text-white leading-none">$34.200.000</div>
 								<div class="text-xs text-[#898989] mt-2">Valor del grano que no se pierde por pisoteo</div>
 							</div>
 							<div class="p-5 rounded-2xl border bg-[rgba(10,10,18,0.6)] border-[rgba(68,78,134,0.15)]">
@@ -594,8 +576,10 @@ const description = 'Venta y servicios de drones agrícolas EaVision: pulverizac
 								<div class="text-xs text-[#898989] mt-2">Estimado 2,5% de pérdida por pasada de maquinaria</div>
 							</div>
 							<div class="p-5 rounded-2xl border bg-[rgba(10,10,18,0.6)] border-[rgba(68,78,134,0.15)]">
-								<div class="text-[0.7rem] text-[#898989] uppercase tracking-widest mb-1.5">Ahorro por Hectárea</div>
-								<div id="ahorro-ha" class="font-[Syne] text-2xl font-extrabold text-white leading-none">$68.400</div>
+								<div class="text-[0.7rem] text-[#898989] uppercase tracking-widest mb-1.5 ">Ahorro por Hectárea</div>
+								<div id="ahorro-ha" class="font-[Syne] text-2xl font-extrabold text-white leading-none">
+									$68.400
+								</div>
 								<div class="text-xs text-[#898989] mt-2">Promedio de ahorro por cada hectárea trabajada</div>
 							</div>
 						</div>
@@ -644,6 +628,58 @@ const description = 'Venta y servicios de drones agrícolas EaVision: pulverizac
 					</div>
 				</div>
 			</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- BENEFICIOS -->
+	<section class="py-20 sm:py-28 px-4 sm:px-8 bg-[#171a30] relative overflow-hidden" id="beneficios">
+		<div class="absolute inset-0 pointer-events-none"
+			style="background: radial-gradient(ellipse 60% 60% at 80% 50%, rgba(68,78,134,0.08), transparent);">
+		</div>
+		<div class="max-w-[1200px] mx-auto relative z-10">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+				<!-- Left -->
+				<div class="fade-up">
+					<div class="inline-block text-[0.97rem] font-medium tracking-[0.12em] uppercase text-[#444e86] mb-4">Por qué elegirnos</div>
+					<h2 class="font-[Syne] text-[clamp(2rem,4vw,3rem)] font-bold text-white mb-4">
+						Tecnología que rinde desde el primer vuelo
+					</h2>
+					<p class="text-[#898989] leading-[1.7] max-w-[560px]">
+						Nuestros drones no son solo una herramienta: son una ventaja competitiva que se traduce en pesos en tu bolsillo.
+					</p>
+					<div class="mt-10 bg-[rgba(10,10,18,0.5)] border border-[rgba(68,78,134,0.15)] rounded-2xl p-6 sm:p-8">
+						<div class="text-xs text-[#898989] mb-2">Cobertura promedio diaria</div>
+						<div class="font-[Syne] text-5xl font-extrabold text-[#FFFF] leading-none">100 ha</div>
+						<div class="text-sm text-[#898989] mt-2">vs. 40-50 ha de una máquina terrestre</div>
+						<div class="mt-5 h-2 bg-[rgba(255,255,255,0.06)] rounded-full overflow-hidden">
+							<div class="h-full w-[75%] bg-[#444e86] rounded-full" style="animation: progressFill 1.5s ease 0.5s both;"></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Right grid -->
+				<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+					{[
+						{ icon: '⚡', titulo: 'Velocidad Operativa', desc: 'Hasta 10x más rápido que equipos terrestres en condiciones difíciles.' },
+						{ icon: '🎯', titulo: 'Precisión GPS RTK', desc: 'Error de posicionamiento menor a 5 cm. Cero solapamiento innecesario.' },
+						{ icon: '💧', titulo: 'Ahorro de Insumos', desc: '30-40% menos producto por la pulverización de gota fina controlada.' },
+						{ icon: '🌍', titulo: 'Sin Compactación', desc: 'El drone no pisa el cultivo. Preserva el suelo y evita pérdidas de rendimiento.' },
+						{ icon: '🔋', titulo: 'Operación 24/7', desc: 'Vuelos nocturnos posibles con sensores térmicos y luces anti-colisión.' },
+						{ icon: '📊', titulo: 'Reportes Digitales', desc: 'Cada vuelo genera datos georreferenciados, trazabilidad completa.' },
+					].map((b) => (
+						<div class="fade-up flex items-start gap-4 p-5 bg-[rgba(10,10,18,0.5)] border border-[rgba(68,78,134,0.15)] rounded-xl transition-colors hover:border-[rgba(68,78,134,0.35)]">
+							<div class="w-10 h-10 flex-shrink-0 bg-[rgba(68,78,134,0.12)] rounded-xl flex items-center justify-center text-lg" aria-hidden="true">
+								{b.icon}
+							</div>
+							<div>
+								<div class="text-sm font-semibold text-white mb-1">{b.titulo}</div>
+								<div class="text-xs text-[#898989] leading-relaxed">{b.desc}</div>
+							</div>
+						</div>
+					))}
+				</div>
 			</div>
 		</div>
 	</section>
