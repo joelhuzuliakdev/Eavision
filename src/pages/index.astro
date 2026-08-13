@@ -53,32 +53,18 @@ const description = 'Venta y servicios de drones agrícolas EaVision: pulverizac
 			<!-- Desktop -->
 			<ul class="hidden md:flex items-center gap-7 lg:gap-10">
 				<li>
-					<a href="#nosotros" class="text-sm text-[#5a5f78] transition-colors hover:text-[#444e86]">
-						Nosotros
-					</a>
-				</li>
-
-				<li>
 					<a href="#ventas" class="text-sm text-[#5a5f78] transition-colors hover:text-[#444e86]">
 						Equipos
 					</a>
 				</li>
-
 				<li>
 					<a href="#servicios" class="text-sm text-[#5a5f78] transition-colors hover:text-[#444e86]">
 						Servicios
 					</a>
 				</li>
-
 				<li>
-					<a href="#beneficios" class="text-sm text-[#5a5f78] transition-colors hover:text-[#444e86]">
-						Beneficios
-					</a>
-				</li>
-
-				<li>
-					<a href="#galeria" class="text-sm text-[#5a5f78] transition-colors hover:text-[#444e86]">
-						Galería
+					<a href="#nosotros" class="text-sm text-[#5a5f78] transition-colors hover:text-[#444e86]">
+						Nosotros
 					</a>
 				</li>
 
@@ -112,10 +98,13 @@ const description = 'Venta y servicios de drones agrícolas EaVision: pulverizac
 
 	<!-- MOBILE NAV MENU -->
 	<div id="mobileMenu" class="hidden fixed top-[70px] left-0 right-0 z-[99] bg-white border-b border-[rgba(68,78,134,0.15)] px-6 py-8 flex-col gap-6">
-		<a href="#nosotros" class="text-[#5c6079] no-underline text-base font-medium hover:text-[#444e86] transition-colors" onclick="closeMobileMenu()">Nosotros</a>
+	 <a href="#ventas"
+       class="text-[#5c6079] no-underline text-base font-medium hover:text-[#444e86] transition-colors"
+       onclick="closeMobileMenu()">
+        Equipos
+    </a>
 		<a href="#servicios" class="text-[#5c6079] no-underline text-base font-medium hover:text-[#444e86] transition-colors" onclick="closeMobileMenu()">Servicios</a>
-		<a href="#beneficios" class="text-[#5c6079] no-underline text-base font-medium hover:text-[#444e86] transition-colors" onclick="closeMobileMenu()">Beneficios</a>
-		<a href="#galeria" class="text-[#5c6079] no-underline text-base font-medium hover:text-[#444e86] transition-colors" onclick="closeMobileMenu()">Galería</a>
+				<a href="#nosotros" class="text-[#5c6079] no-underline text-base font-medium hover:text-[#444e86] transition-colors" onclick="closeMobileMenu()">Nosotros</a>
 		<a href="#contacto" class="bg-[#444e86] text-white px-5 py-3 rounded-md font-semibold text-sm text-center no-underline" onclick="closeMobileMenu()">Cotizar</a>
 	</div>
 
@@ -174,7 +163,7 @@ const description = 'Venta y servicios de drones agrícolas EaVision: pulverizac
 				<div class="flex flex-row gap-6 sm:gap-8 mt-10 pt-8 border-t border-[rgba(68,78,134,0.15)]">
 					<div>
 						<div id="stat-1" class="font-[Syne] text-2xl sm:text-3xl font-extrabold text-white" data-count="85%" data-suffix="%">0%</div>
-						<div class="text-xs text-[#898989] mt-1">Menos insumos utilizados</div>
+						<div class="text-xs text-[#898989] mt-1">Ahorro en agua</div>
 					</div>
 					<div>
 						<div id="stat-2" class="font-[Syne] text-2xl sm:text-3xl font-extrabold text-white" data-count="35" data-suffix="ha/h">0x</div>
@@ -189,239 +178,550 @@ const description = 'Venta y servicios de drones agrícolas EaVision: pulverizac
 		</div>
 	</section>
 
-	<!-- NOSOTROS -->
-	<section class="py-20 sm:py-28 px-4 sm:px-8 bg-[#f6f7fb] relative overflow-hidden" id="nosotros">
-		<div class="absolute inset-0 pointer-events-none"
-			style="background: radial-gradient(circle at 20% 30%, rgba(68,78,134,0.08), transparent 40%), radial-gradient(circle at 80% 70%, rgba(68,78,134,0.05), transparent 40%);">
-		</div>
-		<div class="max-w-[1200px] mx-auto relative z-10">
-			<div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-20 items-center">
-
-				<!-- Content -->
-				<div class="fade-up">
-					<div class="inline-block text-[0.97rem] font-medium tracking-[0.12em] uppercase text-[#444e86] mb-4">Nosotros</div>
-					<h2 class="font-[Syne] text-[clamp(2rem,4vw,3rem)] font-bold leading-[1.15] text-[#14152a] mb-4">
-						Somos Eavision
-					</h2>
-					<p class="text-base text-[#5c6079] leading-relaxed max-w-[560px]">
-						Empresa argentina especializada en tecnología agrícola de precisión y soluciones aéreas para el agro.
-					</p>
-					<div class="flex flex-col gap-5 mt-8">
-						<p class="text-[#5c6079] leading-[1.8] text-[0.97rem]">
-							Trabajamos junto a productores, ingenieros agrónomos y contratistas para optimizar cada hectárea mediante drones agrícolas de última generación.
-						</p>
-						<p class="text-[#5c6079] leading-[1.8] text-[0.97rem]">
-							Somos representantes oficiales de <strong class="text-[#14152a]">EaVision</strong>, una de las marcas líderes a nivel mundial en drones inteligentes para pulverización, monitoreo y agricultura de precisión.
-						</p>
-						<p class="text-[#5c6079] leading-[1.8] text-[0.97rem]">
-							Brindamos venta de equipos, capacitación, soporte técnico y servicios profesionales en campo, acompañando a nuestros clientes desde la implementación hasta la operación diaria.
-						</p>
-					</div>
-					<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-8">
-						<div class="flex items-center gap-3 px-4 py-3.5 bg-white border border-[rgba(68,78,134,0.15)] rounded-xl text-sm text-[#14152a] shadow-[0_2px_10px_rgba(23,26,60,0.04)]">
-							<span class="text-[#444e86] font-bold">✔</span>
-							<span>Representantes oficiales EaVision</span>
-						</div>
-						<div class="flex items-center gap-3 px-4 py-3.5 bg-white border border-[rgba(68,78,134,0.15)] rounded-xl text-sm text-[#14152a] shadow-[0_2px_10px_rgba(23,26,60,0.04)]">
-							<span class="text-[#444e86] font-bold">✔</span>
-							<span>Capacitación y soporte técnico</span>
-						</div>
-						<div class="flex items-center gap-3 px-4 py-3.5 bg-white border border-[rgba(68,78,134,0.15)] rounded-xl text-sm text-[#14152a] shadow-[0_2px_10px_rgba(23,26,60,0.04)]">
-							<span class="text-[#444e86] font-bold">✔</span>
-							<span>Tecnología agrícola de precisión</span>
-						</div>
-						<div class="flex items-center gap-3 px-4 py-3.5 bg-white border border-[rgba(68,78,134,0.15)] rounded-xl text-sm text-[#14152a] shadow-[0_2px_10px_rgba(23,26,60,0.04)]">
-							<span class="text-[#444e86] font-bold">✔</span>
-							<span>Operaciones en todo el país</span>
-						</div>
-					</div>
-				</div>
-
-				<!-- Card -->
-				<div class="fade-up [transition-delay:0.2s] relative bg-white border border-[rgba(68,78,134,0.15)] rounded-3xl p-8 sm:p-12 overflow-hidden shadow-[0_20px_60px_rgba(23,26,60,0.08)]">
-					<div class="absolute inset-[-20%] pointer-events-none" style="background: radial-gradient(circle, rgba(68,78,134,0.1), transparent 60%); filter: blur(40px);"></div>
-					<div class="relative z-10">
-						<div class="inline-flex items-center gap-2 bg-[rgba(68,78,134,0.1)] border border-[rgba(68,78,134,0.25)] px-4 py-1.5 rounded-full text-xs text-[#444e86] mb-6">
-							Partner Oficial
-						</div>
-						<h3 class="font-[Syne] text-3xl font-bold text-[#14152a] mb-4 leading-tight">EaVision Argentina</h3>
-						<p class="text-[#5c6079] leading-[1.7] mb-8">
-							Drones inteligentes diseñados para maximizar rendimiento, reducir costos y transformar la forma de trabajar el campo.
-						</p>
-						<div class="flex gap-8 pt-6 border-t border-[rgba(68,78,134,0.15)]">
-							<div>
-								<div class="font-[Syne] text-3xl font-extrabold text-[#3a4384] leading-none">+500</div>
-								<div class="text-xs text-[#5c6079] mt-1.5">Hectáreas trabajadas</div>
-							</div>
-							<div>
-								<div class="font-[Syne] text-3xl font-extrabold text-[#3a4384] leading-none">24/7</div>
-								<div class="text-xs text-[#5c6079] mt-1.5">Soporte técnico</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
 	<!-- VENTAS -->
-	<section class="py-20 sm:py-28 px-4 sm:px-8 bg-white" id="ventas">
-		<div class="max-w-[1200px] mx-auto">
+<!-- VENTAS -->
+<section class="py-20 sm:py-28 px-4 sm:px-8 bg-white" id="ventas">
+	<div class="max-w-[1200px] mx-auto">
 
-			<div class="text-center mb-14 fade-up">
-				<div class="inline-block text-[0.97rem] font-medium tracking-[0.12em] uppercase text-[#444e86] mb-4">Equipos en venta</div>
-				<h2 class="font-[Syne] text-[clamp(2rem,4vw,3rem)] font-bold text-[#14152a] mb-4">
-					Adquirí tu drone agrícola
-				</h2>
-				<p class="text-[#5c6079] leading-[1.7] max-w-[520px] mx-auto">
-					Equipos EaVision disponibles para entrega inmediata. Financiación disponible, capacitación incluida y soporte técnico permanente.
-				</p>
+		<!-- Título -->
+		<div class="text-center mb-14 fade-up">
+			<div class="inline-block text-[0.97rem] font-medium tracking-[0.12em] uppercase text-[#444e86] mb-4">
+				Equipos en venta
 			</div>
 
-			<!-- Card del drone -->
-			<div class="max-w-3xl mx-auto fade-up">
-				<div id="drone-card" class="group relative bg-[#f6f7fb] border border-[rgba(68,78,134,0.2)] rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 hover:border-[rgba(68,78,134,0.45)] hover:shadow-[0_0_60px_rgba(68,78,134,0.1)]"
-					onclick="openModal()">
+			<h2 class="font-[Syne] text-[clamp(2rem,4vw,3rem)] font-bold text-[#14152a] mb-4">
+				Adquirí tu drone agrícola
+			</h2>
 
-					<div class="grid grid-cols-1 sm:grid-cols-2">
-
-						<!-- Imagen principal -->
-						<div class="relative overflow-hidden aspect-square sm:aspect-auto min-h-[280px]">
-							<img src="/droneVolandoSoja.webp" alt="Drone agrícola EaVision EA-30 Pro pulverizando un cultivo de soja"
-								width="600" height="600" loading="lazy" decoding="async"
-								class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-							<div class="absolute inset-0 hidden sm:block"></div>
-							<!-- Badge disponible -->
-							<div class="absolute top-4 left-4">
-								<span class="inline-flex items-center gap-1.5 bg-[rgba(68,78,134,0.15)] border border-[rgba(68,78,134,0.35)] text-[#444e86] text-[0.68rem] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full backdrop-blur-sm">
-									<span class="w-1.5 h-1.5 bg-[#444e86] rounded-full animate-pulse"></span>
-									Disponible
-								</span>
-							</div>
-						</div>
-
-						<!-- Info -->
-						<div class="p-7 sm:p-8 flex flex-col justify-between">
-							<div>
-								<div class="text-[#444e86] text-xs font-semibold uppercase tracking-widest mb-2">EaVision</div>
-								<h3 class="font-[Syne] text-2xl sm:text-3xl font-extrabold text-[#14152a] leading-tight mb-1">EA-30 Pro</h3>
-								<p class="text-[#5c6079] text-sm mb-6 leading-relaxed">Drone agrícola de alta capacidad para pulverización, siembra y fertilización de precisión.</p>
-
-								<!-- Specs -->
-								<div class="grid grid-cols-2 gap-3 mb-6">
-									{[
-										{ icon: '💧', label: 'Tanque', val: '30 L' },
-										{ icon: '⚡', label: 'Velocidad', val: '8 m/s' },
-										{ icon: '🌾', label: 'Cobertura', val: '80-120 ha/día' },
-										{ icon: '🎯', label: 'Precisión RTK', val: '±2 cm' },
-										{ icon: '🔋', label: 'Autonomía', val: '12 min/carga' },
-										{ icon: '⚖️', label: 'Peso', val: '24 kg (lleno)' },
-									].map((s) => (
-										<div class="flex items-center gap-2.5 bg-white border border-[rgba(68,78,134,0.1)] rounded-xl px-3 py-2.5">
-											<span class="text-base" aria-hidden="true">{s.icon}</span>
-											<div>
-												<div class="text-[0.65rem] text-[#5c6079] leading-none mb-0.5">{s.label}</div>
-												<div class="text-xs font-semibold text-[#14152a]">{s.val}</div>
-											</div>
-										</div>
-									))}
-								</div>
-							</div>
-
-							<!-- Botones -->
-							<div class="flex flex-col gap-3" onclick="event.stopPropagation()">
-								<a href="https://wa.me/5493510000000?text=Hola!%20Me%20interesa%20el%20drone%20EaVision%20EA-30%20Pro.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F"
-									target="_blank" rel="noopener noreferrer"
-									class="w-full bg-[#25d366] text-white px-6 py-3.5 rounded-xl font-semibold text-sm text-center no-underline inline-flex items-center justify-center gap-2 transition-all hover:bg-[#20ba5a] hover:-translate-y-0.5">
-									<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-									Consultar por WhatsApp
-								</a>
-								<button onclick="openModal()" class="w-full bg-transparent text-[#14152a] border border-[rgba(68,78,134,0.25)] px-6 py-3 rounded-xl font-medium text-sm inline-flex items-center justify-center gap-2 transition-all hover:border-[rgba(68,78,134,0.35)] hover:bg-[rgba(68,78,134,0.05)] cursor-pointer">
-									Ver galería del equipo
-								</button>
-							</div>
-						</div>
-					</div>
-
-					<!-- Includes strip -->
-					<div class="border-t border-[rgba(68,78,134,0.12)] px-7 sm:px-8 py-4 flex flex-wrap gap-x-6 gap-y-2">
-						{['✔ Capacitación incluida', '✔ Garantía 12 meses', '✔ Soporte técnico 24/7', '✔ Envío a todo el país'].map((item) => (
-							<span class="text-sm text-[#5c6079]">{item}</span>
-						))}
-					</div>
-				</div>
-			</div>
-
-				<!-- Calculadora ROI -->
-				<div class="max-w-[1000px] mx-auto mt-16 fade-up">
-					<div class="text-center mb-10">
-						<div class="inline-block text-[0.97rem] font-medium tracking-[0.12em] uppercase text-[#444e86] mb-4">Calculadora</div>
-						<h3 class="font-[Syne] text-[clamp(1.6rem,3vw,2.4rem)] font-bold text-[#14152a] mb-3">
-							Calculá el ROI de tu drone
-						</h3>
-						<p class="text-[#5c6079] leading-[1.7] max-w-[520px] mx-auto">Estimá cuánto vas a ganar por mes y en cuánto tiempo recuperás la inversión.</p>
-					</div>
-			<!-- ROI Panel -->
-			<div id="panel-roi" class="block">
-				<div class="bg-[#f6f7fb] border border-[rgba(68,78,134,0.15)] rounded-2xl p-5 sm:p-8 lg:p-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-					<!-- Inputs -->
-					<div>
-						<div class="font-[Syne] text-xl font-bold text-[#14152a] mb-8">Ingresá los datos</div>
-						{[
-							{ label: 'Precio del Drone (ARS)', id: 'precio-drone', prefix: '$', val: '4500000', fn: 'calcROI()', readonly: true },
-							{ label: 'Hectáreas trabajadas por día', id: 'ha-dia', prefix: 'ha', val: '80', fn: 'calcROI()' },
-							{ label: 'Precio cobrado por hectárea (ARS)', id: 'precio-ha', prefix: '$', val: '4500', fn: 'calcROI()' },
-							{ label: 'Días de trabajo por mes', id: 'dias-mes', prefix: 'd', val: '20', fn: 'calcROI()' },
-							{ label: 'Costos operativos mensuales (ARS)', id: 'costo-op', prefix: '$', val: '250000', fn: 'calcROI()' },
-						].map((f) => (
-							<div class="mb-6 last:mb-0">
-								<label class="flex items-center gap-2 text-xs text-[#5c6079] font-medium mb-2" for={f.id}>
-									{f.label}
-									{f.readonly && <span class="text-[0.62rem] bg-[rgba(68,78,134,0.1)] border border-[rgba(68,78,134,0.2)] text-[#444e86] px-2 py-0.5 rounded-full uppercase tracking-wide">Precio fijo</span>}
-								</label>
-								<div class="relative">
-									<span class={`absolute left-4 top-1/2 -translate-y-1/2 text-sm font-semibold ${f.readonly ? 'text-[#5c5c66]' : 'text-[#444e86]'}`}>{f.prefix}</span>
-									<input
-										class={`w-full border rounded-xl py-3.5 pl-10 pr-4 text-base font-[DM_Sans] outline-none transition-all ${f.readonly ? 'bg-[rgba(68,78,134,0.04)] border-[rgba(68,78,134,0.08)] text-[#5c5c66] cursor-not-allowed' : 'bg-white border-[rgba(68,78,134,0.15)] text-[#14152a] focus:border-[#444e86] focus:shadow-[0_0_0_3px_rgba(68,78,134,0.12)]'}`}
-										type="number" id={f.id} name={f.id} value={f.val}
-										oninput={f.readonly ? undefined : f.fn}
-										readonly={f.readonly || undefined}
-										tabindex={f.readonly ? -1 : undefined}
-									/>
-								</div>
-							</div>
-						))}
-					</div>
-					<!-- Results -->
-					<div>
-						<div class="font-[Syne] text-xl font-bold text-[#14152a] mb-8">📊 Tus resultados</div>
-						<div class="flex flex-col gap-4">
-							<div class="p-5 sm:p-6 rounded-2xl border bg-[rgba(68,78,134,0.08)] border-[rgba(68,78,134,0.3)]">
-								<div class="text-[0.7rem] text-[#5c6079] uppercase tracking-widest mb-1.5">Ganancia Mensual Neta</div>
-								<div id="ganancia-mensual" class="font-[Syne] text-3xl sm:text-4xl font-extrabold text-[#3a4384] leading-none">$6.950.000</div>
-								<div class="text-xs text-[#5c6079] mt-2">Ingresos brutos menos costos operativos</div>
-							</div>
-							<div class="p-5 rounded-2xl border bg-white border-[rgba(68,78,134,0.15)]">
-								<div class="text-[0.7rem] text-[#5c6079] uppercase tracking-widest mb-1.5">Recupero de Inversión</div>
-								<div id="tiempo-recupero" class="font-[Syne] text-2xl font-extrabold text-[#14152a] leading-none">0,6 meses</div>
-								<div class="text-xs text-[#5c6079] mt-2">Tiempo estimado para recuperar el costo del drone</div>
-							</div>
-							<div class="p-5 rounded-2xl border bg-white border-[rgba(68,78,134,0.15)]">
-								<div class="text-[0.7rem] text-[#5c6079] uppercase tracking-widest mb-1.5">Proyección Anual</div>
-								<div id="proyeccion-anual" class="font-[Syne] text-2xl font-extrabold text-[#14152a] leading-none">$83.400.000</div>
-								<div class="text-xs text-[#5c6079] mt-2">Ganancia neta estimada en 12 meses</div>
-							</div>
-							<div class="p-5 rounded-2xl border bg-white border-[rgba(68,78,134,0.15)]">
-								<div class="text-[0.7rem] text-[#5c6079] uppercase tracking-widest mb-1.5">Ingresos Brutos/Mes</div>
-								<div id="ingresos-brutos" class="font-[Syne] text-2xl font-extrabold text-[#14152a] leading-none">$7.200.000</div>
-								<div id="ha-mes-desc" class="text-xs text-[#5c6079] mt-2">1600 ha/mes × $4.500/ha</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-				</div>
+			<p class="text-[#5c6079] leading-[1.7] max-w-[520px] mx-auto">
+				Equipos EaVision disponibles para entrega inmediata. Financiación disponible,
+				capacitación incluida y soporte técnico permanente.
+			</p>
 		</div>
+
+
+		<!-- ====================================================== -->
+		<!-- CARDS DE EQUIPOS -->
+		<!-- ====================================================== -->
+
+		<div class="max-w-[1120px] mx-auto fade-up">
+
+			<div class="flex lg:grid lg:grid-cols-[1.18fr_0.82fr] gap-5 lg:gap-6 overflow-x-auto lg:overflow-visible snap-x snap-mandatory lg:snap-none pb-4 lg:pb-0 -mx-4 px-4 lg:mx-0 lg:px-0 scrollbar-hide">
+
+
+				<!-- ================================================== -->
+				<!-- EQUIPO NUEVO - DESTACADO -->
+				<!-- ================================================== -->
+
+				<div
+					id="drone-card"
+					class="group relative flex-none w-[90vw] lg:w-auto snap-start bg-[#f6f7fb] border-2 border-[#444e86] rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-[0_20px_60px_rgba(68,78,134,0.15)]"
+					onclick="openModal()"
+				>
+
+					<!-- Badge NUEVO -->
+					<div class="absolute top-5 left-5 z-20">
+						<span class="inline-flex items-center gap-2 bg-[#444e86] text-white text-[0.68rem] font-bold uppercase tracking-widest px-4 py-2 rounded-full shadow-lg">
+							<span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
+							Nuevo
+						</span>
+					</div>
+
+
+					<!-- Imagen -->
+					<div class="relative overflow-hidden h-[300px] sm:h-[360px] lg:h-[390px]">
+
+						<img
+							src="/droneVolandoSoja.webp"
+							alt="Drone agrícola EaVision EA-30 Pro pulverizando un cultivo de soja"
+							width="800"
+							height="600"
+							loading="lazy"
+							decoding="async"
+							class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+						/>
+
+						<!-- Overlay inferior -->
+						<div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/75 via-black/25 to-transparent"></div>
+
+
+						<!-- Información sobre imagen -->
+						<div class="absolute left-6 right-6 bottom-6 text-white">
+
+							<div class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-white/80 mb-2">
+								EaVision
+							</div>
+
+							<h3 class="font-[Syne] text-3xl sm:text-4xl font-extrabold leading-none mb-2">
+								EA-30 Pro
+							</h3>
+
+							<p class="text-white/85 text-sm sm:text-base">
+								30 L · Pulverización, siembra y fertilización de precisión
+							</p>
+
+						</div>
+
+					</div>
+
+
+					<!-- Información -->
+					<div class="p-6 sm:p-7">
+
+						<!-- Specs -->
+						<div class="grid grid-cols-2 gap-3 mb-6">
+
+							<div class="flex items-center gap-2.5 bg-white border border-[rgba(68,78,134,0.1)] rounded-xl px-3 py-3">
+								<span class="text-base" aria-hidden="true">💧</span>
+
+								<div>
+									<div class="text-[0.65rem] text-[#5c6079] leading-none mb-1">
+										Tanque
+									</div>
+
+									<div class="text-xs font-semibold text-[#14152a]">
+										30 L
+									</div>
+								</div>
+							</div>
+
+
+							<div class="flex items-center gap-2.5 bg-white border border-[rgba(68,78,134,0.1)] rounded-xl px-3 py-3">
+								<span class="text-base" aria-hidden="true">⚡</span>
+
+								<div>
+									<div class="text-[0.65rem] text-[#5c6079] leading-none mb-1">
+										Velocidad
+									</div>
+
+									<div class="text-xs font-semibold text-[#14152a]">
+										8 m/s
+									</div>
+								</div>
+							</div>
+
+
+							<div class="flex items-center gap-2.5 bg-white border border-[rgba(68,78,134,0.1)] rounded-xl px-3 py-3">
+								<span class="text-base" aria-hidden="true">🌾</span>
+
+								<div>
+									<div class="text-[0.65rem] text-[#5c6079] leading-none mb-1">
+										Cobertura
+									</div>
+
+									<div class="text-xs font-semibold text-[#14152a]">
+										80-120 ha/día
+									</div>
+								</div>
+							</div>
+
+
+							<div class="flex items-center gap-2.5 bg-white border border-[rgba(68,78,134,0.1)] rounded-xl px-3 py-3">
+								<span class="text-base" aria-hidden="true">🎯</span>
+
+								<div>
+									<div class="text-[0.65rem] text-[#5c6079] leading-none mb-1">
+										Precisión RTK
+									</div>
+
+									<div class="text-xs font-semibold text-[#14152a]">
+										±2 cm
+									</div>
+								</div>
+							</div>
+
+
+							<div class="flex items-center gap-2.5 bg-white border border-[rgba(68,78,134,0.1)] rounded-xl px-3 py-3">
+								<span class="text-base" aria-hidden="true">🔋</span>
+
+								<div>
+									<div class="text-[0.65rem] text-[#5c6079] leading-none mb-1">
+										Autonomía
+									</div>
+
+									<div class="text-xs font-semibold text-[#14152a]">
+										12 min/carga
+									</div>
+								</div>
+							</div>
+
+
+							<div class="flex items-center gap-2.5 bg-white border border-[rgba(68,78,134,0.1)] rounded-xl px-3 py-3">
+								<span class="text-base" aria-hidden="true">⚖️</span>
+
+								<div>
+									<div class="text-[0.65rem] text-[#5c6079] leading-none mb-1">
+										Peso
+									</div>
+
+									<div class="text-xs font-semibold text-[#14152a]">
+										24 kg (lleno)
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+
+						<!-- Botones -->
+						<div
+							class="flex flex-col gap-3"
+							onclick="event.stopPropagation()"
+						>
+
+							<a
+								href="https://wa.me/5493510000000?text=Hola!%20Me%20interesa%20el%20drone%20EaVision%20EA-30%20Pro.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="w-full bg-[#25d366] text-white px-6 py-3.5 rounded-xl font-semibold text-sm text-center no-underline inline-flex items-center justify-center gap-2 transition-all hover:bg-[#20ba5a] hover:-translate-y-0.5"
+							>
+
+								<svg
+									width="16"
+									height="16"
+									viewBox="0 0 24 24"
+									fill="currentColor"
+									aria-hidden="true"
+								>
+									<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.198-.298.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+								</svg>
+
+								Consultar por WhatsApp
+							</a>
+
+
+							<button
+								onclick="openModal()"
+								class="w-full bg-transparent text-[#14152a] border border-[rgba(68,78,134,0.25)] px-6 py-3 rounded-xl font-medium text-sm inline-flex items-center justify-center gap-2 transition-all hover:border-[rgba(68,78,134,0.35)] hover:bg-[rgba(68,78,134,0.05)] cursor-pointer"
+							>
+								Ver galería del equipo
+							</button>
+
+						</div>
+
+					</div>
+
+
+					<!-- Includes -->
+					<div class="border-t border-[rgba(68,78,134,0.12)] px-6 sm:px-7 py-4 flex flex-wrap gap-x-5 gap-y-2">
+
+						<span class="text-sm text-[#5c6079]">
+							✔ Capacitación incluida
+						</span>
+
+						<span class="text-sm text-[#5c6079]">
+							✔ Garantía 12 meses
+						</span>
+
+						<span class="text-sm text-[#5c6079]">
+							✔ Soporte técnico 24/7
+						</span>
+
+						<span class="text-sm text-[#5c6079]">
+							✔ Envío a todo el país
+						</span>
+
+					</div>
+
+				</div>
+
+
+
+				<!-- ================================================== -->
+				<!-- EQUIPO ANTERIOR - SIN STOCK -->
+				<!-- ================================================== -->
+
+				<div
+					class="group relative flex-none w-[90vw] lg:w-auto snap-start bg-[#f1f1f1] border border-[#d5d5d5] rounded-3xl overflow-hidden grayscale"
+				>
+
+					<!-- Imagen -->
+					<div class="relative overflow-hidden h-[300px] sm:h-[360px] lg:h-[390px]">
+
+						<img
+							src="/droneVolandoSoja.webp"
+							alt="Drone agrícola EaVision modelo anterior"
+							width="700"
+							height="600"
+							loading="lazy"
+							decoding="async"
+							class="w-full h-full object-cover grayscale transition-transform duration-500"
+						/>
+
+						<!-- Overlay blanco/gris -->
+						<div class="absolute inset-0 bg-white/45"></div>
+
+
+						<!-- Badge sin stock -->
+						<div class="absolute top-5 left-5 z-10">
+
+							<span class="inline-flex items-center gap-2 bg-[#555] text-white text-[0.68rem] font-bold uppercase tracking-widest px-4 py-2 rounded-full">
+
+								<span class="w-1.5 h-1.5 bg-white rounded-full"></span>
+
+								Sin stock
+
+							</span>
+
+						</div>
+
+
+						<!-- Información sobre imagen -->
+						<div class="absolute left-6 right-6 bottom-6 text-[#333]">
+
+							<div class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-[#555] mb-2">
+								EaVision
+							</div>
+
+							<h3 class="font-[Syne] text-3xl font-extrabold leading-none mb-2 text-[#222]">
+								EA-30
+							</h3>
+
+							<p class="text-[#555] text-sm">
+								Modelo anterior · Consultá por su reemplazo
+							</p>
+
+						</div>
+
+					</div>
+
+
+					<!-- Información -->
+					<div class="p-6 sm:p-7">
+
+						<p class="text-[#666] text-sm leading-relaxed mb-6">
+							Este modelo actualmente se encuentra fuera de stock.
+							Conocé la nueva generación EaVision y sus prestaciones mejoradas.
+						</p>
+
+
+						<!-- Specs -->
+						<div class="grid grid-cols-2 gap-3 mb-6">
+
+							<div class="bg-white/70 border border-[#d8d8d8] rounded-xl px-3 py-3">
+
+								<div class="text-[0.65rem] text-[#777] mb-1">
+									Tanque
+								</div>
+
+								<div class="text-xs font-semibold text-[#444]">
+									30 L
+								</div>
+
+							</div>
+
+
+							<div class="bg-white/70 border border-[#d8d8d8] rounded-xl px-3 py-3">
+
+								<div class="text-[0.65rem] text-[#777] mb-1">
+									Velocidad
+								</div>
+
+								<div class="text-xs font-semibold text-[#444]">
+									8 m/s
+								</div>
+
+							</div>
+
+
+							<div class="bg-white/70 border border-[#d8d8d8] rounded-xl px-3 py-3">
+
+								<div class="text-[0.65rem] text-[#777] mb-1">
+									Cobertura
+								</div>
+
+								<div class="text-xs font-semibold text-[#444]">
+									80-120 ha/día
+								</div>
+
+							</div>
+
+
+							<div class="bg-white/70 border border-[#d8d8d8] rounded-xl px-3 py-3">
+
+								<div class="text-[0.65rem] text-[#777] mb-1">
+									Precisión
+								</div>
+
+								<div class="text-xs font-semibold text-[#444]">
+									±2 cm
+								</div>
+
+							</div>
+
+						</div>
+
+
+						<!-- CTA -->
+						<a
+							href="#ventas"
+							class="w-full bg-[#555] text-white px-6 py-3.5 rounded-xl font-semibold text-sm text-center no-underline inline-flex items-center justify-center gap-2 transition-all hover:bg-[#333]"
+						>
+							Conocé el nuevo EA-30 Pro →
+						</a>
+
+					</div>
+
+
+					<!-- Includes -->
+					<div class="border-t border-[#d5d5d5] px-6 sm:px-7 py-4">
+
+						<span class="text-sm text-[#777]">
+							Modelo fuera de stock · Consultá por disponibilidad
+						</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+</section>
+</section>
+				<!-- Calculadora ROI -->
+<!-- CALCULADORA ROI -->
+<div class="max-w-[1000px] mx-auto mt-16 fade-up">
+
+	<div class="bg-[#14152a] rounded-3xl px-5 py-12 sm:px-10 sm:py-16 lg:px-16">
+
+		<!-- TÍTULO -->
+		<div class="text-center mb-12">
+
+			<div class="inline-block text-[0.75rem] font-medium tracking-[0.15em] uppercase text-[#8b93d6] mb-4">
+				Calculadora
+			</div>
+
+			<h3 class="font-[Syne] text-[clamp(2rem,5vw,3.5rem)] font-extrabold text-white leading-tight mb-5">
+				Descubrí cuanto recuperas de tu inversión
+			</h3>
+
+		</div>
+
+
+		<!-- CALCULADORA -->
+		<div class="max-w-[700px] mx-auto">
+
+			<div class="text-center">
+
+				<!-- PREGUNTA -->
+				<div class="font-[Syne] text-lg sm:text-xl text-white font-semibold mb-7">
+					¿A cuánto cobrás el servicio por hectárea?
+				</div>
+
+
+				<!-- VALOR -->
+				<div
+					id="precio-ha-display"
+					class="inline-flex items-center justify-center bg-[#53645f] text-white font-[Syne] font-bold text-base sm:text-lg px-4 py-2 rounded-lg mb-8"
+				>
+					$4.500/ha
+				</div>
+
+
+				<!-- SLIDER -->
+				<div class="px-1">
+
+				<input
+	type="range"
+	id="precio-ha"
+	min="3000"
+	max="10000"
+	step="500"
+	value="4500"
+	oninput="calcROI()"
+	class="roi-slider w-full"
+/>
+
+					<div class="flex justify-between mt-3 text-sm text-[#777]">
+						<span>$3.000/ha</span>
+						<span>$10.000/ha</span>
+					</div>
+
+				</div>
+
+			</div>
+
+
+			<!-- REFERENCIA -->
+			<p class="text-center text-sm text-[#898989] mt-8 mb-10">
+				Mové el slider para ver cómo cambia tu rentabilidad.
+			</p>
+
+
+			<!-- RESULTADOS -->
+			<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+
+				<div class="bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.08)] rounded-2xl p-5 text-center">
+
+					<div class="text-[0.65rem] text-[#898989] uppercase tracking-widest mb-2">
+						Ganancia mensual
+					</div>
+
+					<div
+						id="ganancia-mensual"
+						class="font-[Syne] text-2xl sm:text-3xl font-extrabold text-white"
+					>
+						$6.950.000
+					</div>
+
+				</div>
+
+
+				<div class="bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.08)] rounded-2xl p-5 text-center">
+
+					<div class="text-[0.65rem] text-[#898989] uppercase tracking-widest mb-2">
+						Recuperás en
+					</div>
+
+					<div
+						id="tiempo-recupero"
+						class="font-[Syne] text-2xl sm:text-3xl font-extrabold text-white"
+					>
+						0,6 meses
+					</div>
+
+				</div>
+
+
+				<div class="bg-[rgba(68,78,134,0.25)] border border-[rgba(68,78,134,0.4)] rounded-2xl p-5 text-center">
+
+					<div class="text-[0.65rem] text-[#aaa] uppercase tracking-widest mb-2">
+						Proyección anual
+					</div>
+
+					<div
+						id="proyeccion-anual"
+						class="font-[Syne] text-2xl sm:text-3xl font-extrabold text-white"
+					>
+						$83.400.000
+					</div>
+
+				</div>
+
+			</div>
+
+
+			<!-- CTA -->
+			<div class="text-center">
+
+				<a
+					href="#contacto"
+					class="inline-flex items-center justify-center gap-2 bg-[#444e86] hover:bg-[#5b67a8] text-white px-8 sm:px-10 py-4 rounded-xl font-[Syne] font-bold text-base sm:text-lg no-underline transition-all duration-300 hover:-translate-y-1"
+				>
+					Quiero mi drone
+					<span>→</span>
+				</a>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
 	</section>
 
 	<!-- MODAL GALERÍA DRONE -->
@@ -675,6 +975,80 @@ const description = 'Venta y servicios de drones agrícolas EaVision: pulverizac
 							</div>
 						</div>
 					))}
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- NOSOTROS -->
+	<section class="py-20 sm:py-28 px-4 sm:px-8 bg-[#f6f7fb] relative overflow-hidden" id="nosotros">
+		<div class="absolute inset-0 pointer-events-none"
+			style="background: radial-gradient(circle at 20% 30%, rgba(68,78,134,0.08), transparent 40%), radial-gradient(circle at 80% 70%, rgba(68,78,134,0.05), transparent 40%);">
+		</div>
+		<div class="max-w-[1200px] mx-auto relative z-10">
+			<div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-20 items-center">
+
+				<!-- Content -->
+				<div class="fade-up">
+					<div class="inline-block text-[0.97rem] font-medium tracking-[0.12em] uppercase text-[#444e86] mb-4">Nosotros</div>
+					<h2 class="font-[Syne] text-[clamp(2rem,4vw,3rem)] font-bold leading-[1.15] text-[#14152a] mb-4">
+						Somos Eavision
+					</h2>
+					<p class="text-base text-[#5c6079] leading-relaxed max-w-[560px]">
+						Empresa argentina especializada en tecnología agrícola de precisión y soluciones aéreas para el agro.
+					</p>
+					<div class="flex flex-col gap-5 mt-8">
+						<p class="text-[#5c6079] leading-[1.8] text-[0.97rem]">
+							Trabajamos junto a productores, ingenieros agrónomos y contratistas para optimizar cada hectárea mediante drones agrícolas de última generación.
+						</p>
+						<p class="text-[#5c6079] leading-[1.8] text-[0.97rem]">
+							Somos representantes oficiales de <strong class="text-[#14152a]">EaVision</strong>, una de las marcas líderes a nivel mundial en drones inteligentes para pulverización, monitoreo y agricultura de precisión.
+						</p>
+						<p class="text-[#5c6079] leading-[1.8] text-[0.97rem]">
+							Brindamos venta de equipos, capacitación, soporte técnico y servicios profesionales en campo, acompañando a nuestros clientes desde la implementación hasta la operación diaria.
+						</p>
+					</div>
+					<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-8">
+						<div class="flex items-center gap-3 px-4 py-3.5 bg-white border border-[rgba(68,78,134,0.15)] rounded-xl text-sm text-[#14152a] shadow-[0_2px_10px_rgba(23,26,60,0.04)]">
+							<span class="text-[#444e86] font-bold">✔</span>
+							<span>Representantes oficiales EaVision</span>
+						</div>
+						<div class="flex items-center gap-3 px-4 py-3.5 bg-white border border-[rgba(68,78,134,0.15)] rounded-xl text-sm text-[#14152a] shadow-[0_2px_10px_rgba(23,26,60,0.04)]">
+							<span class="text-[#444e86] font-bold">✔</span>
+							<span>Capacitación y soporte técnico</span>
+						</div>
+						<div class="flex items-center gap-3 px-4 py-3.5 bg-white border border-[rgba(68,78,134,0.15)] rounded-xl text-sm text-[#14152a] shadow-[0_2px_10px_rgba(23,26,60,0.04)]">
+							<span class="text-[#444e86] font-bold">✔</span>
+							<span>Tecnología agrícola de precisión</span>
+						</div>
+						<div class="flex items-center gap-3 px-4 py-3.5 bg-white border border-[rgba(68,78,134,0.15)] rounded-xl text-sm text-[#14152a] shadow-[0_2px_10px_rgba(23,26,60,0.04)]">
+							<span class="text-[#444e86] font-bold">✔</span>
+							<span>Operaciones en todo el país</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Card -->
+				<div class="fade-up [transition-delay:0.2s] relative bg-white border border-[rgba(68,78,134,0.15)] rounded-3xl p-8 sm:p-12 overflow-hidden shadow-[0_20px_60px_rgba(23,26,60,0.08)]">
+					<div class="absolute inset-[-20%] pointer-events-none" style="background: radial-gradient(circle, rgba(68,78,134,0.1), transparent 60%); filter: blur(40px);"></div>
+					<div class="relative z-10">
+						<div class="inline-flex items-center gap-2 bg-[rgba(68,78,134,0.1)] border border-[rgba(68,78,134,0.25)] px-4 py-1.5 rounded-full text-xs text-[#444e86] mb-6">
+							Partner Oficial
+						</div>
+						<h3 class="font-[Syne] text-3xl font-bold text-[#14152a] mb-4 leading-tight">EaVision Argentina</h3>
+						<p class="text-[#5c6079] leading-[1.7] mb-8">
+							Drones inteligentes diseñados para maximizar rendimiento, reducir costos y transformar la forma de trabajar el campo.
+						</p>
+						<div class="flex gap-8 pt-6 border-t border-[rgba(68,78,134,0.15)]">
+							<div>
+								<div class="font-[Syne] text-3xl font-extrabold text-[#3a4384] leading-none">+500</div>
+								<div class="text-xs text-[#5c6079] mt-1.5">Hectáreas trabajadas</div>
+							</div>
+							<div>
+								<div class="font-[Syne] text-3xl font-extrabold text-[#3a4384] leading-none">24/7</div>
+								<div class="text-xs text-[#5c6079] mt-1.5">Soporte técnico</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -971,6 +1345,53 @@ const description = 'Venta y servicios de drones agrícolas EaVision: pulverizac
 	.hero-in-3 { animation-delay: 0.4s; }
 	.hero-in-4 { animation-delay: 0.55s; }
 	.hero-in-5 { animation-delay: 0.7s; }
+
+	/* =========================
+   SLIDER CALCULADORA ROI
+   ========================= */
+
+.roi-slider {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 100%;
+	height: 8px;
+	border-radius: 999px;
+	background: #555;
+	outline: none;
+	cursor: pointer;
+}
+
+.roi-slider::-webkit-slider-thumb {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #53645f;
+	border: 3px solid white;
+	box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+	cursor: grab;
+}
+
+.roi-slider::-webkit-slider-thumb:active {
+	cursor: grabbing;
+}
+
+.roi-slider::-moz-range-thumb {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #53645f;
+	border: 3px solid white;
+	box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+	cursor: grab;
+}
+
+.roi-slider::-moz-range-track {
+	height: 8px;
+	border-radius: 999px;
+	background: #555;
+}
 </style>
 
 <script>
@@ -1094,28 +1515,106 @@ setTimeout(animateCounters, 700);
 	}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 	document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-	// ROI Calculator
-	function calcROI() {
-		const precio = parseFloat(document.getElementById('precio-drone')?.value) || 0;
-		const haDia = parseFloat(document.getElementById('ha-dia')?.value) || 0;
-		const precioHa = parseFloat(document.getElementById('precio-ha')?.value) || 0;
-		const diasMes = parseFloat(document.getElementById('dias-mes')?.value) || 0;
-		const costoOp = parseFloat(document.getElementById('costo-op')?.value) || 0;
+// ROI Calculator
+function calcROI() {
 
-		const haMes = haDia * diasMes;
-		const ingresosBrutos = haMes * precioHa;
-		const gananciaNeta = ingresosBrutos - costoOp;
-		const tiempoRecupero = gananciaNeta > 0 ? precio / gananciaNeta : 0;
-		const proyeccionAnual = gananciaNeta * 12;
+	const precioDrone = 4500000;
 
-		const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
-		set('ganancia-mensual', '$' + formatNum(gananciaNeta));
-		set('tiempo-recupero', tiempoRecupero > 0 ? tiempoRecupero.toFixed(1) + ' meses' : '—');
-		set('proyeccion-anual', '$' + formatNum(proyeccionAnual));
-		set('ingresos-brutos', '$' + formatNum(ingresosBrutos));
-		set('ha-mes-desc', formatNum(haMes) + ' ha/mes × $' + formatNum(precioHa) + '/ha');
+	const hectareasDia = 80;
+
+	const diasMes = 20;
+
+	const costosOperativos = 250000;
+
+
+	// Precio seleccionado en el slider
+	const slider = document.getElementById('precio-ha');
+
+	const precioHa = parseFloat(slider?.value) || 0;
+
+
+	// Cálculos
+	const hectareasMes = hectareasDia * diasMes;
+
+	const ingresosBrutos = hectareasMes * precioHa;
+
+	const gananciaNeta = ingresosBrutos - costosOperativos;
+
+	const tiempoRecupero =
+		gananciaNeta > 0
+			? precioDrone / gananciaNeta
+			: 0;
+
+	const proyeccionAnual =
+		gananciaNeta * 12;
+
+
+	// Actualizar textos
+	const set = (id, valor) => {
+
+		const elemento = document.getElementById(id);
+
+		if (elemento) {
+			elemento.textContent = valor;
+		}
+
+	};
+
+
+	set(
+		'precio-ha-display',
+		'$' + formatNum(precioHa) + '/ha'
+	);
+
+
+	set(
+		'ganancia-mensual',
+		'$' + formatNum(gananciaNeta)
+	);
+
+
+	set(
+		'tiempo-recupero',
+		tiempoRecupero > 0
+			? tiempoRecupero.toFixed(1).replace('.', ',') + ' meses'
+			: '—'
+	);
+
+
+	set(
+		'proyeccion-anual',
+		'$' + formatNum(proyeccionAnual)
+	);
+
+
+	// Actualizar visualmente la barra
+	if (slider) {
+
+		const min = parseFloat(slider.min);
+
+		const max = parseFloat(slider.max);
+
+		const value = parseFloat(slider.value);
+
+		const porcentaje =
+			((value - min) / (max - min)) * 100;
+
+
+		slider.style.background = `
+			linear-gradient(
+				to right,
+				#53645f 0%,
+				#53645f ${porcentaje}%,
+				#555 ${porcentaje}%,
+				#555 100%
+			)
+		`;
+
 	}
-	window.calcROI = calcROI;
+
+}
+
+window.calcROI = calcROI;
 
 	// Ahorro Calculator
 	function calcAhorro() {
