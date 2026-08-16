@@ -1,10 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const title = 'EAV-J150 | EaVision';
+const title = 'EAV-J150 | Drone Agrícola de Alta Capacidad | EaVision';
 
 const description =
-	'EAV-J150 — Drone agrícola de alta capacidad con generador, dispersor de sólidos, antena RTK y herramienta de mapeo.';
+	'EAV-J150: drone agrícola de 70L y 80kg de esparcido sólido, caudal de 40 L/min y rendimiento de 25-40 ha/h. Generador, dispersor de sólidos, antena RTK y mapeo. Distribuido por Terrallink en Santa Cruz, Bolivia.';
+
+const canonicalURL = 'https://www.eavision.com/eav-j150'; // ← reemplazar por la URL real de la página
+
+const ogImage = 'https://www.eavision.com/droneVolandoSoja.webp'; // ← reemplazar por la URL absoluta real
 
 const whatsapp =
 	'https://wa.me/5493510000000?text=Hola!%20Me%20interesa%20el%20EAV-J150.%20Quisiera%20recibir%20m%C3%A1s%20informaci%C3%B3n.';
@@ -75,9 +79,53 @@ const technicalSpecs = [
 	['Protección', 'IPX6K / IP67'],
 	['Rendimiento', '25–40 ha/h'],
 ];
+
+// JSON-LD: datos estructurados de producto para resultados enriquecidos en Google
+const productJsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'Product',
+	name: 'EAV-J150',
+	description: description,
+	image: ogImage,
+	brand: {
+		'@type': 'Brand',
+		name: 'EaVision',
+	},
+	category: 'Drone agrícola',
+	additionalProperty: [
+		{ '@type': 'PropertyValue', name: 'Capacidad Tanque', value: '70 L' },
+		{ '@type': 'PropertyValue', name: 'Depósito Sólido', value: '80 kg' },
+		{ '@type': 'PropertyValue', name: 'Flujo Máximo', value: '40 L/min' },
+		{ '@type': 'PropertyValue', name: 'Rendimiento', value: '25-40 ha/h' },
+	],
+};
 ---
 
 <Layout title={title} description={description}>
+
+	<!-- ===================================================== -->
+	<!-- SEO -->
+	<!-- ===================================================== -->
+
+	<link rel="canonical" href={canonicalURL} />
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="product" />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:image" content={ogImage} />
+	<meta property="og:url" content={canonicalURL} />
+	<meta property="og:locale" content="es_AR" />
+	<meta property="og:site_name" content="EaVision" />
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content={description} />
+	<meta name="twitter:image" content={ogImage} />
+
+	<!-- Datos estructurados (JSON-LD) -->
+	<script type="application/ld+json" set:html={JSON.stringify(productJsonLd)} />
 
 	<!-- ===================================================== -->
 	<!-- FUENTE -->
@@ -105,6 +153,14 @@ const technicalSpecs = [
 		referrerpolicy="no-referrer"
 	/>
 
+	<!-- Precarga la imagen del hero: es el LCP de la página -->
+	<link
+		rel="preload"
+		as="image"
+		href="/droneVolandoSoja.webp"
+		fetchpriority="high"
+	/>
+
 	<!-- ===================================================== -->
 	<!-- NAVBAR -->
 	<!-- ===================================================== -->
@@ -126,6 +182,8 @@ const technicalSpecs = [
 					src="/logos/logoEavisionAzul.webp"
 					alt="EA Vision"
 					class="h-12 sm:h-14 lg:h-16 w-auto transition-transform duration-300 hover:scale-105"
+					loading="eager"
+					decoding="async"
 				/>
 			</a>
 
@@ -220,9 +278,17 @@ const technicalSpecs = [
 
 				<div class="hero-image-wrap">
 
+					<!--
+						Imagen del hero = LCP (Largest Contentful Paint) de la página.
+						fetchpriority="high" + loading="eager" para que cargue primero.
+						NUNCA poner loading="lazy" acá.
+					-->
 					<img
 						src="/droneVolandoSoja.webp"
-						alt="Drone agrícola EaVision EAV-J150 en operación"
+						alt="Drone agrícola EaVision EAV-J150 pulverizando un cultivo de soja"
+						fetchpriority="high"
+						loading="eager"
+						decoding="async"
 					/>
 
 					<div class="hero-overlay"></div>
@@ -424,7 +490,7 @@ const technicalSpecs = [
 					>
 
 						{
-							galleryItems.map((item) => (
+							galleryItems.map((item, index) => (
 
 								<article class="gallery-card">
 
@@ -450,8 +516,10 @@ const technicalSpecs = [
 
 												<img
 													src={item.image}
-													alt={`EAV-J150 ${item.title}`}
+													alt={`EAV-J150: ${item.title}`}
 													loading="lazy"
+													decoding="async"
+													fetchpriority={index < 2 ? 'low' : undefined}
 												/>
 
 											) : (
@@ -517,8 +585,8 @@ const technicalSpecs = [
 					</div>
 
 					<p>
-						Próximamente podrás ver el EAV-J150
-						en operación.
+						Mirá al EAV-J150 en pleno vuelo de
+						pulverización sobre un cultivo real.
 					</p>
 
 				</div>
@@ -526,15 +594,22 @@ const technicalSpecs = [
 
 				<div class="video-container">
 
-					<video 
+					<!--
+						VIDEO LAZY: no se descarga el .mp4 hasta que la sección
+						está por entrar en pantalla (ver script "lazy-video" al final).
+						data-src en vez de src evita la descarga inmediata.
+					-->
+					<video
 						class="video-player"
-						autoplay
+						id="operacion-video"
 						loop
 						muted
 						playsinline
+						preload="none"
 						poster="/droneVolandoSoja.webp"
+						aria-label="Video del EAV-J150 en operación de pulverización"
 					>
-						<source src="/videos/dronOperacion.mp4" type="video/mp4" />
+						<source data-src="/videos/dronOperacion.mp4" type="video/mp4" />
 						Tu navegador no soporta el elemento de video.
 					</video>
 
@@ -576,7 +651,12 @@ const technicalSpecs = [
 						</div>
 
 						<div class="kit-image-placeholder">
-							<img src="../../public/bateriaDrones/bateriaDrone.webp" alt="">
+							<img
+								src="/bateriaDrones/bateriaDrone.webp"
+								alt="Batería del kit EAV-J150"
+								loading="lazy"
+								decoding="async"
+							/>
 						</div>
 
 						<h3>
@@ -597,7 +677,12 @@ const technicalSpecs = [
 						</div>
 
 						<div class="kit-image-placeholder">
-							<img src="../../public/bateriaDrones/bateriaDos.webp" alt="">
+							<img
+								src="/bateriaDrones/bateriaDos.webp"
+								alt="Cargador dual del kit EAV-J150"
+								loading="lazy"
+								decoding="async"
+							/>
 						</div>
 
 						<h3>
@@ -1233,6 +1318,7 @@ const technicalSpecs = [
 						alt="EA Vision"
 						class="h-12 sm:h-14 md:h-16 w-auto"
 						loading="lazy"
+						decoding="async"
 					/>
 				</a>
 
@@ -1878,44 +1964,12 @@ const technicalSpecs = [
 	background: #eef0f6;
 }
 
-.video-placeholder {
+.video-player {
 	width: 100%;
 	height: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	background:
-		radial-gradient(circle at center, rgba(68,78,134,.08), transparent 35%);
-}
-
-.video-play {
-	width: 76px;
-	height: 76px;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: var(--accent);
-	color: #ffffff;
-	font-size: 22px;
-	padding-left: 4px;
-	box-shadow: 0 20px 60px rgba(68,78,134,.2);
-}
-
-.video-label {
-	margin-top: 25px;
-	color: #14152a;
-	font-family: 'Syne', sans-serif;
-	font-size: 18px;
-	font-weight: 700;
-	letter-spacing: .03em;
-}
-
-.video-note {
-	margin-top: 8px;
-	color: #5c6079;
-	font-size: 12px;
+	object-fit: cover;
+	display: block;
+	background: #eef0f6;
 }
 
 
@@ -1983,6 +2037,14 @@ const technicalSpecs = [
 	align-items: center;
 	justify-content: center;
 	color: #8288a0;
+	overflow: hidden;
+}
+
+.kit-image-placeholder img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 18px;
 }
 
 .kit-image-placeholder div {
@@ -2762,7 +2824,7 @@ const technicalSpecs = [
 </style>
 
 
-<script>
+<script is:inline>
 	// Navbar: fondo más opaco al hacer scroll
 	window.addEventListener('scroll', () => {
 		const nav = document.getElementById('navbar');
@@ -2921,4 +2983,55 @@ const technicalSpecs = [
 
 
 	updateGallery();
+
+
+	/* ===================================================== */
+	/* LAZY VIDEO */
+	/* No se descarga el .mp4 hasta que la sección está a 200px */
+	/* de entrar en el viewport. Evita cargar varios MB de video */
+	/* si el usuario nunca llega a esa sección. */
+	/* ===================================================== */
+
+	const lazyVideo = document.getElementById('operacion-video');
+
+	if (lazyVideo && 'IntersectionObserver' in window) {
+
+		const videoObserver = new IntersectionObserver(
+			(entries) => {
+
+				entries.forEach((entry) => {
+
+					if (entry.isIntersecting) {
+
+						const source = lazyVideo.querySelector('source[data-src]');
+
+						if (source) {
+							source.src = source.dataset.src;
+							lazyVideo.load();
+							lazyVideo.play().catch(() => {
+								// Autoplay bloqueado (ej. ahorro de datos): el poster queda visible.
+							});
+						}
+
+						videoObserver.unobserve(lazyVideo);
+					}
+
+				});
+
+			},
+			{ rootMargin: '200px' }
+		);
+
+		videoObserver.observe(lazyVideo);
+
+	} else if (lazyVideo) {
+
+		// Fallback para navegadores sin IntersectionObserver
+		const source = lazyVideo.querySelector('source[data-src]');
+		if (source) {
+			source.src = source.dataset.src;
+			lazyVideo.load();
+		}
+
+	}
 </script>
