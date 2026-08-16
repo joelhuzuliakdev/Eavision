@@ -1873,10 +1873,11 @@ const productJsonLd = {
 
 .gallery-card-top {
 	display: flex;
-	align-items: center;
+	align-items: flex-start;   /* antes: center */
 	gap: 13px;
-	height: 58px;
-	padding: 0 18px;
+	height: auto;               /* antes: 58px */
+	min-height: 58px;
+	padding: 16px 18px;         /* antes: 0 18px */
 	color: #5c6079;
 	font-size: 10px;
 	letter-spacing: .12em;
@@ -1886,13 +1887,16 @@ const productJsonLd = {
 .gallery-card-top strong {
 	color: #14152a;
 	font-size: 10px;
-	white-space: nowrap;
+	white-space: normal;        /* antes: nowrap */
+	line-height: 1.4;
 }
 
 .gallery-line {
 	height: 1px;
 	flex: 1;
 	background: var(--line);
+	margin-top: 4px;            /* para que no quede pegada arriba cuando el título tiene 2 líneas */
+	align-self: flex-start;
 }
 
 .gallery-media {
@@ -2753,6 +2757,19 @@ const productJsonLd = {
 
 	.gallery-card {
 		flex-basis: 82%;
+	}
+
+	.gallery-card-top {
+		flex-wrap: wrap;
+	}
+
+	.gallery-line {
+		display: none;
+	}
+
+	.gallery-card-top strong {
+		font-size: 11px;
+		flex: 1 1 100%;
 	}
 
 	.gallery-media {
