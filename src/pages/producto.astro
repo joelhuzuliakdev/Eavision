@@ -13,27 +13,27 @@ const galleryItems = [
 	{
 		number: '01',
 		title: 'Carga Ultra-Rápida',
-		image: null,
+		image: '/eavJ150//eavBateria.webp',
 	},
 	{
 		number: '02',
 		title: 'Operación',
-		image: null,
+		image: '/eavJ150//eavBoquillas.webp',
 	},
 	{
 		number: '03',
 		title: 'Mapeo',
-		image: null,
+		image: '/eavJ150//eavSistemaLaser.webp',
 	},
 	{
 		number: '04',
 		title: 'Aplicación',
-		image: null,
+		image: '/eavJ150//eavEsparcidor.webp',
 	},
 	{
 		number: '05',
-		title: 'Siembra Aérea',
-		image: null,
+		title: 'Levantamiento de carga',
+		image: '/eavJ150//eavTransporte.webp',
 	},
 ];
 
@@ -231,10 +231,6 @@ const technicalSpecs = [
 
 
 					<div class="hero-content">
-
-						<div class="eyebrow hero-in">
-							EAVISION · TECNOLOGÍA AGRÍCOLA
-						</div>
 
 						<div class="hero-status hero-in">
 							<span></span>
@@ -530,21 +526,17 @@ const technicalSpecs = [
 
 				<div class="video-container">
 
-					<div class="video-placeholder">
-
-						<div class="video-play">
-							▶
-						</div>
-
-						<div class="video-label">
-							VIDEO DEL EAV-J150
-						</div>
-
-						<div class="video-note">
-							Contenido audiovisual próximamente.
-						</div>
-
-					</div>
+					<video 
+						class="video-player"
+						autoplay
+						loop
+						muted
+						playsinline
+						poster="/droneVolandoSoja.webp"
+					>
+						<source src="/videos/dronOperacion.mp4" type="video/mp4" />
+						Tu navegador no soporta el elemento de video.
+					</video>
 
 				</div>
 
@@ -584,8 +576,7 @@ const technicalSpecs = [
 						</div>
 
 						<div class="kit-image-placeholder">
-							<div>+</div>
-							<span>IMAGEN</span>
+							<img src="../../public/bateriaDrones/bateriaDrone.webp" alt="">
 						</div>
 
 						<h3>
@@ -606,8 +597,7 @@ const technicalSpecs = [
 						</div>
 
 						<div class="kit-image-placeholder">
-							<div>+</div>
-							<span>IMAGEN</span>
+							<img src="../../public/bateriaDrones/bateriaDos.webp" alt="">
 						</div>
 
 						<h3>
