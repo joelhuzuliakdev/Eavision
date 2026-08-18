@@ -1096,7 +1096,7 @@ const description = 'Venta y servicios de drones agrícolas EaVision: pulverizac
 
 					{[
 						{ icon: '📞', label: 'Teléfono / WhatsApp', val: '+54 9 351 000-0000' },
-						{ icon: '📧', label: 'Email', val: 'info@eavision.com' },
+						{ icon: '📧', label: 'Email', val: 'eavision@elladerosa.com.ar' },
 						{ icon: '📍', label: 'Zona de operaciones', val: 'Córdoba · Buenos Aires · Santa Fe · Entre Ríos' },
 					].map((c) => (
 						<div class="flex items-start gap-4 mb-7">
@@ -1118,80 +1118,280 @@ const description = 'Venta y servicios de drones agrícolas EaVision: pulverizac
 					</a>
 				</div>
 
-				<!-- Form -->
-				<div class="fade-up [transition-delay:0.2s] bg-[#f6f7fb] border border-[rgba(68,78,134,0.15)] rounded-2xl p-6 sm:p-10">
-					<div class="font-[Syne] text-xl sm:text-2xl font-bold text-[#14152a] mb-7">Solicitar Cotización</div>
-					<form>
-					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-						<div class="flex flex-col gap-1.5">
-							<label class="text-xs text-[#5c6079]" for="nombre">Nombre y apellido</label>
-							<input type="text" id="nombre" name="nombre" autocomplete="name" class="bg-white border border-[rgba(68,78,134,0.15)] rounded-xl px-4 py-3 text-[#14152a] text-sm font-[DM_Sans] outline-none transition-all focus:border-[#444e86] focus:shadow-[0_0_0_3px_rgba(68,78,134,0.12)]" placeholder="Juan Rodríguez" />
-						</div>
-						<div class="flex flex-col gap-1.5">
-							<label class="text-xs text-[#5c6079]" for="telefono">Teléfono</label>
-							<input type="tel" id="telefono" name="telefono" autocomplete="tel" class="bg-white border border-[rgba(68,78,134,0.15)] rounded-xl px-4 py-3 text-[#14152a] text-sm font-[DM_Sans] outline-none transition-all focus:border-[#444e86] focus:shadow-[0_0_0_3px_rgba(68,78,134,0.12)]" placeholder="+54 9 351 ..." />
-						</div>
-						<div class="flex flex-col gap-1.5">
-							<label class="text-xs text-[#5c6079]" for="email">Email</label>
-							<input type="email" id="email" name="email" autocomplete="email" class="bg-white border border-[rgba(68,78,134,0.15)] rounded-xl px-4 py-3 text-[#14152a] text-sm font-[DM_Sans] outline-none transition-all focus:border-[#444e86] focus:shadow-[0_0_0_3px_rgba(68,78,134,0.12)]" placeholder="juan@campo.com" />
-						</div>
-						<div class="flex flex-col gap-1.5">
-							<label class="text-xs text-[#5c6079]" for="provincia">Provincia</label>
+				<!-- <!-- Form -->
+<div class="fade-up [transition-delay:0.2s] bg-[#f6f7fb] border border-[rgba(68,78,134,0.15)] rounded-2xl p-6 sm:p-10">
 
-							<select
-								id="provincia"
-								name="provincia"
-								class="bg-white border border-[rgba(68,78,134,0.15)] rounded-xl px-4 py-3 text-[#14152a] text-sm font-[DM_Sans] outline-none transition-all focus:border-[#444e86] appearance-none cursor-pointer"
-							>
-								<option value="">Seleccionar...</option>
-								<option value="Buenos Aires">Buenos Aires</option>
-								<option value="Ciudad Autónoma de Buenos Aires">Ciudad Autónoma de Buenos Aires</option>
-								<option value="Catamarca">Catamarca</option>
-								<option value="Chaco">Chaco</option>
-								<option value="Chubut">Chubut</option>
-								<option value="Córdoba">Córdoba</option>
-								<option value="Corrientes">Corrientes</option>
-								<option value="Entre Ríos">Entre Ríos</option>
-								<option value="Formosa">Formosa</option>
-								<option value="Jujuy">Jujuy</option>
-								<option value="La Pampa">La Pampa</option>
-								<option value="La Rioja">La Rioja</option>
-								<option value="Mendoza">Mendoza</option>
-								<option value="Misiones">Misiones</option>
-								<option value="Neuquén">Neuquén</option>
-								<option value="Río Negro">Río Negro</option>
-								<option value="Salta">Salta</option>
-								<option value="San Juan">San Juan</option>
-								<option value="San Luis">San Luis</option>
-								<option value="Santa Cruz">Santa Cruz</option>
-								<option value="Santa Fe">Santa Fe</option>
-								<option value="Santiago del Estero">Santiago del Estero</option>
-								<option value="Tierra del Fuego">Tierra del Fuego</option>
-								<option value="Tucumán">Tucumán</option>
-							</select>
-						</div>
-						<div class="sm:col-span-2 flex flex-col gap-1.5">
-							<label class="text-xs text-[#5c6079]" for="servicio">Servicio de interés</label>
-							<select id="servicio" name="servicio" class="bg-white border border-[rgba(68,78,134,0.15)] rounded-xl px-4 py-3 text-[#14152a] text-sm font-[DM_Sans] outline-none transition-all focus:border-[#444e86] appearance-none cursor-pointer">
-								<option value="">¿Qué necesitás?</option>
-								<option>Pulverización con drones</option>
-								<option>Siembra aérea</option>
-								<option>Aplicación de fertilizantes</option>
-								<option>Monitoreo y mapeo</option>
-								<option>Compra de drone agrícola</option>
-								<option>Todos los servicios</option>
-							</select>
-						</div>
-						<div class="sm:col-span-2 flex flex-col gap-1.5">
-							<label class="text-xs text-[#5c6079]" for="mensaje">Hectáreas aproximadas / Mensaje</label>
-							<textarea id="mensaje" name="mensaje" class="bg-white border border-[rgba(68,78,134,0.15)] rounded-xl px-4 py-3 text-[#14152a] text-sm font-[DM_Sans] outline-none transition-all focus:border-[#444e86] focus:shadow-[0_0_0_3px_rgba(68,78,134,0.12)] resize-y min-h-[120px] w-full" placeholder="Contanos sobre tu campo y qué necesitás. Ej: 800 ha de soja en Córdoba, necesito cotización para pulverización esta campaña."></textarea>
-						</div>
-					</div>
-					<button type="submit" class="w-full mt-5 bg-[#444e86] text-white px-7 py-4 rounded-xl font-semibold text-base inline-flex items-center justify-center gap-2 transition-all hover:bg-[#5b67a8] hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(68,78,134,0.3)] cursor-pointer border-none font-[DM_Sans]">
-						Enviar Consulta →
-					</button>
-					</form>
-				</div>
+	<div class="font-[Syne] text-xl sm:text-2xl font-bold text-[#14152a] mb-7">
+		Solicitar Cotización
+	</div>
+
+	<form id="contact-form" method="POST" action="/api/contacto">
+
+		<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+
+			<div class="flex flex-col gap-1.5">
+
+				<label
+					class="text-xs text-[#5c6079]"
+					for="nombre"
+				>
+					Nombre y apellido
+				</label>
+
+				<input
+					type="text"
+					id="nombre"
+					name="nombre"
+					autocomplete="name"
+					class="bg-white border border-[rgba(68,78,134,0.15)] rounded-xl px-4 py-3 text-[#14152a] text-sm font-[DM_Sans] outline-none transition-all focus:border-[#444e86] focus:shadow-[0_0_0_3px_rgba(68,78,134,0.12)]"
+					placeholder="Juan Rodríguez"
+				/>
+
+			</div>
+
+
+			<div class="flex flex-col gap-1.5">
+
+				<label
+					class="text-xs text-[#5c6079]"
+					for="telefono"
+				>
+					Teléfono
+				</label>
+
+				<input
+					type="tel"
+					id="telefono"
+					name="telefono"
+					autocomplete="tel"
+					class="bg-white border border-[rgba(68,78,134,0.15)] rounded-xl px-4 py-3 text-[#14152a] text-sm font-[DM_Sans] outline-none transition-all focus:border-[#444e86] focus:shadow-[0_0_0_3px_rgba(68,78,134,0.12)]"
+					placeholder="+54 9 351 ..."
+				/>
+
+			</div>
+
+
+			<div class="flex flex-col gap-1.5">
+
+				<label
+					class="text-xs text-[#5c6079]"
+					for="email"
+				>
+					Email
+				</label>
+
+				<input
+					type="email"
+					id="email"
+					name="email"
+					autocomplete="email"
+					class="bg-white border border-[rgba(68,78,134,0.15)] rounded-xl px-4 py-3 text-[#14152a] text-sm font-[DM_Sans] outline-none transition-all focus:border-[#444e86] focus:shadow-[0_0_0_3px_rgba(68,78,134,0.12)]"
+					placeholder="juan@campo.com"
+				/>
+
+			</div>
+
+
+			<div class="flex flex-col gap-1.5">
+
+				<label
+					class="text-xs text-[#5c6079]"
+					for="provincia"
+				>
+					Provincia
+				</label>
+
+				<select
+					id="provincia"
+					name="provincia"
+					class="bg-white border border-[rgba(68,78,134,0.15)] rounded-xl px-4 py-3 text-[#14152a] text-sm font-[DM_Sans] outline-none transition-all focus:border-[#444e86] appearance-none cursor-pointer"
+				>
+
+					<option value="">
+						Seleccionar...
+					</option>
+
+					<option value="Buenos Aires">
+						Buenos Aires
+					</option>
+
+					<option value="Ciudad Autónoma de Buenos Aires">
+						Ciudad Autónoma de Buenos Aires
+					</option>
+
+					<option value="Catamarca">
+						Catamarca
+					</option>
+
+					<option value="Chaco">
+						Chaco
+					</option>
+
+					<option value="Chubut">
+						Chubut
+					</option>
+
+					<option value="Córdoba">
+						Córdoba
+					</option>
+
+					<option value="Corrientes">
+						Corrientes
+					</option>
+
+					<option value="Entre Ríos">
+						Entre Ríos
+					</option>
+
+					<option value="Formosa">
+						Formosa
+					</option>
+
+					<option value="Jujuy">
+						Jujuy
+					</option>
+
+					<option value="La Pampa">
+						La Pampa
+					</option>
+
+					<option value="La Rioja">
+						La Rioja
+					</option>
+
+					<option value="Mendoza">
+						Mendoza
+					</option>
+
+					<option value="Misiones">
+						Misiones
+					</option>
+
+					<option value="Neuquén">
+						Neuquén
+					</option>
+
+					<option value="Río Negro">
+						Río Negro
+					</option>
+
+					<option value="Salta">
+						Salta
+					</option>
+
+					<option value="San Juan">
+						San Juan
+					</option>
+
+					<option value="San Luis">
+						San Luis
+					</option>
+
+					<option value="Santa Cruz">
+						Santa Cruz
+					</option>
+
+					<option value="Santa Fe">
+						Santa Fe
+					</option>
+
+					<option value="Santiago del Estero">
+						Santiago del Estero
+					</option>
+
+					<option value="Tierra del Fuego">
+						Tierra del Fuego
+					</option>
+
+					<option value="Tucumán">
+						Tucumán
+					</option>
+
+				</select>
+
+			</div>
+
+
+			<div class="sm:col-span-2 flex flex-col gap-1.5">
+
+				<label
+					class="text-xs text-[#5c6079]"
+					for="servicio"
+				>
+					Servicio de interés
+				</label>
+
+				<select
+					id="servicio"
+					name="servicio"
+					class="bg-white border border-[rgba(68,78,134,0.15)] rounded-xl px-4 py-3 text-[#14152a] text-sm font-[DM_Sans] outline-none transition-all focus:border-[#444e86] appearance-none cursor-pointer"
+				>
+
+					<option value="">
+						¿Qué necesitás?
+					</option>
+
+					<option>
+						Pulverización con drones
+					</option>
+
+					<option>
+						Siembra aérea
+					</option>
+
+					<option>
+						Aplicación de fertilizantes
+					</option>
+
+					<option>
+						Monitoreo y mapeo
+					</option>
+
+					<option>
+						Compra de drone agrícola
+					</option>
+
+					<option>
+						Todos los servicios
+					</option>
+
+				</select>
+
+			</div>
+
+
+			<div class="sm:col-span-2 flex flex-col gap-1.5">
+
+				<label
+					class="text-xs text-[#5c6079]"
+					for="mensaje"
+				>
+					Hectáreas aproximadas / Mensaje
+				</label>
+
+				<textarea
+					id="mensaje"
+					name="mensaje"
+					class="bg-white border border-[rgba(68,78,134,0.15)] rounded-xl px-4 py-3 text-[#14152a] text-sm font-[DM_Sans] outline-none transition-all focus:border-[#444e86] focus:shadow-[0_0_0_3px_rgba(68,78,134,0.12)] resize-y min-h-[120px] w-full"
+					placeholder="Contanos sobre tu campo y qué necesitás. Ej: 800 ha de soja en Córdoba, necesito cotización para pulverización esta campaña."
+				></textarea>
+
+			</div>
+
+		</div>
+
+
+		<button
+	type="submit"
+	class="w-full mt-5 bg-[#444e86] text-white px-7 py-4 rounded-xl font-semibold text-base inline-flex items-center justify-center gap-2 transition-all hover:bg-[#5b67a8] hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(68,78,134,0.3)] cursor-pointer border-none font-[DM_Sans]"
+>
+	Enviar Consulta →
+</button>
+
+</form>
+
+</div>
+
 			</div>
 		</div>
 	</section>
@@ -1281,11 +1481,61 @@ const description = 'Venta y servicios de drones agrícolas EaVision: pulverizac
 		</div>
 	</footer>
 
+	<!-- ===================================================== -->
+	<!-- MODAL DE CONFIRMACIÓN DE ENVÍO -->
+	<!-- ===================================================== -->
+
+	<div
+		id="successModal"
+		class="hidden fixed inset-0 z-[9999] items-center justify-center bg-[rgba(10,10,18,0.6)] backdrop-blur-sm p-4"
+		onclick="if(event.target===this) closeSuccessModal()"
+	>
+		<div class="modal-card relative w-full max-w-sm rounded-3xl bg-white p-8 sm:p-10 text-center shadow-2xl">
+
+			<button
+				type="button"
+				onclick="closeSuccessModal()"
+				aria-label="Cerrar"
+				class="absolute top-4 right-4 flex h-8 w-8 items-center justify-center rounded-full text-[#8288a0] transition-colors hover:bg-[#f1f2f8] hover:text-[#14152a]"
+			>
+				✕
+			</button>
+
+			<div
+				id="modalIcon"
+				class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-[rgba(37,211,102,0.12)]"
+			>
+				<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+					<circle class="checkmark-circle" cx="26" cy="26" r="24" fill="none" />
+					<path class="checkmark-check" fill="none" d="M14 27l7 7 16-16" />
+				</svg>
+			</div>
+
+			<h3 id="modalTitle" class="font-[Syne] text-2xl font-bold text-[#14152a] mb-2">
+				¡Consulta enviada!
+			</h3>
+
+			<p id="modalText" class="text-sm leading-relaxed text-[#5c6079] mb-7">
+				Nos comunicaremos con vos a la brevedad para hablar de tu campo.
+			</p>
+
+			<button
+				type="button"
+				onclick="closeSuccessModal()"
+				class="w-full rounded-xl bg-[#444e86] px-6 py-3.5 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-[#5b67a8]"
+			>
+				Listo
+			</button>
+
+		</div>
+	</div>
+
 </Layout>
 
 <style>
 	html {
 		scroll-behavior: smooth;
+		font-size: 16px;
 	}
 	/* Animaciones que Tailwind no puede generar dinámicamente */
 	@keyframes float {
@@ -1346,7 +1596,7 @@ const description = 'Venta y servicios de drones agrícolas EaVision: pulverizac
 
 	/* Select option color fix */
 	select option { background: #ffffff; color: #14152a; }
-
+   
 	/* Input number arrows remove */
 	input[type=number]::-webkit-outer-spin-button,
 	input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
@@ -1418,6 +1668,56 @@ const description = 'Venta y servicios de drones agrícolas EaVision: pulverizac
 	height: 8px;
 	border-radius: 999px;
 	background: #555;
+}
+
+
+/* =========================
+   MODAL DE CONFIRMACIÓN
+   ========================= */
+
+#successModal.flex {
+	display: flex;
+}
+
+.modal-card {
+	animation: modalIn .35s cubic-bezier(.16,1,.3,1);
+}
+
+@keyframes modalIn {
+	from { opacity: 0; transform: translateY(16px) scale(.96); }
+	to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.checkmark {
+	width: 44px;
+	height: 44px;
+}
+
+.checkmark-circle {
+	stroke: #25d366;
+	stroke-width: 3;
+	stroke-miterlimit: 10;
+	stroke-dasharray: 166;
+	stroke-dashoffset: 166;
+	animation: circleDraw .5s ease forwards;
+}
+
+.checkmark-check {
+	stroke: #25d366;
+	stroke-width: 4;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-dasharray: 48;
+	stroke-dashoffset: 48;
+	animation: checkDraw .35s ease .45s forwards;
+}
+
+@keyframes circleDraw {
+	to { stroke-dashoffset: 0; }
+}
+
+@keyframes checkDraw {
+	to { stroke-dashoffset: 0; }
 }
 
 </style>
@@ -1548,4 +1848,100 @@ document.addEventListener('DOMContentLoaded', calcROI);
 	// Init
 	calcROI();
 	calcAhorro();
+		// Formulario de contacto
+	// OJO: el id del <form> es "contact-form" (con guion), no "contactForm".
+	// Ese desajuste era lo que impedía que este listener se ejecutara nunca.
+	const contactForm = document.getElementById('contact-form');
+
+	contactForm?.addEventListener('submit', async (event) => {
+		event.preventDefault();
+
+		const form = event.currentTarget;
+		const button = form.querySelector('button[type="submit"]');
+
+		if (!button) return;
+
+		button.disabled = true;
+		button.textContent = 'Enviando...';
+
+		try {
+			const formData = new FormData(form);
+
+			const response = await fetch('/api/contacto', {
+				method: 'POST',
+				body: formData,
+			});
+
+			const result = await response.json();
+
+			if (response.ok && result.success) {
+				showSuccessModal();
+				form.reset();
+			} else {
+				throw new Error(result.message || 'No se pudo enviar la consulta.');
+			}
+		} catch (error) {
+			console.error('Error al enviar el formulario:', error);
+			showErrorModal();
+		} finally {
+			button.disabled = false;
+			button.textContent = 'Enviar Consulta →';
+		}
+	});
+
+	// ===================================================== //
+	// MODAL DE CONFIRMACIÓN
+	// ===================================================== //
+
+	function setModalState(state) {
+		const icon = document.getElementById('modalIcon');
+		const title = document.getElementById('modalTitle');
+		const text = document.getElementById('modalText');
+
+		if (!icon || !title || !text) return;
+
+		if (state === 'error') {
+			icon.className = 'mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-[rgba(220,53,69,0.12)]';
+			icon.innerHTML = '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#dc3545" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
+			title.textContent = 'No pudimos enviar tu consulta';
+			text.textContent = 'Intentá nuevamente o escribinos directo por WhatsApp.';
+		} else {
+			icon.className = 'mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-[rgba(37,211,102,0.12)]';
+			icon.innerHTML = '<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark-circle" cx="26" cy="26" r="24" fill="none"/><path class="checkmark-check" fill="none" d="M14 27l7 7 16-16"/></svg>';
+			title.textContent = '¡Consulta enviada!';
+			text.textContent = 'Nos comunicaremos con vos a la brevedad para hablar de tu campo.';
+		}
+	}
+
+	function showSuccessModal() {
+		setModalState('success');
+		openModal();
+	}
+
+	function showErrorModal() {
+		setModalState('error');
+		openModal();
+	}
+
+	function openModal() {
+		const modal = document.getElementById('successModal');
+		if (!modal) return;
+		modal.classList.remove('hidden');
+		modal.classList.add('flex');
+		document.body.style.overflow = 'hidden';
+	}
+
+	function closeSuccessModal() {
+		const modal = document.getElementById('successModal');
+		if (!modal) return;
+		modal.classList.add('hidden');
+		modal.classList.remove('flex');
+		document.body.style.overflow = '';
+	}
+
+	window.closeSuccessModal = closeSuccessModal;
+
+	document.addEventListener('keydown', (event) => {
+		if (event.key === 'Escape') closeSuccessModal();
+	});
 </script>
