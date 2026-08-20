@@ -2239,10 +2239,26 @@ const productJsonLd = {
 	box-shadow: 0 25px 50px rgba(23,26,60,.12);
 }
 
+/* ===================================================== */
+/* GALERÍA — FIX SWIPE MOBILE */
+/* ===================================================== */
+
 .gallery-wrapper {
 	overflow: hidden;
 	mask-image: linear-gradient(90deg, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
 	-webkit-mask-image: linear-gradient(90deg, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
+	touch-action: pan-y; /* deja pasar el swipe horizontal al JS, el navegador maneja el scroll vertical */
+}
+
+.gallery-track {
+	touch-action: pan-y;
+}
+
+.gallery-media img {
+	-webkit-user-drag: none;
+	-webkit-touch-callout: none;
+	user-select: none;
+	pointer-events: none; /* evita que la imagen capture el touch antes que el contenedor */
 }
 
 .gallery-media {
@@ -2258,6 +2274,10 @@ const productJsonLd = {
 	height: 100%;
 	object-fit: cover;
 	transition: transform .5s ease;
+	-webkit-user-drag: none;
+	-webkit-touch-callout: none;
+	user-select: none;
+	pointer-events: none;
 }
 
 .gallery-card:hover .gallery-media img {
