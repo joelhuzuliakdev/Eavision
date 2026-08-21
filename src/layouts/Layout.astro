@@ -141,7 +141,25 @@ const ogImageURL = new URL(image, siteUrl);
 			],
 		})} />
 	</head>
-	<body>
+	<body id="top">
 		<slot />
+
+		<script is:inline>
+			// Scroll suave al hacer click en cualquier link con id="logoHome"
+			document.addEventListener('click', (e) => {
+				const link = e.target.closest('#logoHome');
+				if (!link) return;
+				e.preventDefault();
+				window.scrollTo({ top: 0, behavior: 'smooth' });
+			});
+
+			// Si la página carga con #top en la URL (viniendo de otra página), animamos el scroll manualmente
+			if (window.location.hash === '#top') {
+				window.scrollTo(0, 0);
+				requestAnimationFrame(() => {
+					window.scrollTo({ top: 0, behavior: 'smooth' });
+				});
+			}
+		</script>
 	</body>
 </html>
