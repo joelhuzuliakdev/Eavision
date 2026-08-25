@@ -1,5 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import {
+	IconDroplet,
+	IconSeeding,
+	IconDroplets,
+	IconSatellite,
+	IconMap,
+	IconPill,
+	IconPhone,
+	IconMail,
+	IconMapPin,
+} from '@tabler/icons-astro';
 
 const title = 'Eavision | Drones Agrícolas y Tecnología Aérea de Precisión para el Campo';
 const description = 'Venta y servicios de drones agrícolas EaVision: pulverización, siembra aérea, fertilización y monitoreo NDVI de cultivos. Reducí costos y aumentá tu rentabilidad. Cotizá sin cargo.';
@@ -830,98 +841,139 @@ recuperas tu inversión.
 		</div>
 	</section>
 
-	<!-- SERVICIOS -->
-	<section class="py-20 sm:py-28 px-4 sm:px-8 bg-[#f6f7fb]" id="servicios">
-		<div class="max-w-[1200px] mx-auto">
-			<div class="text-center mb-14 fade-up">
-				<div class="inline-block text-[0.97rem] font-medium tracking-[0.12em] uppercase text-[#444e86] mb-4">Lo que hacemos</div>
-				<h2 class="font-[Syne] text-[clamp(2rem,4vw,3rem)] font-bold text-[#14152a] mb-4">
-					Servicio profesional para tu lote
-				</h2>
-				<p class="text-base sm:text-lg text-[#5c6079] leading-relaxed max-w-xl mx-auto">
-					Cubrimos todas las etapas del cultivo con tecnología de precisión y pilotos certificados con experiencia en campo.
-				</p>
-			</div>
-			<!-- WhatsApp -->
-				<div class="flex justify-center mt-7 mb-14">
-					<a
-						href="#"
-						aria-label="Agenda tu turno por WhatsApp"
-						class="inline-flex items-center justify-center gap-3 rounded-xl bg-[#444e86] px-7 py-3.5 text-sm font-semibold text-white no-underline transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#5b67a8] hover:shadow-lg"
-					>
-						<!-- ícono WhatsApp -->
-						<svg
-							width="20"
-							height="20"
-							viewBox="0 0 24 24"
-							fill="currentColor"
-							aria-hidden="true"
-							class="text-[#25D366]"
-						>
-							<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.173.199-.272.347-.47.347-.198 0-.52-.075-.892-.223-.371-.149-1.046-.385-1.99-1.23-.736-.655-1.232-1.463-1.38-1.711-.149-.248-.016-.382.112-.51.114-.114.248-.297.372-.446.124-.149.165-.248.248-.421.083-.174.041-.322-.021-.446-.062-.124-.57-1.37-.78-1.876-.205-.492-.414-.425-.57-.433-.148-.007-.322.065-.692.322-.238.256-.908.887-.908 2.164 0 1.277.929 2.504 1.058 2.677.128.173 1.827 2.791 4.426 3.912.619.267 1.101.426 1.477.545.621.198 1.185.17 1.632.103.498-.074 1.531-.626 1.747-1.23.215-.603.215-1.12.149-1.23-.062-.108-.235-.173-.495-.297zM12.05 21.65h-.004a9.7 9.7 0 0 1-4.93-1.347l-.354-.21-3.66.96.977-3.565-.23-.366a9.72 9.72 0 0 1-1.49-5.18c.002-5.37 4.373-9.738 9.744-9.738 2.603 0 5.047 1.015 6.883 2.852a9.69 9.69 0 0 1 2.85 6.895c-.002 5.37-4.373 9.738-9.786 9.738zm8.288-18.026A11.69 11.69 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.893c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.605-8.277z"
-							/>
-						</svg>
+<!-- SERVICIOS -->
+<section class="py-20 sm:py-28 px-4 sm:px-8 bg-[#f6f7fb]" id="servicios">
 
-						<span>Agenda tu turno</span>
-					</a>
-				</div>
+	<div class="max-w-[1200px] mx-auto">
 
+		<div class="text-center mb-14 fade-up">
+
+			<div class="inline-block text-[0.97rem] font-medium tracking-[0.12em] uppercase text-[#444e86] mb-4">
+				Lo que hacemos
 			</div>
 
-		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border border-[rgba(68,78,134,0.15)] rounded-2xl overflow-hidden divide-y divide-[rgba(68,78,134,0.15)] sm:divide-y-0"
-	style="gap: 1.5px; background: rgba(68,78,134,0.15);"
->
-	{[
-		{
-			icon: '🌿',
-			titulo: 'Pulverización',
-			desc: 'Aplicación ultra precisa de agroquímicos con dron y pilotos certificados. Servicio con seguro operativo y asesoramiento profesional.'
-		},
-		{
-			icon: '🌱',
-			titulo: 'Siembra',
-			desc: 'Siembra de todo tipo de cultivo, precisa y uniforme con cero compactación de suelo e independencia del clima.'
-		},
-		{
-			icon: '⚗️',
-			titulo: 'Fertilización',
-			desc: 'Fertilizá en el momento preciso para una correcta incorporación, independientemente de las condiciones del suelo.'
-		},
-		{
-			icon: '📡',
-			titulo: 'Monitoreo de Cultivos',
-			desc: 'Cámaras multiespectrales NDVI y RGB que detectan estrés hídrico, plagas, enfermedades y malezas antes de que el ojo humano pueda verlas.'
-		},
-		{
-			icon: '🗺️',
-			titulo: 'Mapeo y Relevamiento',
-			desc: 'Generación de ortomosaicos, modelos 3D, curvas de nivel y mapas de variabilidad con precisión centimétrica RTK/PPK.'
-		},
-		{
-			icon: '💊',
-			titulo: 'Aplicación Selectiva',
-			desc: 'Aplicación con prescipciones variables basadas en mapas NVDI'
-		},
-	].map((s) => (
-		<div class="fade-up group group bg-white px-6 sm:px-10 py-8 sm:py-10 cursor-default relative overflow-hidden transition-colors hover:bg-[rgba(68,78,134,0.04)]">
+			<h2 class="font-[Syne] text-[clamp(2rem,4vw,3rem)] font-bold text-[#14152a] mb-4">
+				Servicio profesional para tu lote
+			</h2>
 
-			<div class="absolute bottom-0 left-0 right-0 h-[2px] bg-[#444e86] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></div>
-
-			<div class="w-12 h-12 sm:w-[52px] sm:h-[52px] bg-[rgba(68,78,134,0.1)] border border-[rgba(68,78,134,0.2)] rounded-xl flex items-center justify-center mb-5 sm:mb-6 text-xl sm:text-2xl transition-all group-hover:bg-[rgba(68,78,134,0.18)] group-hover:border-[rgba(68,78,134,0.4)]" aria-hidden="true">
-				{s.icon}
-			</div>
-
-			<h3 class="font-[Syne] text-base sm:text-lg font-bold text-[#14152a] mb-3">
-				{s.titulo}
-			</h3>
-
-			<p class="text-sm text-[#5c6079] leading-relaxed">
-				{s.desc}
+			<p class="text-base sm:text-lg text-[#5c6079] leading-relaxed max-w-xl mx-auto">
+				Cubrimos todas las etapas del cultivo con tecnología de precisión y pilotos certificados con experiencia en campo.
 			</p>
 
 		</div>
-	))}
-</div>
+
+
+		<!-- WhatsApp -->
+		<div class="flex justify-center mt-7 mb-14">
+
+			<a
+				href="#"
+				aria-label="Agenda tu turno por WhatsApp"
+				class="inline-flex items-center justify-center gap-3 rounded-xl bg-[#444e86] px-7 py-3.5 text-sm font-semibold text-white no-underline transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#5b67a8] hover:shadow-lg"
+			>
+
+				<!-- Ícono WhatsApp -->
+				<svg
+					width="20"
+					height="20"
+					viewBox="0 0 24 24"
+					fill="currentColor"
+					aria-hidden="true"
+					class="text-[#25D366]"
+				>
+					<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.173.199-.272.347-.47.347-.198 0-.52-.075-.892-.223-.371-.149-1.046-.385-1.99-1.23-.736-.655-1.232-1.463-1.38-1.711-.149-.248-.016-.382.112-.51.114-.114.248-.297.372-.446.124-.149.165-.248.248-.421.083-.174.041-.322-.021-.446-.062-.124-.57-1.37-.78-1.876-.205-.492-.414-.425-.57-.433-.148-.007-.322.065-.692.322-.238.256-.908.887-.908 2.164 0 1.277.929 2.504 1.058 2.677.128.173 1.827 2.791 4.426 3.912.619.267 1.101.426 1.477.545.621.198 1.185.17 1.632.103.498-.074 1.531-.626 1.747-1.23.215-.603.215-1.12.149-1.23-.062-.108-.235-.173-.495-.297zM12.05 21.65h-.004a9.7 9.7 0 0 1-4.93-1.347l-.354-.21-3.66.96.977-3.565-.23-.366a9.72 9.72 0 0 1-1.49-5.18c.002-5.37 4.373-9.738 9.744-9.738 2.603 0 5.047 1.015 6.883 2.852a9.69 9.69 0 0 1 2.85 6.895c-.002 5.37-4.373 9.738-9.786 9.738zm8.288-18.026A11.69 11.69 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.893c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.605-8.277z" />
+				</svg>
+
+				<span>Agenda tu turno</span>
+
+			</a>
+
+		</div>
+
+
+		<!-- TARJETAS DE SERVICIOS -->
+		<div
+			class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border border-[rgba(68,78,134,0.15)] rounded-2xl overflow-hidden divide-y divide-[rgba(68,78,134,0.15)] sm:divide-y-0"
+			style="gap: 1.5px; background: rgba(68,78,134,0.15);"
+		>
+
+			{[
+				{
+					icon: IconDroplet,
+					titulo: 'Pulverización',
+					desc: 'Aplicación ultra precisa de agroquímicos con dron y pilotos certificados. Servicio con seguro operativo y asesoramiento profesional.'
+				},
+				{
+					icon: IconSeeding,
+					titulo: 'Siembra',
+					desc: 'Siembra de todo tipo de cultivo, precisa y uniforme con cero compactación de suelo e independencia del clima.'
+				},
+				{
+					icon: IconDroplets,
+					titulo: 'Fertilización',
+					desc: 'Fertilizá en el momento preciso para una correcta incorporación, independientemente de las condiciones del suelo.'
+				},
+				{
+					icon: IconSatellite,
+					titulo: 'Monitoreo de Cultivos',
+					desc: 'Cámaras multiespectrales NDVI y RGB que detectan estrés hídrico, plagas, enfermedades y malezas antes de que el ojo humano pueda verlas.'
+				},
+				{
+					icon: IconMap,
+					titulo: 'Mapeo y Relevamiento',
+					desc: 'Generación de ortomosaicos, modelos 3D, curvas de nivel y mapas de variabilidad con precisión centimétrica RTK/PPK.'
+				},
+				{
+					icon: IconPill,
+					titulo: 'Aplicación Selectiva',
+					desc: 'Aplicación con prescripciones variables basadas en mapas NDVI.'
+				},
+			].map((s) => {
+
+				const Icon = s.icon;
+
+				return (
+
+					<div class="fade-up group bg-white px-6 sm:px-10 py-8 sm:py-10 cursor-default relative overflow-hidden transition-colors hover:bg-[rgba(68,78,134,0.04)]">
+
+						<!-- Línea inferior al pasar el mouse -->
+						<div class="absolute bottom-0 left-0 right-0 h-[2px] bg-[#444e86] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></div>
+
+
+						<!-- Ícono -->
+						<div class="w-12 h-12 sm:w-[52px] sm:h-[52px] bg-[rgba(68,78,134,0.1)] border border-[rgba(68,78,134,0.2)] rounded-xl flex items-center justify-center mb-5 sm:mb-6 text-[#444e86] transition-all group-hover:bg-[rgba(68,78,134,0.18)] group-hover:border-[rgba(68,78,134,0.4)]">
+
+							<Icon
+								size={25}
+								stroke-width={1.8}
+								aria-hidden="true"
+							/>
+
+						</div>
+
+
+						<!-- Título -->
+						<h3 class="font-[Syne] text-base sm:text-lg font-bold text-[#14152a] mb-3">
+							{s.titulo}
+						</h3>
+
+
+						<!-- Descripción -->
+						<p class="text-sm text-[#5c6079] leading-relaxed">
+							{s.desc}
+						</p>
+
+					</div>
+
+				);
+
+			})}
+
+		</div>
+
+	</div>
+
+</section>
 
 		<!-- Calculadora: Si no pisas ¿cuánto ahorras? -->
 			<div class="max-w-[1000px] mx-auto mt-16 fade-up">
@@ -957,7 +1009,7 @@ recuperas tu inversión.
 					</div>
 					<!-- Results -->
 					<div>
-						<div class="font-[Syne] text-xl font-bold text-[#14152a] mb-8">🌾 Estas son tus pérdidas:</div>
+						<div class="font-[Syne] text-xl font-bold text-[#14152a] mb-8"> Estas son tus pérdidas:</div>
 						<div class="flex flex-col gap-4">
 
 							<!-- Kg perdidos: primero y destacado -->
@@ -1062,6 +1114,7 @@ recuperas tu inversión.
 			</div>
 		</div>
 	</section>
+
 	<!-- NOSOTROS -->
 	<section class="py-20 sm:py-28 px-4 sm:px-8 bg-[#f6f7fb] relative overflow-hidden" id="nosotros">
 		<div class="absolute inset-0 pointer-events-none"
@@ -1115,87 +1168,134 @@ recuperas tu inversión.
 				</div>
 
 				<!-- Card -->
-<div class="fade-up [transition-delay:0.2s] relative bg-white border border-[rgba(68,78,134,0.15)] rounded-3xl p-8 sm:p-12 overflow-hidden shadow-[0_20px_60px_rgba(23,26,60,0.08)]">
+				<div class="fade-up [transition-delay:0.2s] relative bg-white border border-[rgba(68,78,134,0.15)] rounded-3xl p-8 sm:p-12 overflow-hidden shadow-[0_20px_60px_rgba(23,26,60,0.08)]">
 
-	<div
-		class="absolute inset-[-20%] pointer-events-none"
-		style="background: radial-gradient(circle, rgba(68,78,134,0.1), transparent 60%); filter: blur(40px);"
-	></div>
+					<div
+						class="absolute inset-[-20%] pointer-events-none"
+						style="background: radial-gradient(circle, rgba(68,78,134,0.1), transparent 60%); filter: blur(40px);"
+					></div>
 
-	<div class="relative z-10">
+					<div class="relative z-10">
 
-		<div class="inline-flex items-center gap-2 bg-[rgba(68,78,134,0.1)] border border-[rgba(68,78,134,0.25)] px-4 py-1.5 rounded-full text-xs text-[#444e86] mb-6">
-			Master dealer
+						<div class="inline-flex items-center gap-2 bg-[rgba(68,78,134,0.1)] border border-[rgba(68,78,134,0.25)] px-4 py-1.5 rounded-full text-xs text-[#444e86] mb-6">
+							Master dealer
+						</div>
+
+						<h3 class="font-[Syne] text-3xl font-bold text-[#14152a] mb-4 leading-tight">
+							<a
+								href="https://www.eavision.com/"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="hover:text-[#444e86] transition-colors"
+							>
+								EaVision
+							</a>
+						</h3>
+
+						<p class="text-[#5c6079] leading-[1.7] mb-8">
+							Fundada en 2015 en Silicon Valley y con sede global en Suzhou, China, EAVision transforma la agricultura mediante robótica e inteligencia artificial. La marca nace enfocada en desarrollar drones autónomos con visión binocular 3D, destacándose por su máxima precisión y calidad en la aplicación.
+						</p>
+
+						<div class="pt-6 border-t border-[rgba(68,78,134,0.15)]">
+
+							<a
+								href="https://www.eavision.com/"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="text-xs text-[#444e86] font-medium hover:text-[#5b67a8] transition-colors"
+							>
+								www.eavision.com
+							</a>
+
+						</div>
+
+					</div>
+				</div>
+
+			</div>
 		</div>
-
-		<h3 class="font-[Syne] text-3xl font-bold text-[#14152a] mb-4 leading-tight">
-			<a
-				href="https://www.eavision.com/"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="hover:text-[#444e86] transition-colors"
-			>
-				EaVision
-			</a>
-		</h3>
-
-		<p class="text-[#5c6079] leading-[1.7] mb-8">
-			Fundada en 2015 en Silicon Valley y con sede global en Suzhou, China, EAVision transforma la agricultura mediante robótica e inteligencia artificial. La marca nace enfocada en desarrollar drones autónomos con visión binocular 3D, destacándose por su máxima precisión y calidad en la aplicación.
-		</p>
-
-		<div class="pt-6 border-t border-[rgba(68,78,134,0.15)]">
-
-			<a
-				href="https://www.eavision.com/"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="text-xs text-[#444e86] font-medium hover:text-[#5b67a8] transition-colors"
-			>
-				www.eavision.com
-			</a>
-
-		</div>
-
-	</div>
-</div>
 	</section>
+
 	<!-- CONTACTO -->
 	<section class="py-20 sm:py-28 px-4 sm:px-8 bg-white" id="contacto">
 		<div class="max-w-[1200px] mx-auto">
 			<div class="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 items-start">
 
-				<!-- Info -->
-				<div class="fade-up pt-0 lg:pt-4">
-					<div class="inline-block text-[0.97rem] font-medium tracking-[0.12em] uppercase text-[#444e86] mb-4">Contacto</div>
-					<h2 class="font-[Syne] text-[clamp(2rem,4vw,3rem)] font-bold text-[#14152a] mb-4">
-						Hablemos de tu lote
-					</h2>
-					<p class="text-[#5c6079] leading-[1.7] mb-10">Cotizá sin compromiso.</p>
+			<!-- Info -->
+<div class="fade-up pt-0 lg:pt-4">
+	<div class="inline-block text-[0.97rem] font-medium tracking-[0.12em] uppercase text-[#444e86] mb-4">
+		Contacto
+	</div>
 
-					{[
-						{ icon: '📞', label: 'Teléfono / WhatsApp', val: '+54 9 351 000-0000' },
-						{ icon: '📧', label: 'Email', val: 'eavision@elladerosa.com.ar' },
-						{ icon: '📍', label: 'Zona de operaciones', val: 'Córdoba · Buenos Aires · Santa Fe · Entre Ríos' },
-					].map((c) => (
-						<div class="flex items-start gap-4 mb-7">
-							<div class="w-12 h-12 flex-shrink-0 bg-[rgba(68,78,134,0.1)] border border-[rgba(68,78,134,0.2)] rounded-xl flex items-center justify-center text-xl" aria-hidden="true">
-								{c.icon}
-							</div>
-							<div>
-								<div class="text-xs text-[#5c6079] mb-1">{c.label}</div>
-								<div class="text-[0.97rem] text-[#14152a] font-medium">{c.val}</div>
-							</div>
-						</div>
-					))}
+	<h2 class="font-[Syne] text-[clamp(2rem,4vw,3rem)] font-bold text-[#14152a] mb-4">
+		Hablemos de tu lote
+	</h2>
 
-					<a href="https://wa.me/5493510000000?text=Hola!%20Quiero%20cotizar%20servicio%20de%20drones%20para%20mi%20campo."
-						class="inline-flex items-center gap-2 bg-[#25d366] text-white px-6 py-3.5 rounded-xl font-semibold text-sm no-underline transition-all hover:bg-[#20ba5a] hover:-translate-y-0.5 mt-2"
-						target="_blank" rel="noopener noreferrer">
-						<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-						Escribinos por WhatsApp
-					</a>
+	<p class="text-[#5c6079] leading-[1.7] mb-10">
+		Cotizá sin compromiso.
+	</p>
+
+	{[
+		{
+			icon: IconPhone,
+			label: 'Teléfono / WhatsApp',
+			val: '+54 9 351 000-0000'
+		},
+		{
+			icon: IconMail,
+			label: 'Email',
+			val: 'eavision@elladerosa.com.ar'
+		},
+		{
+			icon: IconMapPin,
+			label: 'Zona de operaciones',
+			val: 'Córdoba · Buenos Aires · Santa Fe · Entre Ríos'
+		},
+	].map((c) => (
+		<div class="flex items-start gap-4 mb-7">
+
+			<!-- Ícono -->
+			<div
+				class="w-12 h-12 flex-shrink-0 bg-[rgba(68,78,134,0.1)] border border-[rgba(68,78,134,0.2)] rounded-xl flex items-center justify-center text-[#444e86]"
+				aria-hidden="true"
+			>
+				<c.icon size={22} stroke={1.8} />
+			</div>
+
+			<!-- Información -->
+			<div>
+				<div class="text-xs text-[#5c6079] mb-1">
+					{c.label}
 				</div>
 
+				<div class="text-[0.97rem] text-[#14152a] font-medium">
+					{c.val}
+				</div>
+			</div>
+
+		</div>
+	))}
+
+	<a
+		href="https://wa.me/5493510000000?text=Hola!%20Quiero%20cotizar%20servicio%20de%20drones%20para%20mi%20campo."
+		class="inline-flex items-center gap-2 bg-[#25d366] text-white px-6 py-3.5 rounded-xl font-semibold text-sm no-underline transition-all hover:bg-[#20ba5a] hover:-translate-y-0.5 mt-2"
+		target="_blank"
+		rel="noopener noreferrer"
+	>
+		<svg
+			width="18"
+			height="18"
+			viewBox="0 0 24 24"
+			fill="currentColor"
+			aria-hidden="true"
+		>
+			<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+			/>
+		</svg>
+
+		Escribinos por WhatsApp
+	</a>
+</div>
 				<!-- <!-- Form -->
 <div class="fade-up [transition-delay:0.2s] bg-[#f6f7fb] border border-[rgba(68,78,134,0.15)] rounded-2xl p-6 sm:p-10">
 
@@ -1502,82 +1602,62 @@ productor. Pulverización y siembra con drones, optimización de las labores par
 aplicaciones eficientes, menores costos y más resultados.
 			</p>
 
-			<!-- Redes sociales -->
-			<div class="flex flex-wrap items-center gap-3">
+<!-- Redes sociales y contacto -->
+<div class="flex flex-wrap items-center gap-3">
 
-				<!-- Instagram -->
-				<a
-					href="https://instagram.com/"
-					target="_blank"
-					rel="noopener noreferrer"
-					aria-label="Instagram"
-					class="flex h-10 w-10 items-center justify-center rounded-xl border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.04)] text-[#8b93d6] transition-all duration-300 hover:-translate-y-1 hover:border-[#7c86d4] hover:bg-[#7c86d4] hover:text-white"
-				>
-					<svg
-						viewBox="0 0 24 24"
-						class="h-5 w-5"
-						fill="currentColor"
-						aria-hidden="true"
-					>
-						<path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5a4.25 4.25 0 0 0 4.25 4.25h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5a4.25 4.25 0 0 0-4.25-4.25h-8.5Zm8.75 2.25a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/>
-					</svg>
-				</a>
+	<!-- Email -->
+	<a
+		href="mailto:eavision@elladerosa.com.ar"
+		aria-label="Enviar email a EaVision"
+		class="flex h-10 w-10 items-center justify-center rounded-xl border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.04)] text-[#8b93d6] transition-all duration-300 hover:-translate-y-1 hover:border-[#7c86d4] hover:bg-[#7c86d4] hover:text-white"
+	>
+		<svg
+			viewBox="0 0 24 24"
+			class="h-5 w-5"
+			fill="currentColor"
+			aria-hidden="true"
+		>
+			<path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/>
+		</svg>
+	</a>
 
-				<!-- Facebook -->
-				<a
-					href="https://facebook.com/"
-					target="_blank"
-					rel="noopener noreferrer"
-					aria-label="Facebook"
-					class="flex h-10 w-10 items-center justify-center rounded-xl border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.04)] text-[#8b93d6] transition-all duration-300 hover:-translate-y-1 hover:border-[#7c86d4] hover:bg-[#7c86d4] hover:text-white"
-				>
-					<svg
-						viewBox="0 0 24 24"
-						class="h-5 w-5"
-						fill="currentColor"
-						aria-hidden="true"
-					>
-						<path d="M13.5 21v-8h2.75l.5-3h-3.25V8.05c0-.87.24-1.55 1.6-1.55h1.8V3.8c-.31-.04-1.37-.13-2.6-.13-2.57 0-4.3 1.57-4.3 4.45V10H7.25v3H10v8h3.5Z"/>
-					</svg>
-				</a>
+	<!-- Instagram -->
+	<a
+		href="https://instagram.com/"
+		target="_blank"
+		rel="noopener noreferrer"
+		aria-label="Instagram"
+		class="flex h-10 w-10 items-center justify-center rounded-xl border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.04)] text-[#8b93d6] transition-all duration-300 hover:-translate-y-1 hover:border-[#7c86d4] hover:bg-[#7c86d4] hover:text-white"
+	>
+		<svg
+			viewBox="0 0 24 24"
+			class="h-5 w-5"
+			fill="currentColor"
+			aria-hidden="true"
+		>
+			<path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5a4.25 4.25 0 0 0 4.25 4.25h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5a4.25 4.25 0 0 0-4.25-4.25h-8.5Zm8.75 2.25a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/>
+		</svg>
+	</a>
 
-				<!-- LinkedIn -->
-				<a
-					href="https://linkedin.com/"
-					target="_blank"
-					rel="noopener noreferrer"
-					aria-label="LinkedIn"
-					class="flex h-10 w-10 items-center justify-center rounded-xl border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.04)] text-[#8b93d6] transition-all duration-300 hover:-translate-y-1 hover:border-[#7c86d4] hover:bg-[#7c86d4] hover:text-white"
-				>
-					<svg
-						viewBox="0 0 24 24"
-						class="h-5 w-5"
-						fill="currentColor"
-						aria-hidden="true"
-					>
-						<path d="M5.2 7.1A2.1 2.1 0 1 1 5.2 2.9a2.1 2.1 0 0 1 0 4.2ZM3.35 21h3.7V9h-3.7v12ZM9.35 9h3.55v1.64h.05c.49-.93 1.7-1.91 3.5-1.91 3.74 0 4.43 2.46 4.43 5.66V21h-3.7v-5.86c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1V21h-3.63V9Z"/>
-					</svg>
-				</a>
+	<!-- WhatsApp -->
+	<a
+		href="https://wa.me/5493510000000?text=Hola!%20Quiero%20cotizar%20servicio%20de%20drones%20para%20mi%20campo."
+		target="_blank"
+		rel="noopener noreferrer"
+		aria-label="WhatsApp"
+		class="flex h-10 w-10 items-center justify-center rounded-xl border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.04)] text-[#8b93d6] transition-all duration-300 hover:-translate-y-1 hover:border-[#7c86d4] hover:bg-[#7c86d4] hover:text-white"
+	>
+		<svg
+			viewBox="0 0 24 24"
+			class="h-5 w-5"
+			fill="currentColor"
+			aria-hidden="true"
+		>
+			<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+		</svg>
+	</a>
 
-				<!-- YouTube -->
-				<a
-					href="https://youtube.com/"
-					target="_blank"
-					rel="noopener noreferrer"
-					aria-label="YouTube"
-					class="flex h-10 w-10 items-center justify-center rounded-xl border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.04)] text-[#8b93d6] transition-all duration-300 hover:-translate-y-1 hover:border-[#7c86d4] hover:bg-[#7c86d4] hover:text-white"
-				>
-					<svg
-						viewBox="0 0 24 24"
-						class="h-5 w-5"
-						fill="currentColor"
-						aria-hidden="true"
-					>
-						<path d="M23.5 6.2a3 3 0 0 0-2.11-2.12C19.52 3.5 12 3.5 12 3.5s-7.52 0-9.39.58A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.11 2.12C4.48 20.5 12 20.5 12 20.5s7.52 0 9.39-.58a3 3 0 0 0 2.11-2.12A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8ZM9.75 15.92V8.08L16.5 12l-6.75 3.92Z"/>
-					</svg>
-				</a>
-
-			</div>
+</div>
 		</div>
 
 
