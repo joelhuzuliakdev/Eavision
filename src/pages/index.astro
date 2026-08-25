@@ -891,89 +891,99 @@ recuperas tu inversión.
 		</div>
 
 
-		<!-- TARJETAS DE SERVICIOS -->
-		<div
-			class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border border-[rgba(68,78,134,0.15)] rounded-2xl overflow-hidden divide-y divide-[rgba(68,78,134,0.15)] sm:divide-y-0"
-			style="gap: 1.5px; background: rgba(68,78,134,0.15);"
-		>
+<!-- TARJETAS DE SERVICIOS -->
+<div
+	class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border border-[rgba(68,78,134,0.15)] rounded-2xl overflow-hidden divide-y divide-[rgba(68,78,134,0.15)] sm:divide-y-0"
+	style="gap: 1.5px; background: rgba(68,78,134,0.15);"
+>
 
-			{[
-				{
-					icon: IconDroplet,
-					titulo: 'Pulverización',
-					desc: 'Aplicación ultra precisa de agroquímicos con dron y pilotos certificados. Servicio con seguro operativo y asesoramiento profesional.'
-				},
-				{
-					icon: IconSeeding,
-					titulo: 'Siembra',
-					desc: 'Siembra de todo tipo de cultivo, precisa y uniforme con cero compactación de suelo e independencia del clima.'
-				},
-				{
-					icon: IconDroplets,
-					titulo: 'Fertilización',
-					desc: 'Fertilizá en el momento preciso para una correcta incorporación, independientemente de las condiciones del suelo.'
-				},
-				{
-					icon: IconSatellite,
-					titulo: 'Monitoreo de Cultivos',
-					desc: 'Cámaras multiespectrales NDVI y RGB que detectan estrés hídrico, plagas, enfermedades y malezas antes de que el ojo humano pueda verlas.'
-				},
-				{
-					icon: IconMap,
-					titulo: 'Mapeo y Relevamiento',
-					desc: 'Generación de ortomosaicos, modelos 3D, curvas de nivel y mapas de variabilidad con precisión centimétrica RTK/PPK.'
-				},
-				{
-					icon: IconPill,
-					titulo: 'Aplicación Selectiva',
-					desc: 'Aplicación con prescripciones variables basadas en mapas NDVI.'
-				},
-			].map((s) => {
+	{[
+		{
+			icon: IconDroplet,
+			titulo: 'Pulverización',
+			desc: 'Aplicación ultra precisa de agroquímicos con dron y pilotos certificados. Servicio con seguro operativo y asesoramiento profesional.'
+		},
+		{
+			icon: IconSeeding,
+			titulo: 'Siembra',
+			desc: 'Siembra de todo tipo de cultivo, precisa y uniforme con cero compactación de suelo e independencia del clima.'
+		},
+		{
+			icon: IconDroplets,
+			titulo: 'Fertilización',
+			desc: 'Fertilizá en el momento preciso para una correcta incorporación, independientemente de las condiciones del suelo.'
+		},
+		{
+			icon: IconSatellite,
+			titulo: 'Monitoreo de Cultivos',
+			desc: 'Cámaras multiespectrales NDVI y RGB que detectan estrés hídrico, plagas, enfermedades y malezas antes de que el ojo humano pueda verlas.'
+		},
+		{
+			icon: IconMap,
+			titulo: 'Mapeo y Relevamiento',
+			desc: 'Generación de ortomosaicos, modelos 3D, curvas de nivel y mapas de variabilidad con precisión centimétrica RTK/PPK.'
+		},
+		{
+			imagen: '/logos/aplicacion-selectiva.png',
+			titulo: 'Aplicación Selectiva',
+			desc: 'Aplicación con prescripciones variables basadas en mapas NDVI.'
+		},
+	].map((s) => {
 
-				const Icon = s.icon;
+		const Icon = s.icon;
 
-				return (
+		return (
 
-					<div class="fade-up group bg-white px-6 sm:px-10 py-8 sm:py-10 cursor-default relative overflow-hidden transition-colors hover:bg-[rgba(68,78,134,0.04)]">
+			<div
+				class="fade-up group bg-white px-6 sm:px-10 py-8 sm:py-10 cursor-default relative overflow-hidden transition-colors hover:bg-[rgba(68,78,134,0.04)]"
+			>
 
-						<!-- Línea inferior al pasar el mouse -->
-						<div class="absolute bottom-0 left-0 right-0 h-[2px] bg-[#444e86] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></div>
-
-
-						<!-- Ícono -->
-						<div class="w-12 h-12 sm:w-[52px] sm:h-[52px] bg-[rgba(68,78,134,0.1)] border border-[rgba(68,78,134,0.2)] rounded-xl flex items-center justify-center mb-5 sm:mb-6 text-[#444e86] transition-all group-hover:bg-[rgba(68,78,134,0.18)] group-hover:border-[rgba(68,78,134,0.4)]">
-
-							<Icon
-								size={25}
-								stroke-width={1.8}
-								aria-hidden="true"
-							/>
-
-						</div>
+				<!-- Línea inferior al pasar el mouse -->
+				<div
+					class="absolute bottom-0 left-0 right-0 h-[2px] bg-[#444e86] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"
+				></div>
 
 
-						<!-- Título -->
-						<h3 class="font-[Syne] text-base sm:text-lg font-bold text-[#14152a] mb-3">
-							{s.titulo}
-						</h3>
+				<!-- Ícono / Imagen del servicio -->
+				<div
+					class="w-12 h-12 sm:w-[52px] sm:h-[52px] bg-[rgba(68,78,134,0.1)] border border-[rgba(68,78,134,0.2)] rounded-xl flex items-center justify-center mb-5 sm:mb-6 text-[#444e86] overflow-hidden transition-all group-hover:bg-[rgba(68,78,134,0.18)] group-hover:border-[rgba(68,78,134,0.4)]"
+				>
+
+					{Icon ? (
+						<Icon
+							size={25}
+							stroke-width={1.8}
+							aria-hidden="true"
+						/>
+					) : (
+						<img
+							src={s.imagen}
+							alt={s.titulo}
+							class="w-full h-full object-contain scale-[1.15]"
+						/>
+					)}
+
+				</div>
 
 
-						<!-- Descripción -->
-						<p class="text-sm text-[#5c6079] leading-relaxed">
-							{s.desc}
-						</p>
+				<!-- Título -->
+				<h3 class="font-[Syne] text-base sm:text-lg font-bold text-[#14152a] mb-3">
+					{s.titulo}
+				</h3>
 
-					</div>
 
-				);
+				<!-- Descripción -->
+				<p class="text-sm text-[#5c6079] leading-relaxed">
+					{s.desc}
+				</p>
 
-			})}
+			</div>
 
-		</div>
+		);
 
-	</div>
+	})}
 
-</section>
+</div>
 
 		<!-- Calculadora: Si no pisas ¿cuánto ahorras? -->
 			<div class="max-w-[1000px] mx-auto mt-16 fade-up">
