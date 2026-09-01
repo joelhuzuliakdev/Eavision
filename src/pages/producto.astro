@@ -318,7 +318,7 @@ const productJsonLd = {
 						NUNCA poner loading="lazy" acá.
 					-->
 					<img
-						src="/droneVolandoSoja.webp"
+						src="/headerProducto.webp"
 						alt="Drone agrícola EaVision EA-J150 pulverizando un cultivo de soja"
 						fetchpriority="high"
 						loading="eager"
@@ -344,11 +344,6 @@ const productJsonLd = {
 						<p class="hero-subtitle hero-in">
 							Dron agrícola de alta capacidad en kit con generador de primera línea, una batería extra a tu operación, dispersor de sólidos, antena RTK y herramienta de mapeo. 
 							<br class="hidden-mobile" />
-						</p>
-
-						<p class="hero-description hero-in">
-							Generador de primera línea, dispersor de sólidos,
-							antena RTK y herramienta de mapeo.
 						</p>
 
 						<div class="hero-actions hero-in">
@@ -2023,10 +2018,11 @@ aplicaciones eficientes, menores costos y más resultados.
 
 .hero-subtitle {
 	margin: 20px 0 0;
-	font-size: clamp(1.35rem, 2.6vw, 2.45rem);
-	line-height: 1.08;
+	font-size: clamp(1.15rem, 1.8vw, 1.65rem);
+	line-height: 1.25;
 	color: #eef0f9;
 	font-weight: 500;
+	max-width: 640px;
 }
 
 .hero-description {
@@ -2093,11 +2089,6 @@ aplicaciones eficientes, menores costos y más resultados.
 	min-width: 135px;
 	padding: 0 25px;
 	border-left: 1px solid rgba(255,255,255,.18);
-}
-
-.hero-metrics > div:first-child {
-	padding-left: 0;
-	border-left: 0;
 }
 
 .hero-metrics strong {
@@ -4522,7 +4513,8 @@ aplicaciones eficientes, menores costos y más resultados.
 	}
 
 	.hero-subtitle {
-		font-size: 1.45rem;
+		font-size: 1.15rem;
+		line-height: 1.3;
 	}
 
 	.hero-description {
@@ -4546,10 +4538,6 @@ aplicaciones eficientes, menores costos y más resultados.
 	.hero-metrics > div {
 		min-width: 0;
 		padding: 0 10px;
-	}
-
-	.hero-metrics > div:nth-child(3) {
-		padding-left: 0;
 	}
 
 	.hero-metrics strong {
