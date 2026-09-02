@@ -78,16 +78,49 @@ const navigationFeatures = [
 	},
 ];
 
-const technicalSpecs = [
-	['Capacidad Tanque', '70 L nominal (73 L máx)'],
-	['Flujo Máximo', '40 L/min (±5%)'],
-	['Boquillas', '2 o 4 · EAV-CCMS60'],
-	['Tamaño de Gota', '10–500 μm'],
-	['Ancho Pulverización', '4–15 m'],
-	['Depósito Sólido', '80 kg'],
-	['Carga Rápida', '9 min (30–95%)'],
-	['Protección', 'IPX6K / IP67'],
-	['Rendimiento', '25–40 ha/h'],
+const technicalTabs = [
+	{
+		label: 'Sistema de Pulverización',
+		rows: [
+			['Capacidad Tanque', '73 L'],
+			['Flujo Máximo', '40 L/min (±5%)'],
+			['Atomizadores', '2 o 4 · EAV-CCM S60'],
+			['Tamaño de Gota', '10–500 μm'],
+			['Ancho Pulverización', '4–15 m configurable'],
+		],
+	},
+	{
+		label: 'Sistema de Esparcido',
+		rows: [
+			['Capacidad Tolva', '100 L'],
+			['Carga Útil Sólidos', '80 kg'],
+			['Flujo Máximo', '240 kg/min'],
+			['Ancho Esparcido', '3–8 m'],
+		],
+	},
+	{
+		label: 'Batería y Carga',
+		rows: [
+			['Capacidad', '45.000 mAh'],
+			['Peso Batería', '17.8 kg (±0.5)'],
+			['Voltaje Carga Plena', '59.92 V'],
+			['Tiempo de Carga', '9 min (30–95%)'],
+			['Protección Batería', 'IP65'],
+			['Cargador/Enf', 'EAV-C60 · 12.400 W dual'],
+			['Generador','Dimensionado para mantener la operatoria (carga de baterías, mezclador, bombas, luces, etc.)',],
+		],
+	},
+	{
+		label: 'Navegación y Sensores',
+		rows: [
+			['LiDAR Frontal', 'Scope128 · Detección de objetos hasta 1 cm a 80 m'],
+			['Radar Giratorio Superior', '360°×140° · 60 m efectivo en campo'],
+			['Radar Giratorio Trasero', '50°×270° · 60 m efectivo en campo'],
+			['Altura Autónoma', '1.5–30 m'],
+			['Seguimiento de Terreno', 'Automático'],
+			['Vel. Máx. Evasión Obstáculos', '49,7 km/h'],
+		],
+	}
 ];
 
 // JSON-LD: datos estructurados de producto para resultados enriquecidos en Google
@@ -103,10 +136,10 @@ const productJsonLd = {
 	},
 	category: 'Drone agrícola',
 	additionalProperty: [
-		{ '@type': 'PropertyValue', name: 'Capacidad Tanque', value: '70 L' },
-		{ '@type': 'PropertyValue', name: 'Depósito Sólido', value: '80 kg' },
-		{ '@type': 'PropertyValue', name: 'Flujo Máximo', value: '40 L/min' },
-		{ '@type': 'PropertyValue', name: 'Rendimiento', value: '25-40 ha/h' },
+		{ '@type': 'PropertyValue', name: 'Capacidad Tanque', value: '73 L' },
+		{ '@type': 'PropertyValue', name: 'Depósito Sólido', value: '100 L' },
+		{ '@type': 'PropertyValue', name: 'Flujo Máximo', value: '100 L' },
+		{ '@type': 'PropertyValue', name: 'Rendimiento', value: '35 Ha/h' },
 	],
 };
 ---
@@ -931,105 +964,6 @@ const productJsonLd = {
 
 				</div>
 
-
-				<!-- ================================================= -->
-				<!-- NAVEGACIÓN -->
-				<!-- ================================================= -->
-
-				<div class="navigation-module">
-
-					<div class="navigation-main">
-
-						<div class="eyebrow">
-							NAVEGACIÓN AVANZADA
-						</div>
-
-						<h3>
-							Detección 360° de alta precisión
-						</h3>
-
-						<p>
-							LiDAR frontal Scope128 + radar giratorio
-							superior 360° + radar trasero: detección
-							esférica de obstáculos en tiempo real.
-						</p>
-
-
-						<div class="navigation-pills">
-
-							<div>
-								<strong>
-									LiDAR frontal
-								</strong>
-
-								<span>
-									80 m efectivos · 150 m máx.
-								</span>
-							</div>
-
-							<div>
-								<strong>
-									Radares giratorios
-								</strong>
-
-								<span>
-									60 m efectivos
-								</span>
-							</div>
-
-							<div>
-								<strong>
-									Detección desde 1 cm
-								</strong>
-							</div>
-
-						</div>
-
-					</div>
-
-
-					<div class="navigation-list">
-
-						{
-							navigationFeatures.map(
-								(item, index) => (
-
-									<div
-										class:list={[
-											'navigation-item',
-											{
-												active: index === 0,
-											},
-										]}
-									>
-
-										<span>
-											{item.number}
-										</span>
-
-										<div>
-
-											<strong>
-												{item.title}
-											</strong>
-
-											<p>
-												{item.description}
-											</p>
-
-										</div>
-
-									</div>
-
-								)
-							)
-						}
-
-					</div>
-
-				</div>
-
-
 				<!-- ================================================= -->
 				<!-- TABLA -->
 				<!-- ================================================= -->
@@ -1042,47 +976,42 @@ const productJsonLd = {
 
 					<div class="technical-tabs">
 
-						<span class="active">
-							01&nbsp; Sistema de Pulverización
-						</span>
-
-						<span>
-							02&nbsp; Sistema de Esparcido
-						</span>
-
-						<span>
-							03&nbsp; Batería y Carga
-						</span>
-
-						<span>
-							04&nbsp; Navegación y Sensores
-						</span>
-
-						<span>
-							05&nbsp; Aeronave y Motor
-						</span>
+						{
+							technicalTabs.map((tab, index) => (
+								<span
+									class={index === 0 ? 'active' : ''}
+									data-tab-index={index}
+								>
+									{String(index + 1).padStart(2, '0')}&nbsp; {tab.label}
+								</span>
+							))
+						}
 
 					</div>
 
-
 					{
-						technicalSpecs.map(
-							([label, value]) => (
-
-								<div class="technical-row">
-
-									<span>
-										{label}
-									</span>
-
-									<strong>
-										{value}
-									</strong>
-
-								</div>
-
-							)
-						)
+						technicalTabs.map((tab, index) => (
+							<div
+								class="technical-panel"
+								data-tab-panel={index}
+								style={index === 0 ? undefined : 'display:none'}
+							>
+								{
+									tab.rows.length > 0 ? (
+										tab.rows.map(([label, value]) => (
+											<div class="technical-row">
+												<span>{label}</span>
+												<strong>{value}</strong>
+											</div>
+										))
+									) : (
+										<div class="technical-row technical-row-empty">
+											<span>Información próximamente disponible.</span>
+										</div>
+									)
+								}
+							</div>
+						))
 					}
 
 				</div>
@@ -3504,12 +3433,17 @@ aplicaciones eficientes, menores costos y más resultados.
 
 	white-space: nowrap;
 
-	cursor: default;
+	cursor: pointer;
 
 	transition:
 		color .3s ease,
 		background .3s ease,
 		transform .3s ease;
+}
+
+.technical-row-empty span {
+	color: #8a90ab;
+	font-style: italic;
 }
 
 
@@ -4889,4 +4823,25 @@ aplicaciones eficientes, menores costos y más resultados.
 		}
 
 	}
+
+	/* ===================================================== */
+	/* TABS DE ESPECIFICACIONES TÉCNICAS */
+	/* ===================================================== */
+
+	const technicalTabButtons = document.querySelectorAll('.technical-tabs span');
+	const technicalPanels = document.querySelectorAll('.technical-panel');
+
+	technicalTabButtons.forEach((button) => {
+		button.addEventListener('click', () => {
+			const targetIndex = button.getAttribute('data-tab-index');
+
+			technicalTabButtons.forEach((btn) => btn.classList.remove('active'));
+			button.classList.add('active');
+
+			technicalPanels.forEach((panel) => {
+				panel.style.display =
+					panel.getAttribute('data-tab-panel') === targetIndex ? '' : 'none';
+			});
+		});
+	});
 </script>
