@@ -685,6 +685,190 @@ const productJsonLd = {
 
 		</section>
 
+		<!-- ================================================= -->
+		<!-- KIT -->
+		<!-- ================================================= -->
+
+		<section class="kit-section">
+
+			<div class="content-width">
+
+				<div class="section-heading-centered">
+
+					<div class="eyebrow">
+						03 — KIT COMPLETO
+					</div>
+
+					<h2>
+						Todo lo que necesitás
+						<span>para operar... Y más.</span>
+					</h2>
+
+				</div>
+
+
+				<div class="kit-grid">
+
+					<div class="kit-card">
+
+						<div class="kit-number">
+							01
+						</div>
+
+						<div class="kit-image-placeholder">
+							<img
+								src="/eavKit/bateria3.webp"
+								alt="Batería del kit EA-J150"
+								loading="lazy"
+								decoding="async"
+							/>
+						</div>
+
+						<h3>
+							Baterias inteligentes CTB X3
+						</h3>
+
+						<p>
+							La operatoria se ejecuta con solo dos baterías, el kit incluye una batería de regalo para mayor comodidad.
+						</p>
+
+					</div>
+
+
+					<div class="kit-card">
+
+						<div class="kit-number">
+							02
+						</div>
+
+						<div class="kit-image-placeholder">
+							<img
+								src="/eavKit/cargadorDual.webp"
+								alt="Cargador dual del kit EA-J150"
+								loading="lazy"
+								decoding="async"
+							/>
+						</div>
+
+						<h3>
+							Cargador Dual
+						</h3>
+
+						<p>
+							9 min de carga y ciclo de enfriamiento.s
+						</p>
+
+					</div>
+
+
+					<div class="kit-card">
+
+						<div class="kit-number">
+							03
+						</div>
+
+						<div class="kit-image-placeholder">
+							<img
+								src="/eavKit/controlRc60.webp"
+								alt="Control RC60 del kit EA-J150"
+								loading="lazy"
+								decoding="async"
+							/>
+						</div>
+
+						<h3>
+							Control
+						</h3>
+
+						<p>
+							Admite operación multiple de aeronaves.
+						</p>
+
+					</div>
+
+
+					<div class="kit-card wide">
+
+						<div class="kit-number">
+							04
+						</div>
+
+						<div class="kit-image-placeholder">
+							<img
+								src="/eavKit/esparcidor.webp"
+								alt="Esparcidor de sólidos del kit EA-J150"
+								loading="lazy"
+								decoding="async"
+							/>
+						</div>
+
+						<h3>	
+							Dispersor de sólidos
+						</h3>
+
+						<p>
+							Tolva de 100 L para fertilizantes y semillas.
+						</p>
+
+					</div>
+
+
+					<div class="kit-card wide">
+
+						<div class="kit-number">
+							05
+						</div>
+
+						<div class="kit-image-placeholder">
+							<img
+								src="/eavKit/antenaRtk.webp"
+								alt="Antena RTK del kit EA-J150"
+								loading="lazy"
+								decoding="async"
+							/>
+						</div>
+
+						<h3>
+							Antena RTK
+						</h3>
+
+						<p>
+							Precisión centimétrica y antena repetidora para más alcance. 
+						</p>
+
+					</div>
+
+					<div class="kit-card wide">
+
+						<div class="kit-number">
+							06
+						</div>
+
+						<div class="kit-image-placeholder">
+							<img
+								src="/eavKit/antenaRtk.webp"
+								alt="Antena RTK del kit EA-J150"
+								loading="lazy"
+								decoding="async"
+							/>
+						</div>
+
+						<h3>
+							Generador 220V
+						</h3>
+
+						<p>
+							Generador de primera línea dimensionado para toda la operatoria. 
+						</p>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>
+
 
 		<!-- ================================================= -->
 		<!-- ESPECIFICACIONES -->
@@ -702,7 +886,7 @@ const productJsonLd = {
 					<div>
 
 						<div class="eyebrow">
-							03 — ESPECIFICACIONES
+							04 — ESPECIFICACIONES
 						</div>
 
 						<h2>
@@ -918,7 +1102,7 @@ const productJsonLd = {
 				<div class="center-heading">
 
 					<div class="eyebrow">
-						04 — NUESTROS MODELOS
+						05 — NUESTROS MODELOS
 					</div>
 
 				</div>
@@ -3224,6 +3408,14 @@ const productJsonLd = {
 		grid-column: span 2;
 	}
 
+	.kit-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.kit-card.wide {
+		grid-column: span 2;
+	}
+
 }
 
 @media (max-width: 600px) {
@@ -4860,7 +5052,6 @@ const productJsonLd = {
 
 }
 
-.kit-grid 
 @media (max-width: 640px) {
 .comparison-note {
 	padding: 9px 12px;
@@ -5046,6 +5237,14 @@ const productJsonLd = {
 
 	.hidden-mobile {
 		display: none;
+	}
+
+	.kit-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.kit-card.wide {
+		grid-column: span 1;
 	}
 
 }
