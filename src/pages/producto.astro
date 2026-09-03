@@ -494,126 +494,136 @@ const productJsonLd = {
 
 
 		<!-- ================================================= -->
-		<!-- GALERÍA -->
-		<!-- ================================================= -->
+<!-- POR QUÉ ELEGIR EL EA-J150 -->
+<!-- ================================================= -->
 
-		<section class="gallery-section">
+<section class="feature-section">
 
-			<div class="content-width">
+	<div class="content-width">
 
-				<div class="section-heading-row">
+		<div class="feature-heading">
 
-					<div>
-
-						<div class="eyebrow">
-							02
-						</div>
-
-						<h2>
-							Porque elegir el <span>EA-J150</span>
-						</h2>
-
-						<p>
-							Una mirada al equipo y a las distintas
-							ventajas de la tecnología <b>EAVision</b>.
-						</p>
-
-					</div>
-
-					<div class="gallery-controls">
-
-						<button
-							type="button"
-							id="gallery-prev"
-							aria-label="Imagen anterior"
-						>
-							←
-						</button>
-
-						<button
-							type="button"
-							id="gallery-next"
-							aria-label="Imagen siguiente"
-						>
-							→
-						</button>
-
-					</div>
-
-				</div>
-
-
-				<div class="gallery-wrapper">
-
-					<div
-						id="gallery"
-						class="gallery-track"
-					>
-
-						{
-							galleryItems.map((item, index) => (
-
-								<article class="gallery-card">
-
-									<div class="gallery-card-top">
-
-										<span>
-											{item.number}
-										</span>
-
-										<div class="gallery-line"></div>
-
-										<strong>
-											{item.title}
-										</strong>
-
-									</div>
-
-
-									<div class="gallery-media">
-
-										{
-											item.image ? (
-
-												<img
-													src={item.image}
-													alt={`EAV-J150: ${item.title}`}
-													loading="lazy"
-													decoding="async"
-													fetchpriority={index < 2 ? 'low' : undefined}
-												/>
-
-											) : (
-
-												<div class="media-placeholder">
-													<div class="placeholder-icon">+</div>
-													<div>
-														<span>IMAGEN</span>
-														<strong>PRÓXIMAMENTE</strong>
-													</div>
-												</div>
-
-											)
-										}
-
-									</div>
-
-									<div class="gallery-card-body">
-										<p>{item.description}</p>
-									</div>
-
-								</article>
-
-							))
-						}
-
-					</div>
-
-				</div>
-
+			<div class="eyebrow">
+				02
 			</div>
 
-		</section>
+			<h2>
+				Porque elegir el <span>EA-J150</span>
+			</h2>
+
+			<p>
+				Una mirada al equipo y a las distintas ventajas de la tecnología
+				<b>EAVision</b>.
+			</p>
+
+		</div>
+
+
+		<div class="feature-list">
+
+			<!-- BATERÍAS -->
+
+			<article class="feature-block">
+
+				<div class="feature-media">
+					<!-- VIDEO DE BATERÍAS -->
+				</div>
+
+				<div class="feature-content">
+
+					<div class="feature-number">
+						01
+					</div>
+
+					<h3>
+						Baterías de última generación
+					</h3>
+
+					<p>
+						Sistema de baterías de última generación con capacidad de
+						45.000 mAh, carga completa en solo 9 minutos, y sin necesidad
+						de ciclo de enfriamiento, facilitando así la operación diaria
+						y minimizando el tiempo en tierra, ya que trabajamos
+						continuamente con sólo dos baterías.
+					</p>
+
+				</div>
+
+			</article>
+
+
+			<!-- BOQUILLAS -->
+
+			<article class="feature-block feature-block-reverse">
+
+				<div class="feature-media">
+					<!-- VIDEO DE BOQUILLAS -->
+				</div>
+
+				<div class="feature-content">
+
+					<div class="feature-number">
+						02
+					</div>
+
+					<h3>
+						Boquillas de precisión
+					</h3>
+
+					<p>
+						Cada atomizador permite ajustar el tamaño de gotas de forma
+						independiente (10 a 500 micrones), logrando una cobertura
+						uniforme que penetra hasta en los escenarios más extremos.
+						Con la tecnología centrífuga CCMS exclusiva de EAVISION
+						logramos un tamaño de gota con un factor de dispersión menor
+						al 1,35%, lo que seleccionás en el control, se genera en los
+						picos.
+					</p>
+
+				</div>
+
+			</article>
+
+
+			<!-- SEGURIDAD -->
+
+			<article class="feature-block">
+
+				<div class="feature-media">
+					<!-- VIDEO DE SEGURIDAD -->
+				</div>
+
+				<div class="feature-content">
+
+					<div class="feature-number">
+						03
+					</div>
+
+					<h3>
+						Evitación de obstáculos
+					</h3>
+
+					<p>
+						Evitación de obstáculos con tecnología LiDAR Scope128 + radares
+						giratorios 360°. Detección de obstáculos a partir de 1 cm a
+						más de 80 metros de distancia. Velocidad máxima de pulverización
+						de 49 km/h con las funciones de evitación de obstáculos y
+						seguimiento del terreno activadas*
+					</p>
+
+					<small class="feature-note">
+						*La garantía cubre colisiones a velocidades de hasta 33 km/h
+					</small>
+
+				</div>
+
+			</article>
+
+		</div>
+
+	</div>
+
+</section>
 
 		<!-- ================================================= -->
 		<!-- KIT -->
@@ -1021,222 +1031,216 @@ const productJsonLd = {
 		</section>
 
 
-		<!-- COMPARACIÓN -->
-		<!-- ================================================= -->
+<!-- ================================================= -->
+<!-- COMPARACIÓN -->
+<!-- ================================================= -->
 
-		<section class="comparison-section">
+<section class="comparison-section">
 
-			<div class="content-width">
+	<div class="content-width">
 
-				<div class="center-heading">
+		<div class="center-heading">
 
-					<div class="eyebrow">
-						05 — NUESTROS MODELOS 
+			<div class="eyebrow">
+				06 — NUESTROS MODELOS
+			</div>
+
+		</div>
+
+
+		<div class="comparison">
+
+			<!-- ========================================= -->
+			<!-- MODELOS -->
+			<!-- ========================================= -->
+
+			<div class="comparison-header">
+
+				<!-- EA-J100 -->
+
+				<div class="comparison-model muted">
+
+					<div class="comparison-image">
+
+						<img
+							src="/eavJ150/eavj100.webp"
+							alt="Drone agrícola EaVision EA-J100"
+							loading="lazy"
+							decoding="async"
+						/>
+
 					</div>
+
+					<strong>
+						EA-J100
+					</strong>
 
 				</div>
 
 
-				<div class="comparison">
+				<!-- EA-J150 -->
 
-					<!-- ========================================= -->
-					<!-- MODELOS -->
-					<!-- ========================================= -->
+				<div class="comparison-model featured">
 
-					<div class="comparison-header">
+					<div class="comparison-image">
 
-						<!-- EAV-J100  -->
-
-						<div class="comparison-model muted">
-
-							<div class="comparison-image">
-
-								<img
-									src="/eavJ150/eavj100.webp"
-									alt="Drone agrícola EaVision EAV-J100"
-									loading="lazy"
-									decoding="async"
-								/>
-
-							</div>
-
-							<span>
-								COMPACTO Y ÁGIL
-							</span>
-
-							<strong>
-								EAV-J100 
-							</strong>
-
-						</div>
-
-
-						<!-- J150 -->
-
-						<div class="comparison-model featured">
-
-							<div class="comparison-image">
-
-								<img
-									src="/eavJ150/EAVJ150.webp"
-									alt="Drone agrícola EaVision EA-J150"
-									loading="lazy"
-									decoding="async"
-								/>
-
-							</div>
-
-							<span>
-								ALTA CAPACIDAD
-							</span>
-
-							<strong>
-								EA-J150
-							</strong>
-
-						</div>
+						<img
+							src="/eavJ150/EAVJ150.webp"
+							alt="Drone agrícola EaVision EA-J150"
+							loading="lazy"
+							decoding="async"
+						/>
 
 					</div>
 
-
-					<!-- ========================================= -->
-					<!-- DEPÓSITO LÍQUIDO -->
-					<!-- ========================================= -->
-
-					<div class="comparison-row">
-
-						<div class="old-value">
-							35 L
-						</div>
-
-						<div class="comparison-label">
-							DEPÓSITO<br />
-							LÍQUIDO
-						</div>
-
-						<div class="new-value">
-							73 L
-						</div>
-
-					</div>
-
-
-					<!-- ========================================= -->
-					<!-- DEPÓSITO SÓLIDO -->
-					<!-- ========================================= -->
-
-					<div class="comparison-row">
-
-						<div class="old-value">
-							50 L
-						</div>
-
-						<div class="comparison-label">
-							DEPÓSITO<br />
-							SÓLIDO
-						</div>
-
-						<div class="new-value">
-							100 L
-						</div>
-
-					</div>
-
-
-					<!-- ========================================= -->
-					<!-- ANCHO DE FAJA -->
-					<!-- ========================================= -->
-
-					<div class="comparison-row">
-
-						<div class="old-value">
-							10–12.5 m
-						</div>
-
-						<div class="comparison-label">
-							ANCHO DE<br />
-							FAJA
-						</div>
-
-						<div class="new-value">
-							4–15 m configurable
-						</div>
-
-					</div>
-
-
-					<!-- ========================================= -->
-					<!-- FLUJO MÁXIMO -->
-					<!-- ========================================= -->
-
-					<div class="comparison-row">
-
-						<div class="old-value">
-							24 L/min
-						</div>
-
-						<div class="comparison-label">
-							FLUJO<br />
-							MÁXIMO
-						</div>
-
-						<div class="new-value">
-							40 L/min
-						</div>
-
-					</div>
-
-
-					<!-- ========================================= -->
-					<!-- RENDIMIENTO -->
-					<!-- ========================================= -->
-
-					<div class="comparison-row">
-
-						<div class="old-value">
-							hasta 24 Ha/h 
-						</div>
-
-						<div class="comparison-label">
-							RENDIMIENTO<br />
-							/HORA
-						</div>
-
-						<div class="new-value">
-							35 Ha/h 
-						</div>
-
-					</div>
-
-
-					<!-- ========================================= -->
-					<!-- TIEMPO DE CARGA -->
-					<!-- ========================================= -->
-
-					<div class="comparison-row">
-
-						<div class="old-value">
-							9 min (30-95%)
-						</div>
-
-						<div class="comparison-label">
-							TIEMPO DE<br />
-							CARGA
-						</div>
-
-						<div class="new-value">
-							9 min (30-95%)
-						</div>
-
-					</div>
+					<strong>
+						EA-J150
+					</strong>
 
 				</div>
 
 			</div>
 
-		</section>
+
+			<!-- ========================================= -->
+			<!-- DEPÓSITO LÍQUIDO -->
+			<!-- ========================================= -->
+
+			<div class="comparison-row">
+
+				<div class="old-value">
+					35 L
+				</div>
+
+				<div class="comparison-label">
+					DEPÓSITO<br />
+					LÍQUIDO
+				</div>
+
+				<div class="new-value">
+					73 L
+				</div>
+
+			</div>
 
 
+			<!-- ========================================= -->
+			<!-- DEPÓSITO SÓLIDO -->
+			<!-- ========================================= -->
+
+			<div class="comparison-row">
+
+				<div class="old-value">
+					50 L
+				</div>
+
+				<div class="comparison-label">
+					DEPÓSITO<br />
+					SÓLIDO
+				</div>
+
+				<div class="new-value">
+					100 L
+				</div>
+
+			</div>
+
+
+			<!-- ========================================= -->
+			<!-- ANCHO DE FAJA -->
+			<!-- ========================================= -->
+
+			<div class="comparison-row">
+
+				<div class="old-value">
+					10–12.5 m
+				</div>
+
+				<div class="comparison-label">
+					ANCHO DE<br />
+					FAJA
+				</div>
+
+				<div class="new-value">
+					4–15 m configurable
+				</div>
+
+			</div>
+
+
+			<!-- ========================================= -->
+			<!-- FLUJO MÁXIMO -->
+			<!-- ========================================= -->
+
+			<div class="comparison-row">
+
+				<div class="old-value">
+					24 L/min
+				</div>
+
+				<div class="comparison-label">
+					FLUJO<br />
+					MÁXIMO
+				</div>
+
+				<div class="new-value">
+					40 L/min
+				</div>
+
+			</div>
+
+
+			<!-- ========================================= -->
+			<!-- RENDIMIENTO -->
+			<!-- ========================================= -->
+
+			<div class="comparison-row">
+
+				<div class="old-value">
+					hasta 24 Ha/h
+				</div>
+
+				<div class="comparison-label">
+					RENDIMIENTO<br />
+					/HORA
+				</div>
+
+				<div class="new-value">
+					35 Ha/h
+				</div>
+
+			</div>
+
+
+			<!-- ========================================= -->
+			<!-- TIEMPO DE CARGA -->
+			<!-- ========================================= -->
+
+			<div class="comparison-row">
+
+				<div class="old-value">
+					9 min (30-95%)
+				</div>
+
+				<div class="comparison-label">
+					TIEMPO DE<br />
+					CARGA
+				</div>
+
+				<div class="new-value">
+					9 min (30-95%)
+				</div>
+
+			</div>
+
+
+
+
+		</div>
+
+	</div>
+
+</section>
 		<!-- ================================================= -->
 		<!-- FUENTE -->
 		<!-- ================================================= -->
@@ -2076,199 +2080,688 @@ const productJsonLd = {
 
 
 /* ===================================================== */
-/* GALERÍA */
+/* SECCIÓN 02 — POR QUÉ ELEGIR EL EA-J150 */
 /* ===================================================== */
 
-.gallery-section {
-	padding: 120px 0;
-	background: #eef0f6;
+.feature-section {
+	padding: 135px 0 160px;
+	background: #f6f7fb;
 }
 
-.section-heading-row {
-	display: flex;
-	align-items: end;
-	justify-content: space-between;
-	gap: 40px;
-	margin-bottom: 50px;
+
+/* ===================================================== */
+/* ENCABEZADO */
+/* ===================================================== */
+
+.feature-heading {
+	margin-bottom: 105px;
 }
 
-.section-heading-row h2,
-.video-header h2 {
-	margin: 15px 0 0;
-	font-size: clamp(2.5rem, 5vw, 5rem);
+.feature-heading .eyebrow {
+	margin-bottom: 20px;
+}
+
+.feature-heading h2 {
+	margin: 0;
+
+	max-width: 850px;
+
+	color: #14152a;
+
+	font-family: 'Syne', sans-serif;
+	font-size: clamp(2.7rem, 5vw, 5.5rem);
+	font-weight: 600;
+
 	line-height: .95;
 	letter-spacing: -.05em;
 }
 
-.section-heading-row h2 span,
-.video-header h2 span {
+.feature-heading h2 span {
 	color: #444e86;
 }
 
-.section-heading-row p {
-	max-width: 450px;
-	margin: 20px 0 0;
+.feature-heading p {
+	max-width: 610px;
+
+	margin: 22px 0 0;
+
 	color: #5c6079;
+
+	font-family: 'DM Sans', sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+
 	line-height: 1.7;
 }
 
-.gallery-controls {
-	display: flex;
-	gap: 8px;
-}
-
-.gallery-controls button {
-	width: 50px;
-	height: 50px;
-	border: 1px solid var(--line);
-	border-radius: 50%;
-	background: transparent;
-	color: #14152a;
-	font-size: 19px;
-	cursor: pointer;
-	transition: all .25s ease;
-}
-
-.gallery-controls button:hover {
-	background: var(--accent);
-	border-color: var(--accent);
-	color: #ffffff;
-}
 
 /* ===================================================== */
-/* GALERÍA — WRAPPER + FIX SWIPE MOBILE */
+/* LISTA */
 /* ===================================================== */
 
-.gallery-wrapper {
-	overflow: hidden;
-	mask-image: linear-gradient(90deg, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
-	-webkit-mask-image: linear-gradient(90deg, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
-	touch-action: pan-y; /* deja pasar el swipe horizontal al JS, el navegador maneja el scroll vertical */
-}
-
-.gallery-track {
-	display: flex;
-	gap: 16px;
-	transition: transform .55s cubic-bezier(.16,1,.3,1);
-	touch-action: pan-y;
-}
-
-.gallery-card {
-	flex: 0 0 calc(38% - 11px);
-	min-width: 300px;
-	border: 1px solid var(--line);
-	border-radius: 25px;
-	overflow: hidden;
-	background: #ffffff;
-	transition: transform .35s cubic-bezier(.16,1,.3,1), box-shadow .35s ease;
-}
-
-.gallery-card:hover {
-	transform: translateY(-6px);
-	box-shadow: 0 25px 50px rgba(23,26,60,.12);
-}
-
-.gallery-media {
-	height: 430px;
-	overflow: hidden;
-	background:
-		radial-gradient(circle at 50% 45%, rgba(68,78,134,.07), transparent 45%),
-		#eef0f6;
-}
-
-.gallery-media img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	transition: transform .5s ease;
-	-webkit-user-drag: none;
-	-webkit-touch-callout: none;
-	user-select: none;
-	pointer-events: none; /* evita que la imagen capture el touch antes que el contenedor */
-}
-
-.gallery-card:hover .gallery-media img {
-	transform: scale(1.05);
-}
-
-.gallery-card-top {
-	display: flex;
-	align-items: flex-start;   /* antes: center */
-	gap: 13px;
-	height: auto;               /* antes: 58px */
-	min-height: 58px;
-	padding: 16px 18px;         /* antes: 0 18px */
-	color: #5c6079;
-	font-size: 10px;
-	letter-spacing: .12em;
-	text-transform: uppercase;
-}
-
-.gallery-card-top strong {
-	color: #14152a;
-	font-size: 10px;
-	white-space: normal;        /* antes: nowrap */
-	line-height: 1.4;
-}
-
-.gallery-line {
-	height: 1px;
-	flex: 1;
-	background: var(--line);
-	margin-top: 4px;            /* para que no quede pegada arriba cuando el título tiene 2 líneas */
-	align-self: flex-start;
-}
-
-.gallery-card-body {
-	padding: 20px 18px 24px;
-}
-
-.gallery-card-body p {
-	margin: 0;
-	color: #5c6079;
-	font-size: 13px;
-	line-height: 1.65;
-}
-
-.media-placeholder {
-	width: 100%;
-	height: 100%;
+.feature-list {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 18px;
-	color: #8288a0;
-	text-align: center;
+
+	gap: 155px;
 }
 
-.placeholder-icon {
+
+/* ===================================================== */
+/* BLOQUES */
+/* ===================================================== */
+
+.feature-block {
+	display: grid;
+
+	grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr);
+
+	align-items: center;
+
+	gap: 90px;
+
+	width: 100%;
+}
+
+
+/* SEGUNDO BLOQUE INVERTIDO */
+
+.feature-block-reverse {
+	grid-template-columns: minmax(320px, .85fr) minmax(0, 1.15fr);
+}
+
+.feature-block-reverse .feature-media {
+	order: 2;
+}
+
+.feature-block-reverse .feature-content {
+	order: 1;
+}
+
+
+/* ===================================================== */
+/* VIDEO */
+/* ===================================================== */
+
+.feature-media {
+	position: relative;
+
+	width: 100%;
+	height: 470px;
+
+	overflow: hidden;
+
+	background: #e9ebf3;
+
+	border-radius: 8px;
+}
+
+.feature-media::before {
+	content: '';
+
+	position: absolute;
+	inset: 0;
+
+	background:
+		linear-gradient(
+			90deg,
+			transparent 49.8%,
+			rgba(68,78,134,.045) 50%,
+			transparent 50.2%
+		),
+		linear-gradient(
+			0deg,
+			transparent 49.8%,
+			rgba(68,78,134,.045) 50%,
+			transparent 50.2%
+		);
+
+	background-size: 80px 80px;
+
+	opacity: .4;
+
+	pointer-events: none;
+}
+
+.feature-media video {
+	display: block;
+
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+}
+
+
+/* ===================================================== */
+/* TEXTO */
+/* ===================================================== */
+
+.feature-content {
+	padding: 10px 0;
+}
+
+.feature-number {
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	width: 72px;
-	height: 72px;
-	border-radius: 50%;
-	border: 1px solid rgba(68,78,134,.25);
-	background: rgba(68,78,134,.04);
-	color: var(--accent);
-	font-size: 32px;
-	font-weight: 300;
-}
+	gap: 13px;
 
-.media-placeholder span,
-.media-placeholder strong {
-	display: block;
-	font-size: 9px;
+	margin-bottom: 23px;
+
+	color: #444e86;
+
+	font-family: 'DM Sans', sans-serif;
+	font-size: 10px;
+	font-weight: 600;
+
 	letter-spacing: .2em;
 }
 
-.media-placeholder strong {
-	margin-top: 6px;
-	color: #5c6079;
+.feature-number::after {
+	content: '';
+
+	width: 45px;
+	height: 1px;
+
+	background: rgba(68,78,134,.3);
 }
 
 
+/* ===================================================== */
+/* TÍTULO DEL BLOQUE */
+/* ===================================================== */
+
+.feature-content h3 {
+	max-width: 520px;
+
+	margin: 0 0 25px;
+
+	color: #14152a;
+
+	font-family: 'Syne', sans-serif;
+	font-size: clamp(2.4rem, 3.8vw, 3.8rem);
+	font-weight: 600;
+
+	line-height: .96;
+	letter-spacing: -.05em;
+}
+
+
+/* ===================================================== */
+/* DESCRIPCIÓN */
+/* ===================================================== */
+
+.feature-content p {
+	max-width: 520px;
+
+	margin: 0;
+
+	color: #5c6079;
+
+	font-family: 'DM Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+
+	line-height: 1.85;
+}
+
+
+/* ===================================================== */
+/* NOTA DE SEGURIDAD */
+/* ===================================================== */
+
+.feature-note {
+	display: block;
+
+	max-width: 520px;
+
+	margin-top: 24px;
+	padding-top: 14px;
+
+	border-top: 1px solid rgba(68,78,134,.12);
+
+	color: #8a90a5;
+
+	font-family: 'DM Sans', sans-serif;
+	font-size: 9px;
+	line-height: 1.6;
+}
+
+
+/* ===================================================== */
+/* TABLET */
+/* ===================================================== */
+
+@media (max-width: 1000px) {
+
+	.feature-block,
+	.feature-block-reverse {
+		grid-template-columns: 1fr 1fr;
+		gap: 55px;
+	}
+
+	.feature-media {
+		height: 380px;
+	}
+
+	.feature-list {
+		gap: 115px;
+	}
+
+}
+
+
+/* ===================================================== */
+/* MOBILE */
+/* ===================================================== */
+
+@media (max-width: 768px) {
+
+	.feature-section {
+		padding: 95px 0 115px;
+	}
+
+	.feature-heading {
+		margin-bottom: 65px;
+	}
+
+	.feature-heading h2 {
+		font-size: clamp(2.7rem, 10vw, 4.2rem);
+	}
+
+	.feature-list {
+		gap: 90px;
+	}
+
+	.feature-block,
+	.feature-block-reverse {
+		display: flex;
+		flex-direction: column;
+
+		gap: 32px;
+	}
+
+	.feature-block-reverse .feature-media,
+	.feature-block-reverse .feature-content {
+		order: initial;
+	}
+
+	.feature-media {
+		height: 320px;
+	}
+
+	.feature-content {
+		width: 100%;
+	}
+
+	.feature-content h3 {
+		font-size: 2.5rem;
+	}
+
+	.feature-content p {
+		font-size: 13px;
+		line-height: 1.8;
+	}
+
+}
+
+
+/* ===================================================== */
+/* MOBILE PEQUEÑO */
+/* ===================================================== */
+
+@media (max-width: 640px) {
+
+	.feature-section {
+		padding: 80px 0 95px;
+	}
+
+	.feature-heading {
+		margin-bottom: 55px;
+	}
+
+	.feature-heading h2 {
+		font-size: 2.8rem;
+	}
+
+	.feature-list {
+		gap: 75px;
+	}
+
+	.feature-media {
+		height: 250px;
+	}
+
+	.feature-content h3 {
+		font-size: 2.15rem;
+	}
+
+}
+/* ===================================================== */
+/* VIDEO */
+/* ===================================================== */
+
+.feature-media {
+	position: relative;
+
+	width: 100%;
+	height: 430px;
+
+	overflow: hidden;
+
+	background:
+		linear-gradient(
+			135deg,
+			#e9ebf3 0%,
+			#f1f2f7 50%,
+			#e5e8f1 100%
+		);
+
+	border-radius: 4px;
+}
+
+
+/* Rejilla muy sutil para que el espacio vacío no se vea muerto */
+
+.feature-media::before {
+	content: '';
+
+	position: absolute;
+
+	inset: 0;
+
+	background:
+		linear-gradient(
+			90deg,
+			transparent 49.9%,
+			rgba(68,78,134,.045) 50%,
+			transparent 50.1%
+		),
+		linear-gradient(
+			0deg,
+			transparent 49.9%,
+			rgba(68,78,134,.045) 50%,
+			transparent 50.1%
+		);
+
+	background-size: 70px 70px;
+
+	opacity: .45;
+
+	pointer-events: none;
+}
+
+
+/* Indicador temporal hasta que estén los videos */
+
+.feature-media::after {
+	content: 'VIDEO · PRÓXIMAMENTE';
+
+	position: absolute;
+
+	left: 28px;
+	bottom: 24px;
+
+	padding: 7px 11px;
+
+	border: 1px solid rgba(68,78,134,.14);
+
+	background: rgba(246,247,251,.72);
+
+	color: #6f7590;
+
+	font-size: 8px;
+	font-weight: 700;
+
+	letter-spacing: .16em;
+
+	backdrop-filter: blur(8px);
+}
+
+
+/* Cuando agreguemos los videos */
+
+.feature-media video {
+	display: block;
+
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+}
+
+
+/* ===================================================== */
+/* CONTENIDO */
+/* ===================================================== */
+
+.feature-content {
+	padding: 10px 0;
+}
+
+
+/* ===================================================== */
+/* NÚMERO */
+/* ===================================================== */
+
+.feature-number {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+
+	margin-bottom: 24px;
+
+	color: #444e86;
+
+	font-size: 10px;
+	font-weight: 700;
+
+	letter-spacing: .2em;
+}
+
+
+/* Línea decorativa */
+
+.feature-number::after {
+	content: '';
+
+	display: block;
+
+	width: 42px;
+	height: 1px;
+
+	background: rgba(68,78,134,.3);
+}
+
+
+/* ===================================================== */
+/* TÍTULO */
+/* ===================================================== */
+
+.feature-content h3 {
+	max-width: 520px;
+
+	margin: 0 0 26px;
+
+	color: #14152a;
+
+	font-family:
+		'HarmonyOS Sans SC',
+		'HarmonyOS Sans',
+		Arial,
+		sans-serif;
+
+	font-size: clamp(2rem, 3.5vw, 3.5rem);
+
+	font-weight: 700;
+
+	line-height: 1.02;
+
+	letter-spacing: -.045em;
+}
+
+
+/* ===================================================== */
+/* DESCRIPCIÓN */
+/* ===================================================== */
+
+.feature-content p {
+	max-width: 520px;
+
+	margin: 0;
+
+	color: #5c6079;
+
+	font-size: 14px;
+
+	line-height: 1.85;
+}
+
+
+/* ===================================================== */
+/* NOTA DE SEGURIDAD */
+/* ===================================================== */
+
+.feature-note {
+	display: block;
+
+	max-width: 500px;
+
+	margin-top: 24px;
+	padding-top: 16px;
+
+	border-top: 1px solid rgba(68,78,134,.12);
+
+	color: #8a90a5;
+
+	font-size: 9px;
+
+	line-height: 1.6;
+}
+
+
+/* ===================================================== */
+/* TABLET */
+/* ===================================================== */
+
+@media (max-width: 1000px) {
+
+	.feature-list {
+		gap: 110px;
+	}
+
+	.feature-block,
+	.feature-block-reverse {
+		grid-template-columns: 1fr 1fr;
+
+		gap: 50px;
+	}
+
+	.feature-media {
+		height: 350px;
+	}
+
+	.feature-content h3 {
+		font-size: clamp(2rem, 4vw, 3rem);
+	}
+
+}
+
+
+/* ===================================================== */
+/* MOBILE */
+/* ===================================================== */
+
+@media (max-width: 768px) {
+
+	.feature-section {
+		padding: 90px 0 110px;
+	}
+
+	.feature-section .section-heading-row h2 {
+		font-size: clamp(2.6rem, 10vw, 4rem);
+	}
+
+	.feature-list {
+		gap: 90px;
+
+		margin-top: 60px;
+	}
+
+	.feature-block,
+	.feature-block-reverse {
+		display: flex;
+		flex-direction: column;
+
+		gap: 32px;
+	}
+
+	.feature-block-reverse .feature-media,
+	.feature-block-reverse .feature-content {
+		order: initial;
+	}
+
+	.feature-media {
+		height: 320px;
+	}
+
+	.feature-content {
+		width: 100%;
+	}
+
+	.feature-content h3 {
+		max-width: 600px;
+
+		font-size: 2.4rem;
+	}
+
+	.feature-content p {
+		max-width: 600px;
+
+		font-size: 13px;
+	}
+
+}
+
+
+/* ===================================================== */
+/* MOBILE PEQUEÑO */
+/* ===================================================== */
+
+@media (max-width: 640px) {
+
+	.feature-section {
+		padding: 80px 0 90px;
+	}
+
+	.feature-list {
+		gap: 75px;
+
+		margin-top: 50px;
+	}
+
+	.feature-media {
+		height: 250px;
+	}
+
+	.feature-media::after {
+		left: 16px;
+		bottom: 16px;
+
+		font-size: 7px;
+	}
+
+	.feature-content h3 {
+		font-size: 2rem;
+	}
+
+	.feature-content p {
+		font-size: 13px;
+
+		line-height: 1.75;
+	}
+
+}
 /* ===================================================== */
 /* VIDEO */
 /* ===================================================== */
@@ -2340,53 +2833,27 @@ const productJsonLd = {
 .kit-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 16px;
+	gap: 14px;
 }
 
 .kit-card {
 	position: relative;
-	padding: 25px;
+	padding: 20px;
 	border: 1px solid var(--line);
-	border-radius: 25px;
+	border-radius: 22px;
 	background: #ffffff;
 	overflow: hidden;
 
-	/* Efecto de transición */
 	transition:
 		transform .35s ease,
 		box-shadow .35s ease,
 		border-color .35s ease;
 }
 
-/* ===================================================== */
-/* EFECTO HOVER DE LAS TARJETAS */
-/* ===================================================== */
-
-.kit-card:hover {
-	transform: translateY(-7px);
-	border-color: rgba(68, 78, 134, .35);
-	box-shadow: 0 22px 45px rgba(23, 26, 60, .12);
-}
-
-.kit-card.wide {
-	grid-column: span 1;
-}
-
-.kit-number {
-	color: var(--accent);
-	font-size: 9px;
-	letter-spacing: .18em;
-	transition: color .35s ease;
-}
-
-.kit-card:hover .kit-number {
-	color: #444e86;
-}
-
 .kit-image-placeholder {
-	height: 230px;
-	margin: 22px 0;
-	border-radius: 18px;
+	height: 190px;
+	margin: 18px 0;
+	border-radius: 16px;
 	border: 1px dashed rgba(68,78,134,.2);
 	background:
 		radial-gradient(
@@ -2408,21 +2875,11 @@ const productJsonLd = {
 		background .35s ease;
 }
 
-.kit-card:hover .kit-image-placeholder {
-	border-color: rgba(68, 78, 134, .35);
-	background:
-		radial-gradient(
-			circle at center,
-			rgba(68,78,134,.11),
-			transparent 55%
-		);
-}
-
 .kit-image-placeholder img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	border-radius: 18px;
+	border-radius: 16px;
 
 	transition:
 		transform .5s ease;
@@ -4141,15 +4598,6 @@ const productJsonLd = {
 		padding: 25px 18px 22px;
 	}
 
-	.comparison-model.featured::after,
-	.comparison-model.muted::after {
-		position: static;
-
-		display: inline-flex;
-
-		margin-top: 14px;
-	}
-
 	.comparison-image {
 		height: 90px;
 	}
@@ -4169,6 +4617,24 @@ const productJsonLd = {
 		font-size: 7px;
 		padding: 10px 5px;
 	}
+	.comparison-note {
+	padding: 10px 18px;
+
+	border-top: 1px solid rgba(68,78,134,.10);
+
+	color: #8a90a5;
+
+	background: rgba(255,255,255,.35);
+
+	font-size: 8px;
+	line-height: 1.5;
+
+	text-align: center;
+}
+
+.comparison-note strong {
+	color: #5c6079;
+}
 }
 
 @media (max-width: 520px) {
@@ -4402,15 +4868,18 @@ const productJsonLd = {
 		grid-column: span 2;
 	}
 
-	.kit-grid {
+	{
 		grid-template-columns: 1fr 1fr;
 	}
 
 }
 
-
+.kit-grid 
 @media (max-width: 640px) {
-
+.comparison-note {
+	padding: 9px 12px;
+	font-size: 7px;
+}
 	.content-width {
 		width: min(100% - 30px, 1200px);
 	}
