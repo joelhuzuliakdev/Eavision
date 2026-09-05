@@ -11,7 +11,7 @@ const canonicalURL = 'https://www.eavision.com/eav-j150'; // ← reemplazar por 
 const ogImage = 'https://www.eavision.com/droneVolandoSoja.webp'; // ← reemplazar por la URL absoluta real
 
 const whatsapp =
-	'https://wa.me/5493510000000?text=Hola!%20Me%20interesa%20el%20EA-J150.%20Quisiera%20recibir%20m%C3%A1s%20informaci%C3%B3n.';
+	'https://wa.me/5493571537374?text=Hola!%20Me%20interesa%20el%20EA-J150.%20Quisiera%20recibir%20m%C3%A1s%20informaci%C3%B3n.';
 
 const galleryItems = [
 	{
@@ -106,7 +106,7 @@ const technicalTabs = [
 			['Voltaje Carga Plena', '59.92 V'],
 			['Tiempo de Carga', '9 min (30–95%)'],
 			['Protección Batería', 'IP65'],
-			['Cargador/Enf', 'EAV-C60 · 12.400 W dual'],
+			['Cargador/Enfriador', 'EAV-C60 · 12.400 W dual'],
 			['Generador','Dimensionado para mantener la operatoria (carga de baterías, mezclador, bombas, luces, etc.)',],
 		],
 	},
@@ -774,7 +774,7 @@ const productJsonLd = {
 						</h3>
 
 						<p>
-							9 min de carga y ciclo de enfriamiento.s
+							12.400 W para una carga completa en 9 minutos y sin necesidad de ciclo de enfriamiento.
 						</p>
 
 					</div>
@@ -865,7 +865,7 @@ const productJsonLd = {
 
 						<div class="kit-image-placeholder">
 							<img
-								src="/eavKit/antenaRtk.webp"
+								src="/eavKit/generador.png"
 								alt="Antena RTK del kit EA-J150"
 								loading="lazy"
 								decoding="async"
@@ -877,7 +877,7 @@ const productJsonLd = {
 						</h3>
 
 						<p>
-							Generador de primera línea dimensionado para toda la operatoria. 
+							 Generador de primera línea dimensionado para toda la operatoria, según disponibilidad.
 						</p>
 
 					</div>
@@ -1054,272 +1054,284 @@ const productJsonLd = {
 				</div>
 
 				<!-- ================================================= -->
-				<!-- TABLA -->
-				<!-- ================================================= -->
+<!-- TABLA -->
+<!-- ================================================= -->
 
-				<div class="detailed-title">
-					ESPECIFICACIONES DETALLADAS
-				</div>
+<div class="detailed-title">
+	ESPECIFICACIONES DETALLADAS
+</div>
 
-				<div class="technical-table">
+<div class="technical-table">
 
-					<div class="technical-tabs">
+	<div class="technical-tabs">
 
-						{
-							technicalTabs.map((tab, index) => (
-								<span
-									class={index === 0 ? 'active' : ''}
-									data-tab-index={index}
-								>
-									{String(index + 1).padStart(2, '0')}&nbsp; {tab.label}
+		{
+			technicalTabs.map((tab, index) => (
+				<span
+					class={index === 0 ? 'active' : ''}
+					data-tab-index={index}
+				>
+					{String(index + 1).padStart(2, '0')}&nbsp; {tab.label}
+				</span>
+			))
+		}
+
+	</div>
+
+
+	{
+		technicalTabs.map((tab, index) => (
+			<div
+				class="technical-panel"
+				data-tab-panel={index}
+				style={index === 0 ? undefined : 'display:none'}
+			>
+
+				{
+					tab.rows.length > 0 ? (
+
+						tab.rows.map(([label, value]) => (
+
+							<div class="technical-row">
+
+								<span>
+									{label}
 								</span>
-							))
-						}
 
-					</div>
+								<strong>
+									{value}
+								</strong>
 
-					{
-						technicalTabs.map((tab, index) => (
-							<div
-								class="technical-panel"
-								data-tab-panel={index}
-								style={index === 0 ? undefined : 'display:none'}
-							>
-								{
-									tab.rows.length > 0 ? (
-										tab.rows.map(([label, value]) => (
-											<div class="technical-row">
-												<span>{label}</span>
-												<strong>{value}</strong>
-											</div>
-										))
-									) : (
-										<div class="technical-row technical-row-empty">
-											<span>Información próximamente disponible.</span>
-										</div>
-									)
-								}
 							</div>
+
 						))
-					}
+
+					) : (
+
+						<div class="technical-row technical-row-empty">
+
+							<span>
+								Información próximamente disponible.
+							</span>
+
+						</div>
+
+					)
+				}
+
+			</div>
+		))
+
+	}
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- COMPARACIÓN -->
+<!-- ================================================= -->
+
+<section class="comparison-section">
+
+	<div class="content-width">
+
+		<div class="center-heading">
+
+			<div class="eyebrow">
+				05 — NUESTROS MODELOS
+			</div>
+
+		</div>
+
+
+		<div class="comparison">
+
+
+			<!-- ========================================= -->
+			<!-- MODELOS -->
+			<!-- ========================================= -->
+
+			<div class="comparison-header">
+
+
+				<!-- EA-J100 -->
+
+				<div class="comparison-model muted">
+
+					<div class="comparison-image">
+
+						<img
+							src="/eavJ150/eavj100.webp"
+							alt="Drone agrícola EaVision EA-J100"
+							loading="lazy"
+							decoding="async"
+						/>
+
+					</div>
+
+					<strong>
+						EA-J100
+					</strong>
+
+				</div>
+
+
+				<!-- EA-J150 -->
+
+				<div class="comparison-model featured">
+
+					<div class="comparison-image">
+
+						<img
+							src="/eavJ150/EAVJ150.webp"
+							alt="Drone agrícola EaVision EA-J150"
+							loading="lazy"
+							decoding="async"
+						/>
+
+					</div>
+
+					<strong>
+						EA-J150
+					</strong>
 
 				</div>
 
 			</div>
 
-		</section>
 
+			<!-- ========================================= -->
+			<!-- DEPÓSITO LÍQUIDO -->
+			<!-- ========================================= -->
 
-		<!-- ================================================= -->
-		<!-- COMPARACIÓN -->
-		<!-- ================================================= -->
+			<div class="comparison-row">
 
-		<section class="comparison-section">
-
-			<div class="content-width">
-
-				<div class="center-heading">
-
-					<div class="eyebrow">
-						05 — NUESTROS MODELOS
-					</div>
-
+				<div class="old-value">
+					60 L
 				</div>
 
-
-				<div class="comparison">
-
-					<!-- ========================================= -->
-					<!-- MODELOS -->
-					<!-- ========================================= -->
-
-					<div class="comparison-header">
-
-						<!-- EA-J100 -->
-
-						<div class="comparison-model muted">
-
-							<div class="comparison-image">
-
-								<img
-									src="/eavJ150/eavj100.webp"
-									alt="Drone agrícola EaVision EA-J100"
-									loading="lazy"
-									decoding="async"
-								/>
-
-							</div>
-
-							<strong>
-								EA-J100
-							</strong>
-
-						</div>
-
-
-						<!-- EA-J150 -->
-
-						<div class="comparison-model featured">
-
-							<div class="comparison-image">
-
-								<img
-									src="/eavJ150/EAVJ150.webp"
-									alt="Drone agrícola EaVision EA-J150"
-									loading="lazy"
-									decoding="async"
-								/>
-
-							</div>
-
-							<strong>
-								EA-J150
-							</strong>
-
-						</div>
-
-					</div>
-
-
-					<!-- ========================================= -->
-					<!-- DEPÓSITO LÍQUIDO -->
-					<!-- ========================================= -->
-
-					<div class="comparison-row">
-
-						<div class="old-value">
-							35 L
-						</div>
-
-						<div class="comparison-label">
-							DEPÓSITO<br />
-							LÍQUIDO
-						</div>
-
-						<div class="new-value">
-							73 L
-						</div>
-
-					</div>
-
-
-					<!-- ========================================= -->
-					<!-- DEPÓSITO SÓLIDO -->
-					<!-- ========================================= -->
-
-					<div class="comparison-row">
-
-						<div class="old-value">
-							50 L
-						</div>
-
-						<div class="comparison-label">
-							DEPÓSITO<br />
-							SÓLIDO
-						</div>
-
-						<div class="new-value">
-							100 L
-						</div>
-
-					</div>
-
-
-					<!-- ========================================= -->
-					<!-- ANCHO DE FAJA -->
-					<!-- ========================================= -->
-
-					<div class="comparison-row">
-
-						<div class="old-value">
-							10–12.5 m
-						</div>
-
-						<div class="comparison-label">
-							ANCHO DE<br />
-							FAJA
-						</div>
-
-						<div class="new-value">
-							4–15 m configurable
-						</div>
-
-					</div>
-
-
-					<!-- ========================================= -->
-					<!-- FLUJO MÁXIMO -->
-					<!-- ========================================= -->
-
-					<div class="comparison-row">
-
-						<div class="old-value">
-							24 L/min
-						</div>
-
-						<div class="comparison-label">
-							FLUJO<br />
-							MÁXIMO
-						</div>
-
-						<div class="new-value">
-							40 L/min
-						</div>
-
-					</div>
-
-
-					<!-- ========================================= -->
-					<!-- RENDIMIENTO -->
-					<!-- ========================================= -->
-
-					<div class="comparison-row">
-
-						<div class="old-value">
-							hasta 24 Ha/h
-						</div>
-
-						<div class="comparison-label">
-							RENDIMIENTO<br />
-							/HORA
-						</div>
-
-						<div class="new-value">
-							35 Ha/h
-						</div>
-
-					</div>
-
-
-					<!-- ========================================= -->
-					<!-- TIEMPO DE CARGA -->
-					<!-- ========================================= -->
-
-					<div class="comparison-row">
-
-						<div class="old-value">
-							9 min (30-95%)
-						</div>
-
-						<div class="comparison-label">
-							TIEMPO DE<br />
-							CARGA
-						</div>
-
-						<div class="new-value">
-							9 min (30-95%)
-						</div>
-
-					</div>
-
-
-
-
+				<div class="comparison-label">
+					DEPÓSITO<br />
+					LÍQUIDO
+				</div>
+
+				<div class="new-value">
+					73 L
 				</div>
 
 			</div>
 
-		</section>
+
+			<!-- ========================================= -->
+			<!-- DEPÓSITO SÓLIDO -->
+			<!-- ========================================= -->
+
+			<div class="comparison-row">
+
+				<div class="old-value">
+					70 L
+				</div>
+
+				<div class="comparison-label">
+					DEPÓSITO<br />
+					SÓLIDO
+				</div>
+
+				<div class="new-value">
+					100 L
+				</div>
+
+			</div>
+
+
+			<!-- ========================================= -->
+			<!-- ANCHO DE FAJA -->
+			<!-- ========================================= -->
+
+			<div class="comparison-row">
+
+				<div class="old-value">
+					10–12.5 m
+				</div>
+
+				<div class="comparison-label">
+					ANCHO DE<br />
+					FAJA
+				</div>
+
+				<div class="new-value">
+					4–15 m configurable
+				</div>
+
+			</div>
+
+
+			<!-- ========================================= -->
+			<!-- FLUJO MÁXIMO -->
+			<!-- ========================================= -->
+
+			<div class="comparison-row">
+
+				<div class="old-value">
+					24 L/min
+				</div>
+
+				<div class="comparison-label">
+					FLUJO<br />
+					MÁXIMO
+				</div>
+
+				<div class="new-value">
+					40 L/min
+				</div>
+
+			</div>
+
+
+			<!-- ========================================= -->
+			<!-- RENDIMIENTO -->
+			<!-- ========================================= -->
+
+			<div class="comparison-row">
+
+				<div class="old-value">
+					Hasta 25 Ha/h
+				</div>
+
+				<div class="comparison-label">
+					RENDIMIENTO<br />
+					/HORA
+				</div>
+
+				<div class="new-value">
+					35 Ha/h
+				</div>
+
+			</div>
+
+
+			<!-- ========================================= -->
+			<!-- TIEMPO DE CARGA -->
+			<!-- ========================================= -->
+
+			<div class="comparison-row">
+
+				<div class="old-value">
+					9 min (30-95%)
+				</div>
+
+				<div class="comparison-label">
+					TIEMPO DE<br />
+					CARGA
+				</div>
+
+				<div class="new-value">
+					9 min (30-95%)
+				</div>
+
+			</div>
+
+
 		<!-- ================================================= -->
 		<!-- FUENTE -->
 		<!-- ================================================= -->
@@ -1338,7 +1350,12 @@ const productJsonLd = {
 			</div>
 
 		</section>
+		</div>
 
+
+	</div>
+
+</section>
 
 		<!-- ================================================= -->
 		<!-- CTA -->
@@ -1459,7 +1476,7 @@ const productJsonLd = {
 
 					<!-- WhatsApp -->
 					<a
-						href="https://wa.me/5493510000000?text=Hola!%20Quiero%20cotizar%20servicio%20de%20drones%20para%20mi%20campo."
+						href="https://wa.me/5493571537374?text=Hola!%20Quiero%20cotizar%20servicio%20de%20drones%20para%20mi%20campo."
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="WhatsApp"
@@ -1480,25 +1497,34 @@ const productJsonLd = {
 
 
 			<!-- Servicios -->
-			<div>
-				<h4 class="font-[Syne] text-sm font-bold text-white mb-5 uppercase tracking-widest">
-					Servicios
-				</h4>
+<div>
+	<h4 class="font-[Syne] text-sm font-bold text-white mb-5 uppercase tracking-widest">
+		Servicios
+	</h4>
 
-				<ul class="list-none flex flex-col gap-2.5">
-					{['Pulverización', 'Siembra Aérea', 'Fertilización', 'Monitoreo NDVI', 'Mapeo 3D'].map((s) => (
-						<li>
-							<a
-								href="#contacto"
-								class="text-sm text-[#9497b8] no-underline transition-colors hover:text-[#8b93d6]"
-							>
-								{s}
-							</a>
-						</li>
-					))}
-				</ul>
-			</div>
+	<ul class="list-none flex flex-col gap-2.5">
 
+		{[
+			'Pulverización',
+			'Siembra Aérea',
+			'Fertilización',
+			'Monitoreo NDVI',
+			'Mapeo 3D'
+		].map((s) => (
+			<li>
+				<a
+					href={`https://wa.me/5493571537374?text=Hola!%20Quiero%20consultar%20por%20${encodeURIComponent(s)}.`}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="text-sm text-[#9497b8] no-underline transition-colors hover:text-[#8b93d6]"
+				>
+					{s}
+				</a>
+			</li>
+		))}
+
+	</ul>
+</div>
 
 <!-- Empresa -->
 <div>
@@ -1864,6 +1890,20 @@ const productJsonLd = {
 
 .product-page,
 .product-page * {
+	font-family:
+		'HarmonyOS Sans',
+		'HarmonyOS Sans SC',
+		Arial,
+		sans-serif;
+}
+
+
+/* ================================================= */
+/* ESPECIFICACIONES DETALLADAS */
+/* ================================================= */
+
+.technical-row span,
+.technical-row strong {
 	font-family:
 		'HarmonyOS Sans',
 		'HarmonyOS Sans SC',
@@ -4264,15 +4304,24 @@ const productJsonLd = {
 .technical-row strong {
 	color: #14152a;
 
-	font-family: monospace;
+	font-family:
+		'HarmonyOS Sans',
+		'HarmonyOS Sans SC',
+		Arial,
+		sans-serif;
 
 	font-size: 12px;
 
-	font-weight: 700;
+	font-weight: 600;
 
-	letter-spacing: -.015em;
+	letter-spacing: 0;
+
+	line-height: 1.4;
 
 	text-align: right;
+
+	flex: 0 1 65%;
+	max-width: 65%;
 
 	transition:
 		color .3s ease,
@@ -4327,8 +4376,9 @@ const productJsonLd = {
 	}
 
 	.technical-row strong {
-		font-size: 11px;
-	}
+    font-size: 11px;
+    max-width: 62%;
+}
 }
 
 
@@ -4368,9 +4418,10 @@ const productJsonLd = {
 		font-size: 10px;
 	}
 
-	.technical-row strong {
-		font-size: 10px;
-	}
+.technical-row strong {
+    font-size: 10px;
+    max-width: 60%;
+}
 }
 
 /* ===================================================== */
@@ -4453,7 +4504,7 @@ const productJsonLd = {
 .comparison-model {
 	position: relative;
 
-	padding: 30px 32px 27px;
+	padding: 30px 32px 45px;
 
 	text-align: center;
 
@@ -4506,7 +4557,6 @@ const productJsonLd = {
 
 	letter-spacing: .14em;
 }
-
 /* ===================================================== */
 /* J150 — PRODUCTO DESTACADO */
 /* ===================================================== */
@@ -4532,7 +4582,6 @@ const productJsonLd = {
 
 	letter-spacing: .14em;
 }
-
 /* ===================================================== */
 /* IMAGEN */
 /* ===================================================== */
@@ -4642,7 +4691,7 @@ const productJsonLd = {
 
 	min-height: 68px;
 
-	border-top: 1px solid rgba(68,78,134,.10);
+	border-top: none;
 
 	background: rgba(255,255,255,.62);
 
@@ -4750,7 +4799,7 @@ const productJsonLd = {
 	padding: 12px 10px;
 
 	border-inline:
-		1px solid rgba(68,78,134,.10);
+		border-inline: none;
 
 	color: #5c6079;
 
@@ -4793,9 +4842,8 @@ const productJsonLd = {
 	}
 
 	.comparison-model {
-		padding: 25px 18px 22px;
-	}
-
+	padding: 25px 18px 38px;
+}
 	.comparison-image {
 		height: 90px;
 	}
@@ -4842,8 +4890,8 @@ const productJsonLd = {
 	}
 
 	.comparison-model {
-		padding: 20px 10px;
-	}
+	padding: 20px 10px 35px;
+}
 
 	.comparison-image {
 		height: 70px;
@@ -4955,7 +5003,7 @@ const productJsonLd = {
 .floating-whatsapp {
 	position: fixed;
 	right: 24px;
-	bottom: 24px;
+	bottom: calc(24px + env(safe-area-inset-bottom));
 	z-index: 999;
 	width: 58px;
 	height: 58px;
@@ -5269,6 +5317,9 @@ const productJsonLd = {
 
 }
 
+.technical-row strong {
+	text-align: left;
+}
 </style>
 
 
