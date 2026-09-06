@@ -7,16 +7,33 @@ export const POST: APIRoute = async ({ request }) => {
 	try {
 		const data = await request.formData();
 
-		const nombre = data.get('nombre')?.toString() || '';
-		const telefono = data.get('telefono')?.toString() || '';
-		const email = data.get('email')?.toString() || '';
-		const provincia = data.get('provincia')?.toString() || '';
-		const servicio = data.get('servicio')?.toString() || '';
-		const mensaje = data.get('mensaje')?.toString() || '';
+		const nombre = data.get('nombre')?.toString().trim() || '';
+		const telefono = data.get('telefono')?.toString().trim() || '';
+		const email = data.get('email')?.toString().trim() || '';
+		const provincia = data.get('provincia')?.toString().trim() || '';
+		const servicio = data.get('servicio')?.toString().trim() || '';
+		const mensaje = data.get('mensaje')?.toString().trim() || '';
+
+		// Validar email
+		if (!email) {
+			return new Response(
+				JSON.stringify({
+					success: false,
+					message: 'El email está vacío. Por favor, ingresá tu email para poder contactarte.',
+					field: 'email',
+				}),
+				{
+					status: 400,
+					headers: {
+						'Content-Type': 'application/json',
+					},
+				}
+			);
+		}
 
 		const { error } = await resend.emails.send({
 			from: 'EaVision <onboarding@resend.dev>',
-			to: ['paulaosella19@gmail.com'],
+			to: ['eavision@elladerosa.com.ar'],
 			subject: `Nueva consulta de ${nombre}`,
 			html: `
 				<h2>Nueva solicitud de cotización</h2>
