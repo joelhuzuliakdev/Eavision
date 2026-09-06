@@ -1003,10 +1003,10 @@ class="fixed bottom-[calc(1rem+env(safe-area-inset-bottom))] right-5 whatsapp-fl
 					<div>
 						<div class="font-[Syne] text-xl font-bold text-[#14152a] mb-8">Datos de tu lote</div>
 						{[
-							{ label: 'Hectáreas del lote', id: 'hectareas', prefix: 'ha', val: '500', fn: 'calcAhorro()' },
-							{ label: 'Rendimiento promedio (kg/ha)', id: 'rendimiento', prefix: 'kg', val: '4500', fn: 'calcAhorro()' },
-							{ label: 'Precio del grano (ARS/ton)', id: 'precio-grano', prefix: '$', val: '380000', fn: 'calcAhorro()' },
-						].map((f) => (
+	{ label: 'Hectáreas del lote', id: 'hectareas', prefix: 'ha', val: '500', fn: 'calcAhorro()' },
+	{ label: 'Rendimiento promedio (kg/ha)', id: 'rendimiento', prefix: 'kg', val: '3500', fn: 'calcAhorro()' },
+	{ label: 'Precio del grano (ARS/ton)', id: 'precio-grano', prefix: '$', val: '520000', fn: 'calcAhorro()' },
+].map((f) => (
 							<div class="mb-6 last:mb-0">
 								<label class="block text-xs text-[#5c6079] font-medium mb-2" for={f.id}>{f.label}</label>
 								<div class="relative">
