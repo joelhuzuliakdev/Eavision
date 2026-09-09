@@ -12,13 +12,86 @@ import {
 	IconMapPin,
 } from '@tabler/icons-astro';
 
-const title = 'Eavision | Drones Agrícolas y Tecnología Aérea de Precisión para el Campo';
+const title = 'EaVision | Drones Agrícolas y Tecnología Aérea de Precisión para el Campo';
+
+// URL base del sitio (debe coincidir con la de Layout.astro)
+const siteUrl = 'https://www.eavisionladero.com.ar';
 const description = 'Venta y servicios de drones agrícolas EaVision: pulverización, siembra aérea, fertilización y monitoreo NDVI de cultivos. Reducí costos y aumentá tu rentabilidad. Cotizá sin cargo.';
 ---
 <Layout title={title} description={description}>
 
 	<!-- FONTS: HarmonyOS Sans SC (中文) + HarmonyOS Sans (Latin) -->
 	<link rel="stylesheet" href="https://unpkg.com/harmonyos-sans-sc-webfont-splitted@1.1.0/dist/index.css" />
+
+	<!-- ===================================================== -->
+	<!-- JSON-LD: PRODUCTOS DE ESTA PÁGINA (EA-J150 y EA-J100) -->
+	<!-- Se define acá y no en Layout.astro porque el Layout es -->
+	<!-- compartido por todas las páginas del sitio: hardcodear -->
+	<!-- un único producto ahí haría que Google "vea" el EA-J150 -->
+	<!-- como si fuera el tema de TODAS las páginas. -->
+	<!-- ===================================================== -->
+
+	<script
+		type="application/ld+json"
+		set:html={JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'ItemList',
+			itemListElement: [
+				{
+					'@type': 'ListItem',
+					position: 1,
+					item: {
+						'@type': 'Product',
+						'@id': `${siteUrl}/#ea-j150`,
+						name: 'EaVision EA-J150',
+						description:
+							'Dron agrícola de alta capacidad en kit con generador de primera línea, batería extra, dispersor de sólidos, antena RTK y herramienta de mapeo.',
+						brand: {
+							'@type': 'Brand',
+							name: 'EaVision',
+						},
+						image: [`${siteUrl}/eavJ150/fotoproducto.jpg`],
+						url: `${siteUrl}/producto`,
+						offers: {
+							'@type': 'Offer',
+							url: `${siteUrl}/producto`,
+							priceCurrency: 'ARS',
+							availability: 'https://schema.org/InStock',
+							seller: {
+								'@type': 'Organization',
+								name: 'El Ladero S.A.',
+							},
+						},
+					},
+				},
+				{
+					'@type': 'ListItem',
+					position: 2,
+					item: {
+						'@type': 'Product',
+						'@id': `${siteUrl}/#ea-j100`,
+						name: 'EaVision EA-J100',
+						description:
+							'Dron agrícola versátil, ideal para pequeñas superficies.',
+						brand: {
+							'@type': 'Brand',
+							name: 'EaVision',
+						},
+						image: [`${siteUrl}/eavJ150/comparaciondroneeaj100.png`],
+						offers: {
+							'@type': 'Offer',
+							priceCurrency: 'ARS',
+							availability: 'https://schema.org/OutOfStock',
+							seller: {
+								'@type': 'Organization',
+								name: 'El Ladero S.A.',
+							},
+						},
+					},
+				},
+			],
+		})}
+	/>
 
 	<!-- Botón flotante de WhatsApp -->
 	<a
@@ -148,6 +221,7 @@ class="fixed bottom-[calc(1rem+env(safe-area-inset-bottom))] right-5 whatsapp-fl
 			loop
 			playsinline
 			preload="metadata"
+			poster="/eavJ150/j150-naranjos.webp"
 			aria-hidden="true"
 			will-change: transform;
 			class="absolute inset-0 w-full h-full object-cover"
