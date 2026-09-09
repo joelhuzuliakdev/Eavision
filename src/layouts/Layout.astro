@@ -9,156 +9,414 @@ interface Props {
 }
 
 const {
-	title = 'Eavision | Drones Agrícolas y Tecnología Aérea de Precisión para el Campo',
-	description = 'Venta y servicios de drones agrícolas EaVision: fumigación, siembra aérea, fertilización y monitoreo NDVI de cultivos. Reducí costos y aumentá tu rentabilidad. Cotizá sin cargo.',
+	title = 'EaVision | Drones Agrícolas y Tecnología de Precisión en Argentina',
+	description = 'EaVision ofrece drones agrícolas y servicios de pulverización, siembra aérea, fertilización y monitoreo de cultivos en Argentina. Tecnología de precisión para optimizar labores y mejorar resultados.',
 	image = '/og-image.jpg',
 	noindex = false,
 } = Astro.props;
 
-// Reemplazar por el dominio real del sitio en producción
-const siteUrl = 'https://www.eavision.com.ar';
-const canonicalURL = new URL(Astro.url.pathname, siteUrl);
-const ogImageURL = new URL(image, siteUrl);
+// =====================================================
+// CONFIGURACIÓN DEL SITIO
+// =====================================================
+
+const siteUrl = 'https://www.eavisionladero.com.ar';
+
+const canonicalURL = new URL(
+	Astro.url.pathname,
+	siteUrl
+);
+
+const ogImageURL = new URL(
+	image,
+	siteUrl
+);
 ---
 
 <!doctype html>
 <html lang="es-AR">
+
 	<head>
-		<!-- Meta básicos -->
+
+		<!-- ===================================================== -->
+		<!-- META BÁSICOS -->
+		<!-- ===================================================== -->
+
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="generator" content={Astro.generator} />
 
-		<!-- Título, descripción y logo de pestaña-->
-		<link rel="icon" type="image/svg+xml" href="/elLaderoIcon.svg">
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+
+		<meta
+			name="generator"
+			content={Astro.generator}
+		/>
+
+
+		<!-- ===================================================== -->
+		<!-- SEO PRINCIPAL -->
+		<!-- ===================================================== -->
+
 		<title>{title}</title>
-		<meta name="description" content={description} />
-		<meta name="keywords" content="drones agrícolas, fumigación con drones, siembra aérea, drones agricultura Argentina, monitoreo NDVI cultivos, EaVision, drone fumigador Córdoba, agricultura de precisión" />
-		<meta name="author" content="Eavision" />
 
-		<!-- Robots -->
-		<meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large'} />
+		<meta
+			name="description"
+			content={description}
+		/>
 
-		<!-- Canonical -->
-		<link rel="canonical" href={canonicalURL} />
+		<meta
+			name="author"
+			content="EaVision"
+		/>
 
-		<!-- Idioma / región -->
-		<meta name="geo.region" content="AR" />
-		<meta name="geo.placename" content="Córdoba, Argentina" />
+		<meta
+			name="robots"
+			content={
+				noindex
+					? 'noindex, nofollow'
+					: 'index, follow, max-image-preview:large'
+			}
+		/>
 
-		<!-- Favicons -->
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-		<meta name="theme-color" content="#0a0a12" />
+		<link
+			rel="canonical"
+			href={canonicalURL}
+		/>
 
-		<!-- Open Graph / Facebook / WhatsApp -->
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content={canonicalURL} />
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<meta property="og:image" content={ogImageURL} />
-		<meta property="og:image:width" content="1200" />
-		<meta property="og:image:height" content="630" />
-		<meta property="og:locale" content="es_AR" />
-		<meta property="og:site_name" content="Eavision" />
 
-		<!-- Twitter Card -->
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:url" content={canonicalURL} />
-		<meta name="twitter:title" content={title} />
-		<meta name="twitter:description" content={description} />
-		<meta name="twitter:image" content={ogImageURL} />
+		<!-- ===================================================== -->
+		<!-- IDIOMA / REGIÓN -->
+		<!-- ===================================================== -->
 
-		<!-- Fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-<link
-	rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-/>
-		<!-- JSON-LD: LocalBusiness -->
-		<script type="application/ld+json" set:html={JSON.stringify({
-			'@context': 'https://schema.org',
-			'@type': 'LocalBusiness',
-			'@id': `${siteUrl}/#organization`,
-			name: 'Eavision',
-			description: 'Representantes oficiales de EaVision en Argentina. Venta de drones agrícolas y servicios de fumigación, siembra aérea, fertilización y monitoreo de cultivos.',
-			image: ogImageURL.toString(),
-			url: siteUrl,
-			telephone: '+5493510000000',
-			email: 'info@eavision.com',
-			priceRange: '$$',
-			address: {
-				'@type': 'PostalAddress',
-				addressRegion: 'Córdoba',
-				addressCountry: 'AR',
-			},
-			areaServed: [
-				{ '@type': 'AdministrativeArea', name: 'Córdoba' },
-				{ '@type': 'AdministrativeArea', name: 'Buenos Aires' },
-				{ '@type': 'AdministrativeArea', name: 'Santa Fe' },
-				{ '@type': 'AdministrativeArea', name: 'Entre Ríos' },
-			],
-			sameAs: [],
-		})} />
+		<meta
+			name="geo.region"
+			content="AR-X"
+		/>
 
-		<!-- JSON-LD: Producto (drone EA-30 Pro) -->
-		<script type="application/ld+json" set:html={JSON.stringify({
-			'@context': 'https://schema.org',
-			'@type': 'Product',
-			name: 'EaVision EA-30 Pro',
-			description: 'Dron agrícola de alta capacidad para fumigación, siembra y fertilización de precisión. Tanque de 30 L, precisión RTK ±2 cm, cobertura de 80-120 ha/día.',
-			brand: {
-				'@type': 'Brand',
+		<meta
+			name="geo.placename"
+			content="Córdoba, Argentina"
+		/>
+
+
+		<!-- ===================================================== -->
+		<!-- FAVICON -->
+		<!-- ===================================================== -->
+
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="/elLaderoIcon.svg"
+		/>
+
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/apple-touch-icon.png"
+		/>
+
+		<meta
+			name="theme-color"
+			content="#0a0a12"
+		/>
+
+
+		<!-- ===================================================== -->
+		<!-- OPEN GRAPH -->
+		<!-- ===================================================== -->
+
+		<meta
+			property="og:type"
+			content="website"
+		/>
+
+		<meta
+			property="og:url"
+			content={canonicalURL}
+		/>
+
+		<meta
+			property="og:title"
+			content={title}
+		/>
+
+		<meta
+			property="og:description"
+			content={description}
+		/>
+
+		<meta
+			property="og:image"
+			content={ogImageURL}
+		/>
+
+		<meta
+			property="og:image:width"
+			content="1200"
+		/>
+
+		<meta
+			property="og:image:height"
+			content="630"
+		/>
+
+		<meta
+			property="og:locale"
+			content="es_AR"
+		/>
+
+		<meta
+			property="og:site_name"
+			content="EaVision"
+		/>
+
+
+		<!-- ===================================================== -->
+		<!-- TWITTER / X -->
+		<!-- ===================================================== -->
+
+		<meta
+			name="twitter:card"
+			content="summary_large_image"
+		/>
+
+		<meta
+			name="twitter:title"
+			content={title}
+		/>
+
+		<meta
+			name="twitter:description"
+			content={description}
+		/>
+
+		<meta
+			name="twitter:image"
+			content={ogImageURL}
+		/>
+
+
+		<!-- ===================================================== -->
+		<!-- GOOGLE FONTS -->
+		<!-- ===================================================== -->
+
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+			rel="stylesheet"
+		/>
+
+
+		<!-- ===================================================== -->
+		<!-- FONT AWESOME -->
+		<!-- ===================================================== -->
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+		/>
+
+
+		<!-- ===================================================== -->
+		<!-- JSON-LD: ORGANIZACIÓN / NEGOCIO -->
+		<!-- ===================================================== -->
+
+		<script
+			type="application/ld+json"
+			set:html={JSON.stringify({
+				'@context': 'https://schema.org',
+				'@type': 'LocalBusiness',
+
+				'@id': `${siteUrl}/#organization`,
+
 				name: 'EaVision',
-			},
-			image: `${siteUrl}/droneVolandoSoja.webp`,
-			offers: {
-				'@type': 'Offer',
-				url: `${siteUrl}/#ventas`,
-				priceCurrency: 'ARS',
-				price: '4500000',
-				availability: 'https://schema.org/InStock',
-				seller: {
-					'@type': 'Organization',
-					name: 'Eavision',
-				},
-			},
-		})} />
 
-		<!-- JSON-LD: Breadcrumb -->
-		<script type="application/ld+json" set:html={JSON.stringify({
-			'@context': 'https://schema.org',
-			'@type': 'BreadcrumbList',
-			itemListElement: [
-				{
-					'@type': 'ListItem',
-					position: 1,
-					name: 'Inicio',
-					item: siteUrl,
+				alternateName: 'EaVision El Ladero',
+
+				description:
+					'Venta de drones agrícolas EaVision y servicios de pulverización, siembra aérea, fertilización y monitoreo de cultivos en Argentina.',
+
+				url: siteUrl,
+
+				logo: `${siteUrl}/elLaderoLogo.svg`,
+
+				image: ogImageURL.toString(),
+
+				telephone: '+5493571537374',
+
+				email: 'eavision@elladerosa.com.ar',
+
+				priceRange: '$$',
+
+				address: {
+					'@type': 'PostalAddress',
+					addressRegion: 'Córdoba',
+					addressCountry: 'AR',
 				},
-			],
-		})} />
+
+				areaServed: [
+					{
+						'@type': 'AdministrativeArea',
+						name: 'Córdoba',
+					},
+					{
+						'@type': 'AdministrativeArea',
+						name: 'Buenos Aires',
+					},
+					{
+						'@type': 'AdministrativeArea',
+						name: 'Santa Fe',
+					},
+					{
+						'@type': 'AdministrativeArea',
+						name: 'Entre Ríos',
+					},
+				],
+
+				sameAs: [
+					'https://www.instagram.com/eavision_ladero/',
+				],
+
+				contactPoint: {
+					'@type': 'ContactPoint',
+					telephone: '+5493571537374',
+					email: 'eavision@elladerosa.com.ar',
+					contactType: 'customer service',
+					areaServed: 'AR',
+					availableLanguage: ['Spanish'],
+				},
+			})}
+		/>
+
+
+		<!-- ===================================================== -->
+		<!-- JSON-LD: PRODUCTO EA-J150 -->
+		<!-- ===================================================== -->
+
+		<script
+			type="application/ld+json"
+			set:html={JSON.stringify({
+				'@context': 'https://schema.org',
+				'@type': 'Product',
+
+				'@id': `${siteUrl}/producto#eaj150`,
+
+				name: 'EaVision EA-J150',
+
+				description:
+					'Dron agrícola EaVision EA-J150 de alta capacidad para aplicaciones agrícolas de precisión, pulverización, fertilización y dispersión de sólidos.',
+
+				brand: {
+					'@type': 'Brand',
+					name: 'EaVision',
+				},
+
+				image: [
+					`${siteUrl}/eavJ150/fotoproducto.jpg`,
+					`${siteUrl}/eavJ150/eavj100.png`,
+				],
+
+				url: `${siteUrl}/producto`,
+
+				offers: {
+					'@type': 'Offer',
+
+					url: `${siteUrl}/producto`,
+
+					priceCurrency: 'ARS',
+
+					availability:
+						'https://schema.org/InStock',
+
+					seller: {
+						'@type': 'Organization',
+						name: 'EaVision',
+						url: siteUrl,
+					},
+				},
+			})}
+		/>
+
+
+		<!-- ===================================================== -->
+		<!-- JSON-LD: BREADCRUMB -->
+		<!-- ===================================================== -->
+
+		<script
+			type="application/ld+json"
+			set:html={JSON.stringify({
+				'@context': 'https://schema.org',
+				'@type': 'BreadcrumbList',
+
+				itemListElement: [
+					{
+						'@type': 'ListItem',
+						position: 1,
+						name: 'Inicio',
+						item: siteUrl,
+					},
+				],
+			})}
+		/>
+
 	</head>
+
+
 	<body id="top">
+
 		<slot />
 
+
+		<!-- ===================================================== -->
+		<!-- SCROLL SUAVE DEL LOGO -->
+		<!-- ===================================================== -->
+
 		<script is:inline>
-			// Scroll suave al hacer click en cualquier link con id="logoHome"
+
 			document.addEventListener('click', (e) => {
+
 				const link = e.target.closest('#logoHome');
+
 				if (!link) return;
+
 				e.preventDefault();
-				window.scrollTo({ top: 0, behavior: 'smooth' });
+
+				window.scrollTo({
+					top: 0,
+					behavior: 'smooth'
+				});
+
 			});
 
-			// Si la página carga con #top en la URL (viniendo de otra página), animamos el scroll manualmente
+
 			if (window.location.hash === '#top') {
+
 				window.scrollTo(0, 0);
+
 				requestAnimationFrame(() => {
-					window.scrollTo({ top: 0, behavior: 'smooth' });
+
+					window.scrollTo({
+						top: 0,
+						behavior: 'smooth'
+					});
+
 				});
+
 			}
+
 		</script>
+
 	</body>
+
 </html>
